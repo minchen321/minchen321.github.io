@@ -46,22 +46,18 @@
 	    padding: 10vh 0;
 	}
 	#left-bubble {
+		margin-top:30%;
     	padding-right: 10px;
+    	margin-left: 2%;
+	    width: 39vw;    	
     }
 	#right-bubble {
-    	padding-left: 5px;
+    	padding-left: 15px;
+    	width: 30vw;
+    	margin-left: 63%;    
     }
 }
 @media only screen and (max-width: 767px) {
-	#left-bubble {
-		margin-top:15%;
-	    margin-left: 2%;
-	    width: 39vw;
-	}
-	#right-bubble {
-    	width: 30vw;
-    	margin-left: 63%;
-    }
 
 }
 @media only screen and (max-width: 575px) {
@@ -72,7 +68,6 @@
 		background-size: auto 75vh;
 	}
 	#left-bubble {
-		margin-top:20%;
 	    margin-left: 2%;
 	    padding-top: 35px;
 	    width: 40vw;
