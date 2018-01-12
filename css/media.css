@@ -1,0 +1,110 @@
+@media only screen and (max-width: 1199px) {
+	#left-bubble img{
+		top:136vh;
+		right:58vw;
+		width: 27vw;
+	}
+	#left-bubble p{
+		top:139vh;
+		right:67vw;
+	}
+	#right-bubble img{
+		top:148vh;
+		left:60vw;
+		width: 22vw;
+	}
+	#right-bubble p{
+		top:152vh;
+		left:65vw;
+	}
+}
+@media only screen and (max-width: 991px) {
+	#left-bubble img{
+		right:58vw;
+		width: 30vw;
+	}
+	#left-bubble p{
+		top:139vh;
+		right:66vw;
+		font-size: 2.5vw;
+	}
+	#right-bubble img{
+		top:148vh;
+		left:60vw;
+		width: 25vw;
+	}
+	#right-bubble p{
+		top:152vh;
+		left:66vw;
+		font-size: 2.5vw;
+	}
+}
+@media only screen and (max-width: 850px) {
+	#about-author{
+		background-size: auto 75vh;
+	}
+}
+@media only screen and (max-width: 768px) {
+	#about-author{
+		background-image: url('../img/about/about-me-mobile.jpg');
+		background-size: auto 100vh;
+	}
+	#left-bubble img{
+		right:60vw;
+		width: 35vw;
+		top:150vh;
+	}
+	#left-bubble p{
+		top:152vh;
+		right:68vw;
+		font-size: 3vw;
+	}
+	#right-bubble img{
+		top:148vh;
+		left:62vw;
+		width: 30vw;
+	}
+	#right-bubble p{
+		top:152vh;
+		left:68vw;
+		font-size: 3vw;
+	}
+}
+@media only screen and (max-width: 575px) {
+	#about-author{
+		background-size: auto 75vh;
+	}
+	#left-bubble img{
+		width: 37vw;
+	}
+	#left-bubble p{
+		font-size: 3.2vw;
+	}
+	#right-bubble img{
+		width: 32vw;
+	}
+	#right-bubble p{
+		top:150vh;
+		font-size: 3.2vw;
+	}
+}
+@media only screen and (max-width: 414px) {
+	#about-author{
+		background-size: auto 70vh;
+	}
+	#left-bubble img{
+		top: 151vh;
+		width: 40vw;
+	}	
+	#left-bubble p{
+		font-size: 4vw;
+	}
+	#right-bubble img{
+		left: 65vw;
+		width: 35vw;
+	}
+	#right-bubble p{
+		font-size: 4vw;
+		left: 71vw;
+	}
+}	

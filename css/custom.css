@@ -1,0 +1,368 @@
+html{
+	font-size: 16px;
+	font-family: 'Pangolin', Arial, sans-serif;
+	overflow-x: hidden;
+	min-width: 320px;
+}
+
+body {
+	color: #000000;
+	background-color: #ffffff;
+}	
+p, li{
+	font-family: 'Pangolin', Arial, sans-serif;
+	font-size: 1rem;	
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #000000;
+	font-family: 'Pangolin', Arial, sans-serif;
+}	
+section h2{
+	font-size: 3rem;
+}
+section .section-heading{
+	text-align: center;
+	margin-bottom: 3rem;
+}
+button{
+	color: #5876b3;
+	font-family: 'Pangolin', Arial, sans-serif;
+}
+footer {
+    padding: 1rem 0;
+}
+.hameid-loader-overlay {
+    width: 100%;
+    height: 100%;
+    background: url('../img/preloader.gif') center no-repeat #FFF;
+    background-size: 250px 188px;
+    z-index: 99999;
+    position: fixed;
+}
+/*-------------------- navbar -------------------------*/
+.navbar {
+	padding: 0 1rem;
+}	
+#mainNav.navbar-shrink{
+	padding-bottom: 0;
+}
+#mainNav {
+    border-bottom: 2px solid #000000;
+    background-color:#ffffff; 
+}
+#mainNav .navbar-brand {
+    font-family: 'Pangolin', Arial, sans-serif;
+}
+#mainNav .navbar-toggler {
+     color: #000000;
+     border: none; 
+     font-size: 1.5rem;
+}
+
+#mainNav a {
+	font-family: 'Pangolin', Arial, sans-serif;
+	font-size: 1.5rem;
+    color: #000000;
+    border-bottom: 2px solid transparent;
+	margin: 0 2px
+}
+#mainNav a:hover {
+	border-bottom: 2px solid #000000;
+}
+#mainNav .nav-link.active {
+    border-bottom: 3px solid #000000;
+} 
+/*-------------------- home -------------------------*/
+#moving-helicopter{
+    position: absolute;
+    left: 0;
+    right: 50%;
+    top: 8%;
+    -webkit-animation-duration: 19s;
+    -webkit-animation-iteration-count: infinite;
+}
+.masthead .intro-body{
+	text-align: center;
+}
+.masthead .intro-body h1{
+/*	position: absolute;
+	top:-10%;*/
+	font-size: 2.5rem;
+	padding-bottom: 5rem;
+}	
+/*-------------------- about -------------------------*/
+#about-author{
+	height: 100vh;
+	background-image: url('../img/about/about-me-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+  -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: auto 100vh; 
+/*background-size: contain;
+*/}
+#about-author h2{
+	padding-top: 12vh;
+}
+.more-btn{
+	border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+#left-bubble img{
+	position: absolute;
+	z-index: 2;
+	top:136vh;
+	right:55vw;
+	width: 23vw;
+}
+
+#left-bubble p{
+	position:absolute;
+	top:138vh;
+	right:61vw;
+	font-size: 2vw;
+	z-index: 3;
+}
+#right-bubble img{
+	position: absolute;
+	top:148vh;
+	left:56vw;
+	z-index: 2;
+	width: 20vw;
+}
+#right-bubble p{
+	position: absolute;
+	top:152vh;
+	left:61vw;
+	font-size: 2vw;
+	z-index: 3;
+}
+
+#front-end-developer{
+	height: 100vh;
+}
+#front-end-developer .row:first-child{
+	height: 100vh;
+}
+#developer-img{
+	background-image: url('../img/about/web-developer.jpg');
+	background-repeat: no-repeat;
+	background-size: auto 100vh;
+
+}
+/*#about #roles button{
+	background-color: #FFFFFF;
+	border: 2px solid #5876b3;
+	font-size: 1.75rem;
+	padding:0rem 0.5rem 0rem 0.5rem;
+	border-radius: 5px;
+	margin-bottom: 0.5rem;
+}
+
+#about #roles button:hover{
+	background-color:#5876b3;
+	color:#FFFFFF;
+}
+#about #roles button:focus{
+	outline: none;
+}
+
+#developer-button{
+	-webkit-animation-duration: 7s;
+	-webkit-animation-iteration-count: infinite;
+
+}
+#me-button{
+	-webkit-animation-duration:7s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-delay: 0.6s;
+}
+#me-slide button, #developer-slide button{
+	background-color: transparent;
+	border:none;
+	font-size: 1.5rem;
+}
+#me-slide button:focus, #developer-slide button:focus{
+	background-color: transparent;
+	border:none;
+	font-size: 1.5rem;
+}
+#developer-intro{
+	padding-top: 1rem;
+	background-image: url("../img/watercolor.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#developer-slide p{
+	font-size: 1.25rem;
+	line-height: 1.25;
+}
+#code{
+	margin-left:3rem;
+}
+.multi-lines{
+	width:60%;
+}
+.developer-icons{
+	width: 12.5rem;
+	height:auto;
+	padding-top:4rem;
+	padding-bottom: 1rem;
+	display: unset;
+}
+#bg{
+	background-image: url("../img/watercolor.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center top;
+}
+
+#me-slide{	
+	height: 40rem;
+	margin-bottom: 3rem;
+}
+#self-intro{
+	text-align: left;
+	margin:5rem 0;
+	padding: 0 10rem;
+}
+#self-intro p{
+	font-size: 1.25rem;
+}
+#self-intro a{
+	color: #5876b3;
+}	
+#contact-me{
+	-webkit-animation-duration:15s;
+	-webkit-animation-iteration-count: infinite;
+	padding-left: 0.5rem;
+}
+#right-button{
+	text-align: right;
+}*/
+/* ---------------------- portfolio ---------------------------- */
+#portfolio h2{
+	margin-bottom: 2rem;
+}
+#imac{
+	position: relative;
+	z-index:2;
+
+}
+.mySlides{
+	width:30.5rem;
+	height: auto;
+	margin-top:0.5rem; 
+	position:absolute;
+	left: 7%;
+	top:4%;
+}
+#nextOne, .portfolio-btn{
+	background-color: #FFFFFF;
+	border: 2px solid #5876b3;
+	font-size: 1.75rem;
+	padding:0rem 0.5rem 0rem 0.5rem;
+	border-radius: 5px;
+	margin: 1rem;
+}
+#nextOne:hover, .portfolio-btn:hover{
+	background-color:#5876b3;
+	color:#FFFFFF;
+}
+#nextOne:focus, .portfolio-btn:focus{
+	outline: none;
+}	
+.project-description{
+	padding-top: 1rem;
+	text-align: left;
+}
+.project-description p{
+	font-size: 1.2rem;
+}
+#projectModal{
+/*	background-image: url("../img/watercolor.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;*/
+	background-color: #f8f9fa;
+}
+.modal-body {
+    padding: 0;
+}    
+
+.modal-content {
+    border: 2px solid #5876b3;
+    border-radius: 0rem;
+    background-color: transparent;
+}    
+.close i{
+	color: #5876b3;
+}
+/* ---------------------- contact ---------------------------- */
+#contact{
+	  background-image: url("../img/watercolor.jpg");
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  padding-top: 8rem;
+	  padding-bottom: 6rem;
+	  background-attachment: fixed;
+	  background-position: top;
+}  
+
+#contact-heading{
+	margin:5rem 0 3rem 0;
+}
+
+.icon-size{
+	height: 3.5rem;
+	width: 3.5rem;
+}
+
+
+
+
+
+
+
+
+/* ---------------------- Resume ---------------------------- */
+#personal-info{
+	padding-top: 5rem;
+	padding-bottom: 1rem;
+	background-color: #fbfafa;
+  	height: 16rem;
+}
+#personal-info .container{
+	padding: 0;
+}
+#personal-info p{
+	font-size: 1.2rem;
+}
+#personal-info span{
+	padding-left: 9rem;
+}
+#personal-info .btn{
+	padding: 0;
+}
+.social-media{
+	margin-top: 3.5rem;
+}
+.social-media img{
+	height: auto;
+	width:4rem;
+}
+.logo{
+	text-align: center;
+}
+#work-experience .row{
+	padding: 2rem 0;
+}
+
+#work-experience p, #work-experience li{
+	font-size: 1.2rem;
+}

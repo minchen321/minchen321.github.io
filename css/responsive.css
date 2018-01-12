@@ -1,0 +1,200 @@
+@media only screen and (max-width: 1199px) {
+	.mySlides{
+		width:26rem;
+		height: auto;
+		margin-top:0.5rem; 
+		top:4%;
+	}
+}	
+@media only screen and (max-width: 991px) {
+	.mySlides{
+		top:2%;
+		width:19rem;
+	}
+	#mainNav .navbar-toggler:focus{
+		outline: none;
+	}
+	section .section-heading{
+		margin-bottom: 1rem;
+	}
+	/* ---------------- about ------------ */
+	.subheader{
+		font-size: 1.5rem;
+	}
+	#me-slide{	
+		height: 38rem;
+		margin-bottom: 0rem;
+	}
+	#self-intro{
+		margin:5rem 0;
+		padding: 0 3rem;
+	}
+}
+
+@media only screen and (max-width: 767px) {	
+	section h2{
+		font-size: 2rem;
+	}
+	.masthead {
+		background-image: url(../img/nyc-mobile.jpg);
+	}  
+	.masthead .intro-body h1{
+		font-size: 2rem;
+		margin-bottom: 6rem;
+		padding-bottom: 0rem;
+	}
+	/* ---------------- about ------------ */
+	.subheader{
+		font-size: 1.1rem;
+	}
+	#self-intro{
+		margin:5rem 0;
+		padding: 0rem;
+	}
+/* =============	profolio   =================  */
+	#nextOne{
+		font-size: 1.25rem;
+	}
+	.mySlides{
+		width:29rem;
+	}
+	.modal {
+	    overflow-y: scroll;
+	}
+	.modal-content {
+    	margin-top: 20%;
+    }
+    .modal-footer {
+    	padding: 0;
+    }	
+
+/* =============	resume   =================  */
+
+	#personal-info{
+		text-align: center;
+		height: 50%;
+	}
+	.social-media {
+	    margin-top: 2rem;
+	}
+}	
+@media only screen and (max-height: 590px) {
+	.masthead .intro-body h1{
+		position: absolute;
+		top:-4.5rem;
+		left: 5%;
+		right: 5%;
+	}	 	
+}
+@media only screen and (max-width: 575px) {
+	.masthead .intro-body h1{
+		font-size: 1.8rem;
+	}	
+	.subheader{
+		font-size: 1.5rem;
+	}
+	.mySlides{
+		width:31rem;
+		left: 5%;
+	}	
+	#self-intro{
+		margin:3rem 0;
+		padding: 0 2rem;
+	}
+	#developer{
+		padding-bottom: 4rem;
+	}
+	.developer-icons {
+	    width: 7rem;
+	}    	
+}	
+
+@media only screen and (max-width: 550px) {
+	.mySlides{
+		width:29.5rem;
+
+	}	
+}
+@media only screen and (max-width: 525px) {
+	.mySlides{
+		width:28rem;
+	}	
+}
+@media only screen and (max-width: 500px) {
+	.mySlides{
+		width:27rem;
+	}	
+}
+@media only screen and (max-width: 480px) {
+	.mySlides{
+		width:25.7rem;
+	}	
+}
+@media only screen and (max-width: 455px) {
+	.mySlides{
+		top:4%;
+		width:24.3rem;
+	}	
+}
+@media only screen and (max-width: 435px) {
+	.mySlides{
+		width:23rem;
+	}	
+}
+@media only screen and (max-width: 414px) {
+	#moving-helicopter img{
+		width:140px;
+		height: auto;
+	}	
+	.masthead {
+	  background-position: center bottom;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover; 
+	  background-attachment: scroll;
+	}
+	#contact{
+		  background-attachment: scroll;
+		  background-position: center top;
+	}  
+	.mySlides{
+		width:22rem;
+		left:6%;
+	}	
+	#work-experience img {
+	    max-width: 70%;
+	    padding-bottom: 2rem;
+	}
+}
+@media only screen and (max-width: 390px) {	
+	.mySlides{
+		width:21rem;
+	}	
+}	
+@media only screen and (max-width: 380px) {	
+	.mySlides{
+		top: 3%;
+		width:19.7rem;
+	}	
+	#developer-slide p{
+		font-size: 1rem;
+	}
+}	
+@media only screen and (max-width: 350px) {	
+	.mySlides{
+		left: 7%;
+		width:17.8rem;
+	}	
+}
+@media only screen and (max-width: 320px) {	
+	.masthead .intro-body h1{
+		font-size: 1.5rem;
+	}	
+	.subheader{
+		font-size: 1.1rem;
+	}
+	.mySlides{
+		width:17rem;
+	}	
+}
