@@ -1,42 +1,35 @@
 @media only screen and (max-width: 1199px) {
-	#left-bubble img{
-		top:136vh;
-		right:58vw;
-		width: 27vw;
+	#left-bubble{
+		margin-left: 15%;
+		width: 28vw;
 	}
 	#left-bubble p{
-		top:139vh;
-		right:67vw;
+		font-size: 1.8rem;
 	}
-	#right-bubble img{
-		top:148vh;
-		left:60vw;
-		width: 22vw;
+	#right-bubble{
+		margin-left: 60%;
 	}
 	#right-bubble p{
-		top:152vh;
-		left:65vw;
+		font-size: 1.8rem;
 	}
 }
 @media only screen and (max-width: 991px) {
-	#left-bubble img{
-		right:58vw;
-		width: 30vw;
+	#left-bubble{
+		margin-top:13%;
+		margin-left: 7%;
+		padding-top: 25px;
+		width: 32vw;
 	}
 	#left-bubble p{
-		top:139vh;
-		right:66vw;
-		font-size: 2.5vw;
+		font-size: 1.5rem;
 	}
-	#right-bubble img{
-		top:148vh;
-		left:60vw;
-		width: 25vw;
+	#right-bubble{
+		width: 27vw;
+		padding-top: 40px;
+		margin-top: -4%;
 	}
 	#right-bubble p{
-		top:152vh;
-		left:66vw;
-		font-size: 2.5vw;
+		font-size: 1.5rem;
 	}
 }
 @media only screen and (max-width: 850px) {
@@ -49,26 +42,20 @@
 		background-image: url('../img/about/about-me-mobile.jpg');
 		background-size: auto 100vh;
 	}
-	#left-bubble img{
-		right:60vw;
-		width: 35vw;
-		top:150vh;
+	#about-author h2 {
+	    padding: 10vh 0;
 	}
-	#left-bubble p{
-		top:152vh;
-		right:68vw;
-		font-size: 3vw;
+}
+@media only screen and (max-width: 767px) {
+	#left-bubble {
+		margin-top:15%;
+	    margin-left: 2%;
+	    width: 39vw;
 	}
-	#right-bubble img{
-		top:148vh;
-		left:62vw;
-		width: 30vw;
-	}
-	#right-bubble p{
-		top:152vh;
-		left:68vw;
-		font-size: 3vw;
-	}
+	#right-bubble {
+    	width: 30vw;
+    	margin-left: 63%;
+    }
 }
 @media only screen and (max-width: 575px) {
 	#moving-helicopter{
@@ -77,37 +64,47 @@
 	#about-author{
 		background-size: auto 75vh;
 	}
-	#left-bubble img{
-		width: 37vw;
+	#left-bubble {
+		margin-top:20%;
+	    margin-left: 2%;
+	    padding-top: 35px;
+	    width: 40vw;
 	}
 	#left-bubble p{
-		font-size: 3.2vw;
-	}
-	#right-bubble img{
-		width: 32vw;
-	}
+		font-size: 1rem;
+	}	
+	#right-bubble {
+    	width: 35vw;
+    	padding-top:50px;
+    }
 	#right-bubble p{
-		top:150vh;
-		font-size: 3.2vw;
-	}
+		font-size: 1rem;
+	}	
 }
 @media only screen and (max-width: 414px) {
 	#about-author{
 		background-size: auto 70vh;
 	}
-	#left-bubble img{
-		top: 151vh;
-		width: 40vw;
-	}	
-	#left-bubble p{
-		font-size: 4vw;
+	#left-bubble {
+	    margin-top: 37%;
+	    margin-left: 1%;
+	    padding-top: 40px;
+	    width: 45vw;
 	}
-	#right-bubble img{
-		left: 65vw;
-		width: 35vw;
+	#right-bubble {
+    	width: 42vw;
+    	padding-top:50px;
+    	padding-left: 20px;
+    	margin-top: -10%;
+    	margin-left: 55%;
+
+    }
+}
+@media only screen and (max-width: 375px) {
+	#about-author{
+		background-size: auto 70vh;
 	}
-	#right-bubble p{
-		font-size: 4vw;
-		left: 71vw;
+	#left-bubble {
+	    margin-top: 40%;
 	}
 }	

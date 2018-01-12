@@ -102,7 +102,8 @@ footer {
   	-o-background-size: cover;
   	background-size: auto 100vh; 
 /*background-size: contain;
-*/}
+*/
+}
 #about-author h2{
 	padding-top: 12vh;
 }
@@ -114,34 +115,36 @@ footer {
     -moz-box-shadow: none;
     box-shadow: none;
 }
-#left-bubble img{
-	position: absolute;
-	z-index: 2;
-	top:136vh;
-	right:55vw;
-	width: 23vw;
+#left-bubble{
+	text-align: center;
+	width: 25vw;
+	height: 130px;
+	margin-top: 10%;
+	margin-left: 20%;
+	padding-top: 20px;
+	padding-right: 35px;
+	background-image: url('../img/about/left-bubble.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto; 
 }
-
 #left-bubble p{
-	position:absolute;
-	top:138vh;
-	right:61vw;
-	font-size: 2vw;
-	z-index: 3;
+	font-size: 2.2vw;
 }
-#right-bubble img{
-	position: absolute;
-	top:148vh;
-	left:56vw;
-	z-index: 2;
-	width: 20vw;
+#right-bubble{
+	text-align: center;
+	width: 23vw;
+	height: 130px;
+	margin-left: 57%;
+	padding-top: 35px;
+	padding-left: 25px;
+	background-image: url('../img/about/right-bubble.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
 }
 #right-bubble p{
-	position: absolute;
-	top:152vh;
-	left:61vw;
-	font-size: 2vw;
-	z-index: 3;
+	font-size: 2.2vw;
 }
 
 #front-end-developer{
