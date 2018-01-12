@@ -1,3 +1,13 @@
+@media only screen and (min-width: 1450px) {
+	#left-bubble{
+		height: 17vh;
+		padding-top: 3vh;
+	}
+	#right-bubble{
+		height: 17vh;
+		padding-top: 5vh;		
+	}	
+}	
 @media only screen and (max-width: 1199px) {
 	#left-bubble{
 		margin-left: 15%;
@@ -88,15 +98,15 @@
 		background-size: auto 70vh;
 	}
 	#left-bubble {
-	    margin-top: 37%;
+	    margin-top: 30%;
 	    margin-left: 1%;
 	    padding-top: 40px;
-	    width: 45vw;
+	    width: 41vw;
 	}
 	#right-bubble {
     	width: 42vw;
     	padding-top:50px;
-    	padding-left: 20px;
+    	padding-left: 0px;
     	margin-top: -10%;
     	margin-left: 55%;
 
@@ -105,8 +115,5 @@
 @media only screen and (max-width: 375px) {
 	#about-author{
 		background-size: auto 70vh;
-	}
-	#left-bubble {
-	    margin-top: 40%;
 	}
 }	
