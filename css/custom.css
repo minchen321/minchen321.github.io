@@ -77,7 +77,8 @@ footer {
     position: absolute;
     left: 0;
     right: 50%;
-    top: 8%;
+    top: 8vh;
+    z-index: 99;
     -webkit-animation-duration: 19s;
     -webkit-animation-iteration-count: infinite;
 }

@@ -71,6 +71,9 @@
 	}
 }
 @media only screen and (max-width: 575px) {
+	#moving-helicopter{
+		top:12vh;
+	}	
 	#about-author{
 		background-size: auto 75vh;
 	}
