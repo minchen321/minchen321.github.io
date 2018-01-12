@@ -45,6 +45,12 @@
 	#about-author h2 {
 	    padding: 10vh 0;
 	}
+	#left-bubble {
+    	padding-right: 10px;
+    }
+	#right-bubble {
+    	padding-left: 5px;
+    }
 }
 @media only screen and (max-width: 767px) {
 	#left-bubble {
@@ -56,6 +62,7 @@
     	width: 30vw;
     	margin-left: 63%;
     }
+
 }
 @media only screen and (max-width: 575px) {
 	#moving-helicopter{
