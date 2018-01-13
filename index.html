@@ -77,11 +77,11 @@
       <!-- about me -->
       <div id="about-author" class="text-center">
         <h2>About Me</h2>
-        <div id="left-bubble">
-          <p>I'm a front-end<br>developer. <button id="developer-btn" class="animated shake more-btn"><u>More</u></button></p>
+        <div id="left-bubble" class="wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+          <p>I'm a front-end<br>developer. <button id="developer-btn" class="animated pulse more-btn"><u>More</u></button></p>
         </div>
-        <div id="right-bubble">
-          <p>I'm Min. <button id="min-btn" class="animated shake more-btn"><u>More</u></button></p>
+        <div id="right-bubble" class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+          <p>I'm Min. <button id="min-btn" class="animated pulse more-btn"><u>More</u></button></p>
         </div>
       </div>
       <!-- front-end developer -->
@@ -305,7 +305,14 @@
       $(window).on('load', function(){
           $(".hameid-loader-overlay").hide();  
       });
-  </script>
+    </script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript">
+      jQuery(function($) {'use strict';
+      //Initiat WOW JS
+      new WOW().init();
+    }); 
+    </script>
 
   </body>
 

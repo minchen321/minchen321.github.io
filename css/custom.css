@@ -101,8 +101,6 @@ footer {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: auto 100vh; 
-/*background-size: contain;
-*/
 }
 #about-author h2{
 	padding-top: 12vh;
@@ -115,6 +113,7 @@ footer {
     -moz-box-shadow: none;
     box-shadow: none;
     padding: 0;
+    -webkit-animation-iteration-count: infinite;
 }
 #left-bubble{
 	text-align: center;
@@ -147,7 +146,6 @@ footer {
 #right-bubble p{
 	font-size: 2.2vw;
 }
-
 #front-end-developer{
 	height: 100vh;
 }
