@@ -62,45 +62,76 @@ $(document).ready(function() {
 	    $("#front-end-developer").show();
     });
 
+    $("#back").click(function(){
+    	$("#front-end-developer").hide();
+        $("#about-author").show();
+    });
+
+
+
+
+	var illustration= document.getElementById("illustration");
+	var mq = window.matchMedia("(max-width: 991px)");
+	if(mq.matches) {
+	    illustration.setAttribute("src", "img/about/web-developer-mobile.png");
+	} else {
+	    illustration.setAttribute("src", "img/about/web-developer.png");
+	}
+
+	mq.addListener(function(changed) {
+	    if(changed.matches) {
+	    	 illustration.setAttribute("src", "img/about/web-developer-mobile.png");
+	    } else {
+	        illustration.setAttribute("src", "img/about/web-developer.png");
+	    }
+	});
+	// var pageWidth = $(window).width();
+	// var illustration= document.getElementById("illustration");
+	// if(pageWidth < 992) {
+	// 	illustration.setAttribute("src", "img/about/left-bubble.png");
+	// }
+	// else{
+	// 	illustration.setAttribute("src", "img/about/web-developer.png");
+	// }
 /* -----------------------------  Portfolio Projects ----------------------------- */		
-	var projectDemo = document.getElementById('project-demo');
-	var projectName = document.getElementById('projectName');
-	var projectImg = document.getElementById('project-img');
-	var project = document.getElementById('project');
-	var intro = document.getElementById('intro');
-	var tech = document.getElementById('tech-stack');
-	var counter = 0;
+	// var projectDemo = document.getElementById('project-demo');
+	// var projectName = document.getElementById('projectName');
+	// var projectImg = document.getElementById('project-img');
+	// var project = document.getElementById('project');
+	// var intro = document.getElementById('intro');
+	// var tech = document.getElementById('tech-stack');
+	// var counter = 0;
 
-	project.innerHTML= description[counter][0];
-	projectName.innerHTML= description[counter][0];
-	intro.innerHTML = description[counter][1];
-	tech.innerHTML = description[counter][2];
-	projectImg.setAttribute('src', imgPath[0]);
-	projectDemo.setAttribute('src', imgPath[0]);
+	// project.innerHTML= description[counter][0];
+	// projectName.innerHTML= description[counter][0];
+	// intro.innerHTML = description[counter][1];
+	// tech.innerHTML = description[counter][2];
+	// projectImg.setAttribute('src', imgPath[0]);
+	// projectDemo.setAttribute('src', imgPath[0]);
 
-	$(".next-project").click(function () {
-		counter++;
-		if(counter > 6){
-			counter=0;
-		}
-		project.innerHTML= description[counter][0];
-		projectName.innerHTML= description[counter][0];
-		intro.innerHTML = description[counter][1];
-		tech.innerHTML = description[counter][2];
-		projectImg.setAttribute('src', imgPath[counter]);
-		projectDemo.setAttribute('src', imgPath[counter]);
-	});
+	// $(".next-project").click(function () {
+	// 	counter++;
+	// 	if(counter > 6){
+	// 		counter=0;
+	// 	}
+	// 	project.innerHTML= description[counter][0];
+	// 	projectName.innerHTML= description[counter][0];
+	// 	intro.innerHTML = description[counter][1];
+	// 	tech.innerHTML = description[counter][2];
+	// 	projectImg.setAttribute('src', imgPath[counter]);
+	// 	projectDemo.setAttribute('src', imgPath[counter]);
+	// });
 
-		$("#previous-project").click(function () {
-		    counter--;
-		if(counter < 0){
-			counter=6;
-		}
-		project.innerHTML= description[counter][0];
-		projectName.innerHTML= description[counter][0];
-		intro.innerHTML = description[counter][1];
-		tech.innerHTML = description[counter][2];
-		projectImg.setAttribute('src', imgPath[counter]);
-		projectDemo.setAttribute('src', imgPath[counter]);
-	});
+	// 	$("#previous-project").click(function () {
+	// 	    counter--;
+	// 	if(counter < 0){
+	// 		counter=6;
+	// 	}
+	// 	project.innerHTML= description[counter][0];
+	// 	projectName.innerHTML= description[counter][0];
+	// 	intro.innerHTML = description[counter][1];
+	// 	tech.innerHTML = description[counter][2];
+	// 	projectImg.setAttribute('src', imgPath[counter]);
+	// 	projectDemo.setAttribute('src', imgPath[counter]);
+	// });
 });

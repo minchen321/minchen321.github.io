@@ -22,6 +22,15 @@
 	#right-bubble p{
 		font-size: 1.8rem;
 	}
+	#about-web-design figcaption {
+	    font-size: 1.2rem;
+	}
+	#code p, #multi-lines{
+		font-size: 1.5rem;
+	}
+	.back-to-about{
+		font-size: 1.5rem;
+	}
 }
 @media only screen and (max-width: 991px) {
 	#left-bubble{
@@ -40,6 +49,32 @@
 	}
 	#right-bubble p{
 		font-size: 1.5rem;
+	}
+	/* ----- web developer page ----- */
+	#front-end-developer{
+		height: 130vh;
+	}
+	#concept{
+		padding: 2vh 4vw;
+	}
+	#developer-img{
+		text-align: center;
+		position: absolute;
+		top: 100vh;
+		right: 0;
+		height: 40vh;
+		background-color:#5876b3;
+		width: 100vw;
+	}
+	#about-web-design{
+		position: absolute;
+		top: 140vh;
+		left: 0;
+		width:100vw;
+	}
+	#developer-img img{
+		width:auto;
+		height: 40vh;
 	}
 }
 @media only screen and (max-width: 850px) {
@@ -68,7 +103,21 @@
     }
 }
 @media only screen and (max-width: 767px) {
-
+	#about-web-design h2{
+		font-size: 2rem;
+	}
+	#concept{
+		padding: 2vh 0vw;
+	}
+	#code p, #multi-lines{
+		font-size: 1.3rem;
+	}
+	.back-to-about{
+		font-size: 1.3rem;
+	}	
+	.developer-icons {
+	    width: 6rem;
+	} 
 }
 @media only screen and (max-width: 575px) {
 	#moving-helicopter{
@@ -92,6 +141,15 @@
 	#right-bubble p{
 		font-size: 1rem;
 	}	
+	#front-end-developer {
+	    height: 140vh;
+	}
+	.developer-icons {
+	    width: 5rem;
+	} 	
+	.back-to-about {
+	    margin-top: 6vh;
+	}
 }
 @media only screen and (max-width: 414px) {
 	#about-author{
@@ -111,6 +169,16 @@
     	margin-left: 55%;
 
     }
+    #front-end-developer {
+	    height: 150vh;
+	}
+	#about-web-design figcaption {
+	    font-size: 1rem;
+	}
+	#about-web-design .col-sm-4{
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 @media only screen and (max-width: 375px) {
 

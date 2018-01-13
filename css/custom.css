@@ -9,7 +9,7 @@ body {
 	color: #000000;
 	background-color: #ffffff;
 }	
-p, li{
+p, li, figcaption, #multi-lines{
 	font-family: 'Pangolin', Arial, sans-serif;
 	font-size: 1rem;	
 }
@@ -115,6 +115,9 @@ footer {
     padding: 0;
     -webkit-animation-iteration-count: infinite;
 }
+.more-btn:focus{
+	outline:none;
+}	
 #left-bubble{
 	text-align: center;
 	width: 25vw;
@@ -146,17 +149,67 @@ footer {
 #right-bubble p{
 	font-size: 2.2vw;
 }
+/* ---- about-web-design --- */
 #front-end-developer{
 	height: 100vh;
 }
-#front-end-developer .row:first-child{
-	height: 100vh;
+#about-web-design{
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	width:67vw;
+}
+#about-web-design h2{
+	padding-top: 7vh;
+	color: #5876b3;
+	font-size: 2.5rem;
+}
+#concept{
+	padding: 2vh 7vw;
+}
+.developer-icons{
+	width: 13vw;
+	height: auto;
+}
+#about-web-design figcaption{
+	padding-top: 2vh;
+	font-size: 1.5rem;
+	color: #5876b3;
+}
+#code{
+	padding: 2vh 2vw 0 9vw;
+}
+#code p, #multi-lines{
+	color: #5876b3;
+	font-size: 1.7rem;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+#multi-lines{
+	padding-left:4vw;
+}
+.back-to-about{
+	padding: 1vw;
+	background-color: transparent;
+	border:none;
+	font-size: 1.7rem;
+}
+.back-to-about:focus, .back-to-about:focus{
+	background-color: transparent;
+	border:none;
+	outline: none;
 }
 #developer-img{
-	background-image: url('../img/about/web-developer.jpg');
-	background-repeat: no-repeat;
-	background-size: auto 100vh;
-
+	position: absolute;
+	top: 100vh;
+	right: 0;
+	height: 100vh;
+	background-color:#5876b3;
+	width: 33vw;
+}
+#developer-img img{
+	width:33vw;
+	height: auto;
 }
 /*#about #roles button{
 	background-color: #FFFFFF;
