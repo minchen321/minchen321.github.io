@@ -156,10 +156,10 @@
 		background-size: auto 70vh;
 	}
 	#left-bubble {
-	    margin-top: 30%;
+	    margin-top: 25%;
 	    margin-left: 1%;
 	    padding-top: 40px;
-	    width: 41vw;
+	    width: 43vw;
 	}
 	#right-bubble {
     	width: 42vw;
@@ -170,7 +170,7 @@
 
     }
     #front-end-developer {
-	    height: 150vh;
+	    height: 160vh;
 	}
 	#about-web-design .row{
 		margin: 0;
