@@ -63,7 +63,7 @@
 		top: 100vh;
 		right: 0;
 		height: 40vh;
-		background-color:#5876b3;
+		background-image: url("../img/about/blue-stroke-horizontal.jpg");
 		width: 100vw;
 	}
 	#about-web-design{
@@ -172,6 +172,9 @@
     #front-end-developer {
 	    height: 150vh;
 	}
+	#about-web-design .row{
+		margin: 0;
+	}	
 	#about-web-design figcaption {
 	    font-size: 1rem;
 	}
