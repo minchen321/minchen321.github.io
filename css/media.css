@@ -142,9 +142,6 @@
 	#front-end-developer {
 	    height: 140vh;
 	}
-	#about-web-design h2 {
-    	padding-top: 1.5rem;
-    }	
 	.developer-icons {
 	    width: 5rem;
 	} 	
@@ -173,6 +170,9 @@
     #front-end-developer {
 	    height: 175vh;
 	}
+	#about-web-design h2 {
+    	padding-top: 10px;
+    }	
 	#about-web-design .row{
 		margin: 0;
 	}	
