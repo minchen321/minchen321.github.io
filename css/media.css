@@ -59,16 +59,12 @@
 	}
 	#developer-img{
 		text-align: center;
-		position: absolute;
-		right: 0;
 		height: 40vh;
 		background-image: url("../img/about/blue-stroke-horizontal.jpg");
 		width: 100vw;
 	}
 	#about-web-design{
-		position: absolute;
 		top: 140vh;
-		left: 0;
 		width:100vw;
 	}
 	#about-web-design h2 {
@@ -158,7 +154,7 @@
 }
 @media only screen and (max-width: 414px) {
 	#about-author{
-		background-size: auto 70vh;
+		background-size: auto 60vh;
 	}
 	#left-bubble {
 	    margin-top: 25%;
@@ -189,5 +185,8 @@
 	}
 }
 @media only screen and (max-width: 375px) {
+	#front-end-developer {
+	    height: 190vh;
+	}
 
 }	
