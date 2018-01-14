@@ -156,7 +156,6 @@ footer {
 #about-web-design{
 	background-color: #ffffff;
 	position: absolute;
-	top: 100vh;
 	left: 0;
 	width:67vw;
 }
@@ -202,7 +201,6 @@ footer {
 }
 #developer-img{
 	position: absolute;
-	top: 100vh;
 	right: 0;
 	height: 100vh;
 	background-image: url("../img/about/blue-stroke-vertical.jpg");
