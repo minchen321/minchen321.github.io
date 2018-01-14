@@ -59,12 +59,12 @@
 	}
 	#developer-img{
 		text-align: center;
-		height: 40vh;
+		height: 40%;
 		background-image: url("../img/about/blue-stroke-horizontal.jpg");
 		width: 100vw;
 	}
 	#about-web-design{
-		top: 140vh;
+		top: 140%;
 		width:100vw;
 	}
 	#about-web-design h2 {
