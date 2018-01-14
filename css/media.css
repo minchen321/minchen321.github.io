@@ -168,13 +168,19 @@
 
     }
     #front-end-developer {
-	    height: 175vh;
+	    height: 165vh;
 	}
 	#about-web-design h2 {
     	padding-top: 10px;
     }	
 	#about-web-design .row{
 		margin: 0;
+	}	
+	#code p, #multi-lines{
+		font-size: 1rem;
+	}
+	.back-to-about{
+		font-size: 1rem;
 	}	
 	#about-web-design figcaption {
 	    font-size: 1rem;
@@ -185,8 +191,5 @@
 	}
 }
 @media only screen and (max-width: 375px) {
-	#front-end-developer {
-	    height: 190vh;
-	}
 
 }	
