@@ -72,7 +72,7 @@
     }	
 	#developer-img img{
 		width:auto;
-		height: 40vh;
+		height: 40%;
 	}
 }
 @media only screen and (max-width: 850px) {
@@ -168,7 +168,7 @@
 
     }
     #front-end-developer {
-	    height: 165vh;
+	    height: 145vh;
 	}
 	#about-web-design h2 {
     	padding-top: 10px;
@@ -191,5 +191,7 @@
 	}
 }
 @media only screen and (max-width: 375px) {
-
+    #front-end-developer {
+	    height: 150vh;
+	}
 }	
