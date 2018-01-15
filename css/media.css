@@ -62,6 +62,7 @@
 		height: 40%;
 		background-image: url("../img/about/blue-stroke-horizontal.jpg");
 		width: 100vw;
+		margin-bottom: 5px;
 	}
 	#about-web-design{
 		z-index: 101;
@@ -71,10 +72,10 @@
 	#about-web-design h2 {
     	padding-top: 2rem;
     }	
-	#developer-img img{
+/*	#developer-img img{
 		width:auto;
 		height: 37vh;
-	}
+	}*/
 }
 @media only screen and (max-width: 850px) {
 	#about-author{

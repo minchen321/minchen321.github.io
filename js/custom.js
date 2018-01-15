@@ -69,36 +69,37 @@ $(document).ready(function() {
 
 
 // ------------------- about me section ----------------------
+	var currentHeight = $(window).height()*4/10;
+	var currentWidth = $(window).width()*33/100;
+	console.log(currentHeight);
+
 	var illustration= document.getElementById("illustration");
 	var mq = window.matchMedia("(max-width: 991px)");
 	if(mq.matches) {
 	    illustration.setAttribute("src", "img/about/web-developer-mobile.png");
+	    illustration.setAttribute("height", currentHeight);
+	    illustration.setAttribute("width", "auto");
 	} else {
 	    illustration.setAttribute("src", "img/about/web-developer.png");
+	   	illustration.setAttribute("height", "auto");
+	   	illustration.setAttribute("width", currentWidth);
 	}
 
 	mq.addListener(function(changed) {
 	    if(changed.matches) {
-	    	 illustration.setAttribute("src", "img/about/web-developer-mobile.png");
+	    	illustration.setAttribute("src", "img/about/web-developer-mobile.png");
+	    	illustration.setAttribute("height", currentHeight);
+	    	illustration.setAttribute("width", "auto");
 	    } else {
 	        illustration.setAttribute("src", "img/about/web-developer.png");
+	        illustration.setAttribute("height", "auto");
+	     	illustration.setAttribute("width", currentWidth);   
 	    }
 	});
 
-// ------------------- about me section ----------------------
-	// var developerSection = document.getElementById("developer-img");
-	// var currentHeight = 0;
+// ------------------- front end developer section ----------------------
 
-	// currentHeight = $('#developer-img').height();
-	// console.log(currentHeight);
-	// var pageWidth = $(window).width();
-	// var illustration= document.getElementById("illustration");
-	// if(pageWidth < 992) {
-	// 	illustration.setAttribute("src", "img/about/left-bubble.png");
-	// }
-	// else{
-	// 	illustration.setAttribute("src", "img/about/web-developer.png");
-	// }
+
 /* -----------------------------  Portfolio Projects ----------------------------- */		
 	// var projectDemo = document.getElementById('project-demo');
 	// var projectName = document.getElementById('projectName');
