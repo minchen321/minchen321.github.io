@@ -158,6 +158,7 @@ footer {
 	position: absolute;
 	left: 0;
 	width:67vw;
+	z-index: 199;
 }
 #about-web-design h2{
 	padding-top: 7vh;
@@ -207,101 +208,12 @@ footer {
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 33vw;
+	overflow: hidden;
 }
-/*#developer-img img{
+#developer-img img{
 	width:33vw;
 	height: auto;
-}*/
-/*#about #roles button{
-	background-color: #FFFFFF;
-	border: 2px solid #5876b3;
-	font-size: 1.75rem;
-	padding:0rem 0.5rem 0rem 0.5rem;
-	border-radius: 5px;
-	margin-bottom: 0.5rem;
 }
-
-#about #roles button:hover{
-	background-color:#5876b3;
-	color:#FFFFFF;
-}
-#about #roles button:focus{
-	outline: none;
-}
-
-#developer-button{
-	-webkit-animation-duration: 7s;
-	-webkit-animation-iteration-count: infinite;
-
-}
-#me-button{
-	-webkit-animation-duration:7s;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-delay: 0.6s;
-}
-#me-slide button, #developer-slide button{
-	background-color: transparent;
-	border:none;
-	font-size: 1.5rem;
-}
-#me-slide button:focus, #developer-slide button:focus{
-	background-color: transparent;
-	border:none;
-	font-size: 1.5rem;
-}
-#developer-intro{
-	padding-top: 1rem;
-	background-image: url("../img/watercolor.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-#developer-slide p{
-	font-size: 1.25rem;
-	line-height: 1.25;
-}
-#code{
-	margin-left:3rem;
-}
-.multi-lines{
-	width:60%;
-}
-.developer-icons{
-	width: 12.5rem;
-	height:auto;
-	padding-top:4rem;
-	padding-bottom: 1rem;
-	display: unset;
-}
-#bg{
-	background-image: url("../img/watercolor.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-    background-position: center top;
-}
-
-#me-slide{	
-	height: 40rem;
-	margin-bottom: 3rem;
-}
-#self-intro{
-	text-align: left;
-	margin:5rem 0;
-	padding: 0 10rem;
-}
-#self-intro p{
-	font-size: 1.25rem;
-}
-#self-intro a{
-	color: #5876b3;
-}	
-#contact-me{
-	-webkit-animation-duration:15s;
-	-webkit-animation-iteration-count: infinite;
-	padding-left: 0.5rem;
-}
-#right-button{
-	text-align: right;
-}*/
 /* ---------------------- portfolio ---------------------------- */
 #portfolio h2{
 	margin-bottom: 2rem;

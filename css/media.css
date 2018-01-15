@@ -50,7 +50,7 @@
 	#right-bubble p{
 		font-size: 1.5rem;
 	}
-	/* ----- web developer page ----- */
+/* ----- web developer page ----- */
 	#front-end-developer{
 		height: 130vh;
 	}
@@ -72,10 +72,10 @@
 	#about-web-design h2 {
     	padding-top: 2rem;
     }	
-/*	#developer-img img{
+	#developer-img img{
 		width:auto;
-		height: 37vh;
-	}*/
+		height: 40vh;
+	}
 }
 @media only screen and (max-width: 850px) {
 	#about-author{

@@ -67,37 +67,26 @@ $(document).ready(function() {
         $("#about-author").show();
     });
 
-
 // ------------------- about me section ----------------------
-	var currentHeight = $(window).height()*4/10;
-	var currentWidth = $(window).width()*33/100;
-	console.log(currentHeight);
+	// var currentHeight = $(window).height()*4/10;
 
-	var illustration= document.getElementById("illustration");
+	var illustration= document.querySelector("#developer-img img");
 	var mq = window.matchMedia("(max-width: 991px)");
 	if(mq.matches) {
 	    illustration.setAttribute("src", "img/about/web-developer-mobile.png");
-	    illustration.setAttribute("height", currentHeight);
-	    illustration.setAttribute("width", "auto");
+	    // illustration.setAttribute("height", currentHeight);
 	} else {
 	    illustration.setAttribute("src", "img/about/web-developer.png");
-	   	illustration.setAttribute("height", "auto");
-	   	illustration.setAttribute("width", currentWidth);
 	}
 
 	mq.addListener(function(changed) {
 	    if(changed.matches) {
 	    	illustration.setAttribute("src", "img/about/web-developer-mobile.png");
-	    	illustration.setAttribute("height", currentHeight);
-	    	illustration.setAttribute("width", "auto");
+	    	// illustration.setAttribute("height", currentHeight);
 	    } else {
-	        illustration.setAttribute("src", "img/about/web-developer.png");
-	        illustration.setAttribute("height", "auto");
-	     	illustration.setAttribute("width", currentWidth);   
+	        illustration.setAttribute("src", "img/about/web-developer.png");  
 	    }
 	});
-
-// ------------------- front end developer section ----------------------
 
 
 /* -----------------------------  Portfolio Projects ----------------------------- */		
