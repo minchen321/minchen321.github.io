@@ -68,8 +68,7 @@ $(document).ready(function() {
     });
 
 
-
-
+// ------------------- about me section ----------------------
 	var illustration= document.getElementById("illustration");
 	var mq = window.matchMedia("(max-width: 991px)");
 	if(mq.matches) {
@@ -85,6 +84,13 @@ $(document).ready(function() {
 	        illustration.setAttribute("src", "img/about/web-developer.png");
 	    }
 	});
+
+// ------------------- about me section ----------------------
+	// var developerSection = document.getElementById("developer-img");
+	// var currentHeight = 0;
+
+	// currentHeight = $('#developer-img').height();
+	// console.log(currentHeight);
 	// var pageWidth = $(window).width();
 	// var illustration= document.getElementById("illustration");
 	// if(pageWidth < 992) {
