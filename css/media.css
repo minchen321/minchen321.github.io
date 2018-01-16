@@ -79,7 +79,7 @@
 		height: 40vh;
 	}
 	#about-min{
-		height: 1000px;
+		height: 130vh;
 	}
 	#my-picture{
 		height: 60%;
@@ -128,7 +128,7 @@
 	#introduction{
 		height: 75%;
 		top: 145%;
-		background-size: 100vw 75vh;
+		background-size: 100vw 100%;
 		background-position: center;
 	}
 	#introduction p{
@@ -229,6 +229,7 @@
 	#introduction p{
 		font-size: 1.1rem;
 	}
+
 }
 @media only screen and (max-width: 375px) {
     #front-end-developer {
