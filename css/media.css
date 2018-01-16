@@ -235,9 +235,6 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
-	#introduction {
-	    background-size: 100vw 450px;
-	}
 	#introduction p{
 		font-size: 1.1rem;
 	}
