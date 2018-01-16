@@ -183,7 +183,7 @@
 	    margin-top: 6vh;
 	}
 	#about-min{
-		height: 100vh;
+		height: 100%;
 	}
 	#my-picture{
 		height: 40%;
@@ -234,6 +234,9 @@
 	#about-web-design .col-sm-4{
 		padding-left: 0;
 		padding-right: 0;
+	}
+	#introduction {
+	    background-size: 100vw 450px;
 	}
 	#introduction p{
 		font-size: 1.1rem;
