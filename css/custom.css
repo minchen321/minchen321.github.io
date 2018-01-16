@@ -229,13 +229,6 @@ footer {
 	background-position: center;
 	width: 33vw;
 }
-/*#blue-bg{
-	position: absolute;
-	right: 0;
-	height: 100vh;
-	width: 67vw;
-	background-color: #7593d2;
-}*/
 #introduction{
 	position: absolute;
 	right: 0;
@@ -254,12 +247,12 @@ footer {
 	font-size: 1.7rem;
 	color: #ffffff;
 }
-#right-button{
-	position: absolute;
-	right:0;
-	bottom: 0;
-	z-index: 200;
-}
+#right-button {
+    position: absolute;
+    right: 0;
+    top: 190%;
+    z-index: 200;
+}    
 #right-button button{
 	color: #ffffff;
 }

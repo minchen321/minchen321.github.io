@@ -97,6 +97,9 @@
 	#introduction p{
 		width: 70vw;
 	}
+	#right-button {
+	    top: 220%;
+	}
 }
 @media only screen and (max-width: 850px) {
 	#about-author{
@@ -134,6 +137,7 @@
 	#introduction p{
 		font-size: 1.4rem;
 	}
+
 }
 @media only screen and (max-width: 767px) {
 	#about-web-design h2{
@@ -228,6 +232,9 @@
 	}
 	#introduction p{
 		font-size: 1.1rem;
+	}
+	#introduction{
+		height: 85%;
 	}
 
 }
