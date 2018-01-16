@@ -87,15 +87,16 @@
 		background-position: 0% 5%;
 		width: 100vw;
 	}
-	#blue-bg{
+/*	#blue-bg{
 		height: 60%;
 		width: 100vw;
 		top:160%;
-	}
+	}*/
 	#introduction{
-		height: 60vh;
+		height: 60%;
+		top: 160%;
 		width: 100vw;
-		background-image: url("../img/about/word-bubble-mobile.png");
+		background-image: url("../img/about/word-bubble-mobile-1.jpg");
 		background-size: 100vw 60vh;
 	}
 	#introduction p{
@@ -182,7 +183,7 @@
 	.back-to-about {
 	    margin-top: 6vh;
 	}
-	#about-min{
+/*	#about-min{
 		height: 100%;
 	}
 	#my-picture{
@@ -190,7 +191,7 @@
 	}
 	#blue-bg{
 		top:140%;
-	}
+	}*/
 	#introduction p{
 		font-size: 1.2rem;
 	}

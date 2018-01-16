@@ -97,7 +97,7 @@ footer {
 	background-image: url('../img/about/about-me-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
-  -webkit-background-size: cover;
+  	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: auto 100vh; 
@@ -228,17 +228,19 @@ footer {
 	background-position: center;
 	width: 33vw;
 }
-#blue-bg{
+/*#blue-bg{
 	position: absolute;
 	right: 0;
 	height: 100vh;
 	width: 67vw;
 	background-color: #7593d2;
-}
+}*/
 #introduction{
+	position: absolute;
+	right: 0;
 	height: 100vh;
 	width: 67vw;
-	background-image: url("../img/about/word-bubble.png");
+	background-image: url("../img/about/word-bubble-1.jpg");
 	background-repeat: no-repeat;
 	background-size: 67vw 100vh;
 	background-position: center;	
