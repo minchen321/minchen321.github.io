@@ -127,16 +127,6 @@
     	width: 30vw;
     	margin-left: 63%;    
     }
-	#introduction{
-		background-position: top;
-		background-size: 100vw 65vh;
-	}
-	#introduction p{
-		font-size: 1.4rem;
-	}
-
-
-
 	#my-picture{
 		height: 45%;
 	}
@@ -145,7 +135,11 @@
 		top: 145%;
 		width: 100vw;
 		background-image: url("../img/about/word-bubble-mobile-1.jpg");
-		background-size: 100vw 70vh;
+		background-size: 100vw 75vh;
+		background-position: bottom;
+	}
+	#introduction p{
+		font-size: 1.4rem;
 	}
 }
 @media only screen and (max-width: 767px) {
