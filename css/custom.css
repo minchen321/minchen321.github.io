@@ -217,6 +217,7 @@ footer {
 /* ---------------------- about Min ---------------------------- */
 #about-min{
 	height: 100vh;
+	background-color: #5876b3;
 }
 #my-picture{
 	position: absolute;

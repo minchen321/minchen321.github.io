@@ -136,7 +136,7 @@
 		width: 100vw;
 		background-image: url("../img/about/word-bubble-mobile-1.jpg");
 		background-size: 100vw 75vh;
-		background-position: bottom;
+		background-position: center;
 	}
 	#introduction p{
 		font-size: 1.4rem;
