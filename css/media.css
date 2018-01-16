@@ -31,6 +31,9 @@
 	.back-to-about{
 		font-size: 1.5rem;
 	}
+	#introduction p{
+		font-size: 1.5rem;
+	}
 }
 @media only screen and (max-width: 991px) {
 	#left-bubble{
@@ -50,7 +53,6 @@
 	#right-bubble p{
 		font-size: 1.5rem;
 	}
-/* ----- web developer page ----- */
 	#front-end-developer{
 		height: 130vh;
 	}
@@ -75,6 +77,29 @@
 	#developer-img img{
 		width:auto;
 		height: 40vh;
+	}
+	#about-min{
+		height: 120vh;
+	}
+	#my-picture{
+		height: 60%;
+		background-image: url("../img/about/min-mobile.jpg");
+		background-position: 0% 5%;
+		width: 100vw;
+	}
+	#blue-bg{
+		height: 60%;
+		width: 100vw;
+		top:160%;
+	}
+	#introduction{
+		height: 60vh;
+		width: 100vw;
+		background-image: url("../img/about/word-bubble-mobile.png");
+		background-size: 100vw 60vh;
+	}
+	#introduction p{
+		width: 70vw;
 	}
 }
 @media only screen and (max-width: 850px) {
@@ -101,6 +126,13 @@
     	width: 30vw;
     	margin-left: 63%;    
     }
+	#introduction{
+		background-position: top;
+		background-size: 100vw 65vh;
+	}
+	#introduction p{
+		font-size: 1.4rem;
+	}
 }
 @media only screen and (max-width: 767px) {
 	#about-web-design h2{
@@ -150,6 +182,18 @@
 	.back-to-about {
 	    margin-top: 6vh;
 	}
+	#about-min{
+		height: 100vh;
+	}
+	#my-picture{
+		height: 40%;
+	}
+	#blue-bg{
+		top:140%;
+	}
+	#introduction p{
+		font-size: 1.2rem;
+	}
 }
 @media only screen and (max-width: 414px) {
 	#about-author{
@@ -191,9 +235,15 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
+	#introduction p{
+		font-size: 1.1rem;
+	}
 }
 @media only screen and (max-width: 375px) {
     #front-end-developer {
 	    height: 145vh;
+	}
+	#introduction p{
+		font-size: 1rem;
 	}
 }	

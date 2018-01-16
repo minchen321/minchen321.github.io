@@ -28,38 +28,18 @@ $(document).ready(function() {
 		});
 	});
 /* -----------------------------   about ----------------------------- */	
-	// $("#roles").show();
-	// $("#developer-slide").hide();
-	// $("#me-slide").hide();	
-
- //    $("#developer-button").click(function(){
- //        $("#roles").hide();
- //        $("#developer-slide").show();
- //    });
-
- //    $("#me-button").click(function () {
- //      $("#roles").hide();
- //      $("#me-slide").show();
-	// });
- //    $("#prev").click(function(){
- //    	$("#me-slide").hide();
- //        $("#roles").show();
- //    });	
- //    $("#back").click(function(){
- //    	$("#developer-slide").hide();
- //        $("#roles").show();
- //    });
-
-
-
-
     $("#about-author").show();
 	$("#front-end-developer").hide();
-	$("#me-slide").hide();
+	$("#about-min").hide();
 
 	$("#developer-btn").click(function(){
 	    $("#about-author").hide();
 	    $("#front-end-developer").show();
+    });
+
+	$("#min-btn").click(function(){
+	    $("#about-author").hide();
+	    $("#about-min").show();
     });
 
     $("#back").click(function(){
@@ -67,6 +47,10 @@ $(document).ready(function() {
         $("#about-author").show();
     });
 
+    $("#previous").click(function(){
+    	$("#about-min").hide();
+        $("#about-author").show();
+    });
 // ------------------- about me section ----------------------
 	// var currentHeight = $(window).height()*4/10;
 
