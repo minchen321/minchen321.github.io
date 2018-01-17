@@ -17,6 +17,11 @@ imgPath[4] = ["img/web-projects/smart-capital.gif"];
 imgPath[5] = ["img/web-projects/movie-quiz.gif"]
 imgPath[6] = ["img/web-projects/recipebook.gif"]
 
+jQuery(function($) {'use strict';
+    //Initiat WOW JS
+    new WOW().init();
+}); 
+
 $(document).ready(function() {
 //------------------- home ------------------------------
 	$(function(){
@@ -34,21 +39,21 @@ $(document).ready(function() {
 
 	$("#developer-btn").click(function(){
 	    $("#about-author").hide();
-	    $("#front-end-developer").show();
+	    $("#front-end-developer").show('slide', {direction:'left'}, 1000);
     });
 
 	$("#min-btn").click(function(){
 	    $("#about-author").hide();
-	    $("#about-min").show();
+	    $("#about-min").show('slide', {direction:'right'}, 1000);
     });
 
     $("#back").click(function(){
-    	$("#front-end-developer").hide();
+    	$("#front-end-developer").hide('slide', {direction:'left'}, 1000);
         $("#about-author").show();
     });
 
     $("#previous").click(function(){
-    	$("#about-min").hide();
+    	$("#about-min").hide('slide', {direction:'right'}, 1000);
         $("#about-author").show();
     });
 // ------------------- about me section ----------------------

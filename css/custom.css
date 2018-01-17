@@ -86,8 +86,6 @@ footer {
 	text-align: center;
 }
 .masthead .intro-body h1{
-/*	position: absolute;
-	top:-10%;*/
 	font-size: 2.5rem;
 	padding-bottom: 5rem;
 }	
@@ -234,7 +232,7 @@ footer {
 	right: 0;
 	height: 100vh;
 	width: 67vw;
-	background-image: url("../img/about/word-bubble-1.jpg");
+	background-image: url("../img/about/word-bubble.jpg");
 	background-repeat: no-repeat;
 	background-size: 67vw 100vh;
 	background-position: center;	
@@ -257,7 +255,12 @@ footer {
 	color: #ffffff;
 }
 /* ---------------------- portfolio ---------------------------- */
-#portfolio h2{
+
+
+
+
+
+/*#portfolio h2{
 	margin-bottom: 2rem;
 }
 #imac{
@@ -296,10 +299,6 @@ footer {
 	font-size: 1.2rem;
 }
 #projectModal{
-/*	background-image: url("../img/watercolor.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center top;*/
 	background-color: #f8f9fa;
 }
 .modal-body {
@@ -313,7 +312,7 @@ footer {
 }    
 .close i{
 	color: #5876b3;
-}
+}*/
 /* ---------------------- contact ---------------------------- */
 #contact{
 	  background-image: url("../img/watercolor.jpg");
@@ -333,14 +332,6 @@ footer {
 	height: 3.5rem;
 	width: 3.5rem;
 }
-
-
-
-
-
-
-
-
 /* ---------------------- Resume ---------------------------- */
 #personal-info{
 	padding-top: 5rem;

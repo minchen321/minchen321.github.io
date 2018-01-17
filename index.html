@@ -2,20 +2,18 @@
 <html lang="en">
 
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Min Chen's Personal Website">
     <meta name="keywords" content="Web Developer, Graphic Designer">
     <meta name="author" content="Min Chen">
-
     <title>Min Chen</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
 
@@ -77,10 +75,10 @@
       <!-- about me -->
       <div id="about-author" class="text-center">
         <h2 color="blue">About Me</h2>
-        <div id="left-bubble" class="wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="500ms">
+        <div id="left-bubble" class="wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="400ms">
           <p>I'm a front-end<br>developer. <button id="developer-btn" class="animated pulse more-btn"><u>More</u></button></p>
         </div>
-        <div id="right-bubble" class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="500ms">
+        <div id="right-bubble" class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="400ms">
           <p>I'm Min. <button id="min-btn" class="animated pulse more-btn"><u>More</u></button></p>
         </div>
       </div>
@@ -106,7 +104,7 @@
             <p>var Min &#61; &#123;</p>
               <div id="multi-lines">Programming&#95;experience: 2&#43; years,<br>
                 Operating&#95;systems&#58; &#91;Windows, Mac_OS&#93;,<br>
-                Programming&#58; &#91;HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, Java&#93;,<br>
+                Programming&#58; &#91;HTML, CSS, Bootstrap, jQuery, JavaScript, Node.js, Express.js, Java&#93;,<br>
                 Softwares&#58; &#91;Sublime, Eclipse, Adobe Experience Design, Photoshop, Illustrator, Microsoft Office&#93;
               </div>
             <p>&#125;&#59;</p>
@@ -122,18 +120,22 @@
       <!-- about Min-->
       <div id="about-min">
         <div id="my-picture"></div>
- 
           <div id="introduction">
             <p>I’m a junior studying Graphic Design and Computer Science at Queens College, CUNY. I'm currently a Front-End Developer at Biscuit &amp; Chai, LLC. I enjoy solving complex problems with creative designs. I'm always looking for opportunities to expand my skills as a web developer. If you have any cool projects or opportunities. Let’s get in touch!</p>
           </div>
-            <div id="right-button">
-              <button id="previous" class="back-to-about">Back <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-            </div>
-
+          <div id="right-button">
+            <button id="previous" class="back-to-about">Back <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
       </div>
+    </section>   
+
+    <section id="portfolio">
+      
+      
+    </section>
 
 
-    </section>      
+
 
     <!-- Download Section -->
 <!--     <section id="portfolio" class="text-center">
@@ -215,28 +217,23 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
     <script type="text/javascript" src="js/typed.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/grayscale.js"></script>
+    <script type="text/javascript" src="js/grayscale.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
       $(window).on('load', function(){
           $(".hameid-loader-overlay").hide();  
       });
-    </script>
-    <script type="text/javascript" src="js/wow.min.js"></script>
-    <script type="text/javascript">
-      jQuery(function($) {'use strict';
-      //Initiat WOW JS
-      new WOW().init();
-    }); 
     </script>
 
   </body>
