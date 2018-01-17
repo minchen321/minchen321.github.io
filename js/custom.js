@@ -1,21 +1,20 @@
-/* -----------------------------  Portfolio Projects ----------------------------- */	
 var description = new Array();
-description[0] = ["DishFinder", "Dish Finder is a JavaScript web application. It allows the users to write/see reviews for a specific item on a restaurant menu.", "HTML, CSS, JavaScript, jQuery, Bootstrap, Node.js, Handlebars.js(template engine), MongoDB"];
-description[1] = ["Payoment", "A company website for Payoment Merchant Serivices", "HTML, CSS, JavaScript, Bootstrap"];
-description[2] = ["Surtom", "A company website for Surtom Construction Contracting Corp.", "HTML, CSS, JavaScript, jQuery, Bootstrap"];
-description[3] = ["CUNYPlus", "A communication platform to connect CUNY students by their areas of study.", "HTML, CSS, JavaScript, jQuery, Bootstrap"];
-description[4] = ["Smart Capital", "A company website for Smart Capital Corporation.", "HTML, CSS, JavaScript, Wordpress"];
-description[5] = ["Movie Quiz", "A Node.js movie quiz game with responsive front-end design.", "HTML, CSS, JavaScript, jQuery, Bootstrap"];
-description[6] = ["RecipeBook", "A JavaScript web application allows users to manage their online recipes.", "HTML, CSS, JavaScript, Node.js, Dust (template engine), Postgres"];
+description[0] = ["DishFinder", "HTML, CSS, JavaScript, jQuery, Bootstrap, Node.js, Express.js, Handlebars, MongoDB"];
+description[1] = ["Lumi Asian Fusion", "HTML, CSS, JavaScript, jQuery, Bootstrap"];
+description[2] = ["Boxing Gym", "HTML, CSS, JavaScript, jQuery, Bootstrap"];
+description[3] = ["Payoment", "HTML, CSS, JavaScript, jQuery, Bootstrap"];
+description[4] = ["Surtom Construction", "HTML, CSS, JavaScript, jQuery, Bootstrap"];
+description[5] = ["Smart Capital", "HTML, CSS, JavaScript, Wordpress"];
+description[6] = ["CUNYPlus", "HTML, CSS, JavaScript, jQuery, Bootstrap, Node.js, Express.js, Handlebars, MongoDB"];
 
 var imgPath = new Array();
-imgPath[0] = ["img/web-projects/dish-finder.gif"];
-imgPath[1] = ["img/web-projects/payoment.gif"];
-imgPath[2] = ["img/web-projects/surtom.gif"];
-imgPath[3] = ["img/web-projects/cunyplus.gif"];
-imgPath[4] = ["img/web-projects/smart-capital.gif"];
-imgPath[5] = ["img/web-projects/movie-quiz.gif"]
-imgPath[6] = ["img/web-projects/recipebook.gif"]
+imgPath[0] = ["img/portfolio/dish-finder.mp4"];
+imgPath[1] = ["img/portfolio/lumi.mp4"];
+imgPath[2] = ["img/portfolio/gym.mp4"];
+imgPath[3] = ["img/portfolio/payoment.mp4"];
+imgPath[4] = ["img/portfolio/surtom.mp4"];
+imgPath[5] = ["img/portfolio/smart-capital.mp4"]
+imgPath[6] = ["img/portfolio/cunyplus.mp4"]
 
 jQuery(function($) {'use strict';
     //Initiat WOW JS
@@ -26,12 +25,13 @@ $(document).ready(function() {
 //------------------- home ------------------------------
 	$(function(){
 		$("#head-title").typed({
-		    strings: ["Hi! I'm Min.", "I'm a creative web designer based in New York City."],
+		    strings: ["Hi! I'm Min.", "I'm a creative web developer based in New York City."],
 		    typeSpeed: 100,
 		    loop: true,
 		    startDelay: 100
 		});
 	});
+
 /* -----------------------------   about ----------------------------- */	
     $("#about-author").show();
 	$("#front-end-developer").hide();
@@ -56,14 +56,12 @@ $(document).ready(function() {
     	$("#about-min").hide('slide', {direction:'right'}, 1000);
         $("#about-author").show();
     });
-// ------------------- about me section ----------------------
-	// var currentHeight = $(window).height()*4/10;
 
+// ------------------- about me section ----------------------
 	var illustration= document.querySelector("#developer-img img");
 	var mq = window.matchMedia("(max-width: 991px)");
 	if(mq.matches) {
 	    illustration.setAttribute("src", "img/about/web-developer-mobile.png");
-	    // illustration.setAttribute("height", currentHeight);
 	} else {
 	    illustration.setAttribute("src", "img/about/web-developer.png");
 	}
@@ -71,52 +69,59 @@ $(document).ready(function() {
 	mq.addListener(function(changed) {
 	    if(changed.matches) {
 	    	illustration.setAttribute("src", "img/about/web-developer-mobile.png");
-	    	// illustration.setAttribute("height", currentHeight);
 	    } else {
 	        illustration.setAttribute("src", "img/about/web-developer.png");  
 	    }
 	});
 
+/* -----------------------------  Portfolio Projects ----------------------------- */	
+	var player = document.getElementById('videoPlayer');	
+	var projectImg = document.getElementById('demo-video');
+	var project = document.getElementById('project');
+	var tech = document.getElementById('tech-stack');
+	var counter = 0;
 
-/* -----------------------------  Portfolio Projects ----------------------------- */		
-	// var projectDemo = document.getElementById('project-demo');
-	// var projectName = document.getElementById('projectName');
-	// var projectImg = document.getElementById('project-img');
-	// var project = document.getElementById('project');
-	// var intro = document.getElementById('intro');
-	// var tech = document.getElementById('tech-stack');
-	// var counter = 0;
+	player.pause();
 
-	// project.innerHTML= description[counter][0];
-	// projectName.innerHTML= description[counter][0];
-	// intro.innerHTML = description[counter][1];
-	// tech.innerHTML = description[counter][2];
-	// projectImg.setAttribute('src', imgPath[0]);
-	// projectDemo.setAttribute('src', imgPath[0]);
+	project.innerHTML= description[counter][0];
+	tech.innerHTML = description[counter][1];
+	projectImg.src = imgPath[0];
 
-	// $(".next-project").click(function () {
-	// 	counter++;
-	// 	if(counter > 6){
-	// 		counter=0;
-	// 	}
-	// 	project.innerHTML= description[counter][0];
-	// 	projectName.innerHTML= description[counter][0];
-	// 	intro.innerHTML = description[counter][1];
-	// 	tech.innerHTML = description[counter][2];
-	// 	projectImg.setAttribute('src', imgPath[counter]);
-	// 	projectDemo.setAttribute('src', imgPath[counter]);
-	// });
+	player.load();
+    player.play();
 
-	// 	$("#previous-project").click(function () {
-	// 	    counter--;
-	// 	if(counter < 0){
-	// 		counter=6;
-	// 	}
-	// 	project.innerHTML= description[counter][0];
-	// 	projectName.innerHTML= description[counter][0];
-	// 	intro.innerHTML = description[counter][1];
-	// 	tech.innerHTML = description[counter][2];
-	// 	projectImg.setAttribute('src', imgPath[counter]);
-	// 	projectDemo.setAttribute('src', imgPath[counter]);
-	// });
+	$("#next-project").click(function () {
+		counter++;
+		if(counter > 6){
+			counter=0;
+		}
+		project.innerHTML= description[counter][0];
+		tech.innerHTML = description[counter][1];
+		player.pause();		
+		projectImg.src = imgPath[counter];
+		player.load();
+    	player.play();
+	});
+	$("#previous-project").click(function () {
+		counter--;
+		if(counter < 0){
+			counter=6;
+		}
+		project.innerHTML= description[counter][0];
+		tech.innerHTML = description[counter][1];
+		player.pause();	
+		projectImg.src = imgPath[counter];
+		player.load();
+    	player.play();
+	});
+
+
+      // var mp4Vid = document.getElementById('demo-video');
+
+      // player.pause();
+
+      // mp4Vid.src = "img/portfolio/payoment.mp4";
+
+      // player.load();
+      // player.play();
 });

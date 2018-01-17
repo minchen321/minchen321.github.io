@@ -255,11 +255,77 @@ footer {
 	color: #ffffff;
 }
 /* ---------------------- portfolio ---------------------------- */
-
-
-
-
-
+#portfolio{
+	margin-top: 5%;
+}
+#project-video{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 3px solid #000000;
+}  
+#project-video img{
+	width: 60vw;
+}	
+#project-video video{
+	width:60vw;
+	height:auto;
+	margin: 0;
+}
+#about-project{
+	padding: 0 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: black;
+	text-align: left;
+}
+#about-project h3{
+	font-size: 3rem;
+	color: #ffffff;
+	font-family: Arial, sans-serif;
+}
+#about-project h4{
+	font-size: 2rem;
+	color: #ffffff;
+	font-family: Arial, sans-serif;
+}
+#about-project p{
+	font-size: 1.2rem;
+	color: #ffffff;
+	font-family: Arial, sans-serif;
+}
+#previous-project{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width:50%;	
+}
+#next-project{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width:50%;
+}
+.portfolio-btn{
+	border:1px solid #000000;
+    background-image:none;
+    background-color:#2d2d2d;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #ffffff;
+    padding: 15px 0;
+}
+.portfolio-btn:hover{
+	background-color: #4c4c4c;
+}
+.portfolio-btn:focus{
+	outline: none;
+}
 /*#portfolio h2{
 	margin-bottom: 2rem;
 }

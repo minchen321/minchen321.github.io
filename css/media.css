@@ -158,6 +158,13 @@
 	.developer-icons {
 	    width: 6rem;
 	} 
+	#project-video img{
+		width: 80vw;
+	}	
+	#project-video video{
+		width:80vw;
+	}
+
 }
 @media only screen and (max-width: 575px) {
 	#moving-helicopter{
@@ -244,6 +251,12 @@
 	}
 	#right-button {
 	    top: 220%;
+	}
+	#project-video img{
+		width: 85vw;
+	}	
+	#project-video video{
+		width:85vw;
 	}
 
 }
