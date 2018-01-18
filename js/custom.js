@@ -39,22 +39,22 @@ $(document).ready(function() {
 
 	$("#developer-btn").click(function(){
 	    $("#about-author").hide();
-	    $("#front-end-developer").show('slide', {direction:'left'}, 1000);
+	    $("#front-end-developer").show('slide', {direction:'left'}, 800);
     });
 
 	$("#min-btn").click(function(){
 	    $("#about-author").hide();
-	    $("#about-min").show('slide', {direction:'right'}, 1000);
+	    $("#about-min").show('slide', {direction:'right'}, 800);
     });
 
     $("#back").click(function(){
-    	$("#front-end-developer").hide('slide', {direction:'left'}, 1000);
-        $("#about-author").show();
+    	$("#front-end-developer").hide();
+        $("#about-author").show('slide', {direction:'right'}, 800);
     });
 
     $("#previous").click(function(){
-    	$("#about-min").hide('slide', {direction:'right'}, 1000);
-        $("#about-author").show();
+    	$("#about-min").hide();
+        $("#about-author").show('slide', {direction:'left'}, 800);
     });
 
 // ------------------- about me section ----------------------

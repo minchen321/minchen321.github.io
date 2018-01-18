@@ -100,6 +100,18 @@
 	#right-button {
 	    top: 220%;
 	}
+	.portfolio-btn{
+		padding: 5px 0;
+	}
+	#about-project h3{
+		font-size: 2rem;
+	}
+	#about-project h4{
+		font-size: 1.5rem;
+	}
+	#about-project p{
+		font-size: 1rem;
+	}
 }
 @media only screen and (max-width: 850px) {
 	#about-author{
@@ -158,11 +170,22 @@
 	.developer-icons {
 	    width: 6rem;
 	} 
+	#project-video {
+    	height: 500px;
+    }	
+    #about-project{
+    	height:480px;
+    	padding: 0 20vw;
+    	background-image: url("../img/portfolio/poster-mobile.jpg");
+    }
+    .project-description{
+    	margin-top: 25%;
+    }
 	#project-video img{
-		width: 80vw;
+		width: 85vw;
 	}	
 	#project-video video{
-		width:80vw;
+		width:85vw;
 	}
 
 }
@@ -202,6 +225,21 @@
 	}
 	#right-button {
 	    top: 212%;
+	}
+	#about-project{
+		background-size: 110% 100%;
+	}
+	.project-description {
+	    margin-top: 40%;
+	}
+	#about-project h3{
+		font-size: 1.5rem;
+	}
+	#about-project h4{
+		font-size: 1.2rem;
+	}
+	#about-project p{
+		font-size: 1rem;
 	}
 }
 @media only screen and (max-width: 414px) {
@@ -252,13 +290,18 @@
 	#right-button {
 	    top: 220%;
 	}
+	#project-video {
+	    height: 350px;
+	}
 	#project-video img{
-		width: 85vw;
+		width: 90vw;
 	}	
 	#project-video video{
-		width:85vw;
+		width:90vw;
 	}
-
+	.project-description {
+	    margin-top: 45%;
+	}
 }
 @media only screen and (max-width: 375px) {
     #front-end-developer {
@@ -266,5 +309,8 @@
 	}
 	#introduction p{
 		font-size: 0.9rem;
+	}
+	.project-description {
+	    margin-top: 40%;
 	}
 }	
