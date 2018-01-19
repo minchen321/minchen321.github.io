@@ -342,20 +342,18 @@ footer {
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: auto 100vh;
+/*	background-size: 100vw auto;*/
   	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 }
 #social-media{
-	margin-left: 5vw;
-	width: 50%;
-/*	display: flex;
-	justify-content: center;
-	align-items: center;*/
+	margin-left: 3vw;
+	width: 30%;
 }
 #social-media a img{
-	width: 9vw;
+	width: 8vw;
 	height:auto;
 /*	-webkit-animation-iteration-count: infinite;*/
 }

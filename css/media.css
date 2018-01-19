@@ -112,6 +112,12 @@
 	#about-project p{
 		font-size: 1rem;
 	}
+	#social-media{
+		margin-left: 5vw;
+	}
+	#social-media a img{
+		width: 12vw;
+	}
 }
 @media only screen and (max-width: 850px) {
 	#about-author{
@@ -187,7 +193,13 @@
 	#project-video video{
 		width:85vw;
 	}
-
+	#social-media{
+		margin-left: 6vw;
+		width: 45%;
+	}
+	#social-media a img{
+		width: 15vw;
+	}
 }
 @media only screen and (max-width: 575px) {
 	#moving-helicopter{
@@ -241,6 +253,9 @@
 	}
 	#about-project p{
 		font-size: 1rem;
+	}
+	#social-media a img {
+	    width: 19vw;
 	}
 }
 @media only screen and (max-width: 414px) {
@@ -302,6 +317,12 @@
 	}
 	.project-description {
 	    margin-top: 55%;
+	}
+	#social-media{
+		width: 60%;
+	}
+	#social-media a img {
+	    width: 25vw;
 	}
 }
 @media only screen and (max-width: 375px) {
