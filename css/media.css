@@ -227,7 +227,8 @@
 	    top: 212%;
 	}
 	#about-project{
-		background-size: 110% 100%;
+		background-size: 110% 90%;
+		background-color: #5876b3
 	}
 	.project-description {
 	    margin-top: 40%;
@@ -291,7 +292,7 @@
 	    top: 220%;
 	}
 	#project-video {
-	    height: 350px;
+	    height: 300px;
 	}
 	#project-video img{
 		width: 90vw;
@@ -300,7 +301,7 @@
 		width:90vw;
 	}
 	.project-description {
-	    margin-top: 45%;
+	    margin-top: 55%;
 	}
 }
 @media only screen and (max-width: 375px) {
@@ -309,8 +310,5 @@
 	}
 	#introduction p{
 		font-size: 0.9rem;
-	}
-	.project-description {
-	    margin-top: 40%;
 	}
 }	
