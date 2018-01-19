@@ -7,6 +7,9 @@
 		height: 17vh;
 		padding-top: 5vh;		
 	}	
+	#introduction p{
+		font-size: 2rem;
+	}
 }	
 
 @media only screen and (max-width: 1199px) {
@@ -87,26 +90,19 @@
 		height: 40vh;
 	}
 	#about-min{
-		height: 130vh;
+		height: auto;
 	}
 	#my-picture{
-		height: 60%;
+		height: 500px;
 		background-image: url("../img/about/min-mobile.jpg");
 		background-position: 0% 5%;
-		width: 100vw;
 	}
 	#introduction{
-		height: 60%;
-		top: 160%;
-		width: 100vw;
+		height: 500px;
 		background-image: url("../img/about/word-bubble-mobile.jpg");
-		background-size: 100vw 60vh;
 	}
 	#introduction p{
 		width: 70vw;
-	}
-	#right-button {
-	    top: 220%;
 	}
 	.portfolio-btn{
 		padding: 5px 0;
@@ -153,17 +149,8 @@
     	width: 30vw;
     	margin-left: 63%;    
     }
-    #about-min {
-	    height: 125vh;
-	}
-	#my-picture{
-		height: 45%;
-	}
-	#introduction{
-		height: 75%;
-		top: 145%;
-		background-size: 100vw 100%;
-		background-position: center;
+    #my-picture{
+		height: 400px;
 	}
 	#introduction p{
 		font-size: 1.4rem;
@@ -273,11 +260,11 @@
 	.back-to-about {
 	    margin-top: 6vh;
 	}
-	#introduction p{
-		font-size: 1.2rem;
+	#my-picture{
+		height: 300px;
 	}
-	#right-button {
-	    top: 212%;
+	#introduction p{
+		font-size: 1.1rem;
 	}
 	#about-project{
 		background-size: 110% 90%;
@@ -350,15 +337,9 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
-	#about-min {
-	    height: 120vh;
-	}
-	#introduction{
-		height: 90%;
-	}
-	#right-button {
-	    top: 220%;
-	}
+	#my-picture {
+	    height: 260px;
+	}	
 	#project-video {
 	    height: 300px;
 	}
@@ -388,7 +369,7 @@
 	    height: 145vh;
 	}
 	#introduction p{
-		font-size: 0.9rem;
+		font-size: 1rem;
 	}
 }	
 

@@ -214,41 +214,35 @@ footer {
 }
 /* ---------------------- about Min ---------------------------- */
 #about-min{
-	height: 100vh;
 	background-color: #5876b3;
+	height: 100vh;
 }
 #my-picture{
-	position: absolute;
-	left: 0;
 	height: 100vh;
 	background-image: url("../img/about/min.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	width: 33vw;
 }
 #introduction{
-	position: absolute;
-	right: 0;
 	height: 100vh;
-	width: 67vw;
 	background-image: url("../img/about/word-bubble.jpg");
 	background-repeat: no-repeat;
-	background-size: 67vw 100vh;
+	background-size: 100% 100%;
 	background-position: center;	
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 #introduction p{
-	width: 40vw;
+	width: 65%;
 	font-size: 1.7rem;
 	color: #ffffff;
 }
 #right-button {
     position: absolute;
     right: 0;
-    top: 190%;
+    bottom: 5%;
     z-index: 200;
 }    
 #right-button button{
