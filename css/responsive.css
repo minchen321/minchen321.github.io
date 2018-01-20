@@ -65,29 +65,30 @@
 		font-size: 1.5rem;
 	}
 	#front-end-developer{
-		height: 130vh;
+		height: auto;
 	}
 	#concept{
 		padding: 2vh 4vw;
 	}
 	#developer-img{
+		position: absolute;
 		text-align: center;
-		height: 40%;
+		height: 350px;
 		background-image: url("../img/about/blue-stroke-horizontal.jpg");
-		width: 100vw;
-		margin-bottom: 5px;
 	}
 	#about-web-design{
-		z-index: 101;
-		top: 140%;
-		width:100vw;
+		height: 650px;
+		position: relative;
+		margin-top: 350px;
 	}
 	#about-web-design h2 {
     	padding-top: 2rem;
     }	
 	#developer-img img{
 		width:auto;
-		height: 40vh;
+		height: 100%;
+		position: relative;
+		bottom: 0;
 	}
 	#about-min{
 		height: auto;
@@ -251,17 +252,21 @@
 	#right-bubble p{
 		font-size: 1rem;
 	}	
-	#front-end-developer {
-	    height: 140vh;
+	#developer-img{
+		height: 300px;
+	}
+	#about-web-design{
+		height: 700px;
+		margin-top: 300px;
 	}
 	.developer-icons {
 	    width: 5rem;
 	} 	
-	.back-to-about {
-	    margin-top: 6vh;
-	}
 	#my-picture{
 		height: 300px;
+	}
+	#introduction {
+	    height: 450px;
 	}
 	#introduction p{
 		font-size: 1.1rem;
@@ -315,11 +320,16 @@
     	margin-top: -10%;
     	margin-left: 55%;
     }
-    #front-end-developer {
-	    height: 130vh;
+    #developer-img{
+		height: 220px;
 	}
+    #about-web-design {
+    	margin-top: 220px;
+    	height: 550px;
+    }
 	#about-web-design h2 {
     	padding-top: 10px;
+    	font-size: 1.5rem;
     }	
 	#about-web-design .row{
 		margin: 0;
@@ -338,7 +348,7 @@
 		padding-right: 0;
 	}
 	#my-picture {
-	    height: 260px;
+	    height: 245px;
 	}	
 	#project-video {
 	    height: 300px;
@@ -365,11 +375,11 @@
 }
 
 @media only screen and (max-width: 375px) {
-    #front-end-developer {
-	    height: 145vh;
-	}
 	#introduction p{
 		font-size: 1rem;
+	}
+	#code {
+	    padding: 0 2vw 0 9vw;
 	}
 }	
 
