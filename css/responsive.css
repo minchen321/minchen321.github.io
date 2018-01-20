@@ -72,6 +72,8 @@
 	}
 	#developer-img{
 		position: absolute;
+		left:0;
+		z-index: 99;
 		text-align: center;
 		height: 350px;
 		background-image: url("../img/about/blue-stroke-horizontal.jpg");
