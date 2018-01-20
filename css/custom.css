@@ -321,7 +321,7 @@ footer {
 }
 /* ---------------------- contact ---------------------------- */
 #contact{
-	height: 100vh;
+	overflow: hidden;
 	width: 100%;
 	background-image: url('../img/contact/blue-strokes.jpg');
 	background-repeat: no-repeat;
@@ -337,7 +337,6 @@ footer {
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: auto 100vh;
-/*	background-size: 100vw auto;*/
   	display: flex;
 	justify-content: center;
 	align-items: center;
