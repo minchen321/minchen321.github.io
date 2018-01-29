@@ -90,17 +90,62 @@ footer {
 	padding-bottom: 5rem;
 }	
 /*-------------------- about -------------------------*/
+
+
+
 #about-author{
 	height: 100vh;
 	background-image: url('../img/about/about-me-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: auto 100vh; 
+  	background-size: auto 100vh;  
 }
 #about-author h2{
+	position: absolute;
+    left: 43%;
+    right: 40%;
+    top: 110%;
+	font-size: 3rem;
+	text-align: center;
+}
+#left-bubble{
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	background-image: url('../img/about/left-bubble.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto; 
+	height: 90vh;
+	margin-left: 20%;
+}
+#left-bubble p{
+	font-size: 2.2vw;
+	padding-left: 50px;
+	padding-top: 30px;
+}
+#right-bubble{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('../img/about/right-bubble.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto; 
+	height: 100vh;
+	margin-top: 15%;
+	margin-right: 25%;
+}
+#right-bubble p{
+	font-size: 2.2vw;
+	padding-top: 30px;
+}	
+.more-btn{
+	color: #5876b3;
+    -webkit-animation-iteration-count: infinite;
+}
+
+/*#about-author h2{
 	padding-top: 12vh;
 }
 .more-btn{
@@ -146,7 +191,11 @@ footer {
 }
 #right-bubble p{
 	font-size: 2.2vw;
-}
+}*/
+
+
+
+
 /* ---- about-web-design --- */
 #front-end-developer{
 	height: 100vh;

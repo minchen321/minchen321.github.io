@@ -1,12 +1,4 @@
 @media only screen and (min-width: 1450px) {
-	#left-bubble{
-		height: 17vh;
-		padding-top: 3vh;
-	}
-	#right-bubble{
-		height: 17vh;
-		padding-top: 5vh;		
-	}	
 	#introduction p{
 		font-size: 2rem;
 	}
@@ -14,14 +6,13 @@
 
 @media only screen and (max-width: 1199px) {
 	#left-bubble{
-		margin-left: 15%;
-		width: 28vw;
+		margin-left: 0;
 	}
 	#left-bubble p{
 		font-size: 1.8rem;
 	}
 	#right-bubble{
-		margin-left: 60%;
+		margin-right: 10%;
 	}
 	#right-bubble p{
 		font-size: 1.8rem;
@@ -38,6 +29,9 @@
 	#introduction p{
 		font-size: 1.5rem;
 	}
+	#about-author h2{
+		font-size: 2.5rem;
+	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -47,22 +41,18 @@
 	section .section-heading{
 		margin-bottom: 1rem;
 	}
+	#about-author h2{
+		left: 40%;
+    	right: 38%;
+	}
 	#left-bubble{
-		margin-top:13%;
-		margin-left: 7%;
-		padding-top: 25px;
-		width: 32vw;
+		margin-left: 15%;
 	}
 	#left-bubble p{
-		font-size: 1.5rem;
+		padding-left: 30px;
 	}
 	#right-bubble{
-		width: 27vw;
-		padding-top: 40px;
-		margin-top: -4%;
-	}
-	#right-bubble p{
-		font-size: 1.5rem;
+		margin-right: 20%;
 	}
 	#front-end-developer{
 		height: auto;
@@ -131,6 +121,12 @@
 	#about-author{
 		background-size: auto 75vh;
 	}
+	#left-bubble p{
+		font-size: 1.6rem;
+	}
+	#right-bubble p{
+		font-size: 1.6rem;
+	}	
 }
 
 @media only screen and (max-width: 768px) {
@@ -138,20 +134,6 @@
 		background-image: url('../img/about/about-me-mobile.jpg');
 		background-size: auto 100vh;
 	}
-	#about-author h2 {
-	    padding: 10vh 0;
-	}
-	#left-bubble {
-		margin-top:30%;
-    	padding-right: 10px;
-    	margin-left: 2%;
-	    width: 39vw;    	
-    }
-	#right-bubble {
-    	padding-left: 15px;
-    	width: 30vw;
-    	margin-left: 63%;    
-    }
     #my-picture{
 		height: 400px;
 	}
@@ -211,6 +193,24 @@
 	#social-media a img{
 		width: 15vw;
 	}	
+	#left-bubble p{
+		font-size: 1.4rem;
+	}
+	#right-bubble p{
+		font-size: 1.4rem;
+	}
+	#left-bubble{
+		margin-left: 0;
+		margin-top: 25%;
+	}
+	#right-bubble{
+		margin-right: 5%;
+		margin-top: 0;
+	}
+	#about-author h2 {
+	    left: 30%;
+	    right: 30%;
+	}
 /* =============	resume   =================  */
 	#personal-info{
 		text-align: center;
@@ -239,20 +239,28 @@
 	#about-author{
 		background-size: auto 75vh;
 	}
-	#left-bubble {
-	    margin-left: 2%;
-	    padding-top: 35px;
-	    width: 40vw;
+	#about-author .col-6{
+		padding-left: 0;
+	}
+	#about-author .col-5{
+		padding-right: 0;
+	}
+	#about-author h2 {
+	    font-size: 2rem;
+	    top: 115%;
+	}
+	#left-bubble{
+		margin-top: 35%;
+	}
+	#right-bubble{
+		margin-right: 0;
+	}	
+	#right-bubble p{
+		font-size: 1.3rem;
 	}
 	#left-bubble p{
-		font-size: 1rem;
-	}	
-	#right-bubble {
-    	width: 35vw;
-    	padding-top:50px;
-    }
-	#right-bubble p{
-		font-size: 1rem;
+		padding-left: 25px;
+		font-size: 1.3rem;
 	}	
 	#developer-img{
 		height: 300px;
@@ -309,19 +317,18 @@
 	#about-author{
 		background-size: auto 60vh;
 	}
-	#left-bubble {
-	    margin-top: 25%;
-	    margin-left: 1%;
-	    padding-top: 40px;
-	    width: 43vw;
+	#about-author h2{
+		top: 120%;
 	}
-	#right-bubble {
-    	width: 42vw;
-    	padding-top:50px;
-    	padding-left: 0px;
-    	margin-top: -10%;
-    	margin-left: 55%;
+	#left-bubble p{
+		font-size: 1rem;
+	}
+	#right-bubble p{
+		font-size: 1rem;
     }
+	#right-bubble{
+		margin-right: 0;
+	}    
     #developer-img{
 		height: 220px;
 	}
@@ -383,10 +390,22 @@
 	#code {
 	    padding: 0 2vw 0 9vw;
 	}
+	#about-author .col-5{
+		padding-left: 0;
+	}
+	#about-author .col-1{
+		padding: 0;
+	}
+	#about-author h2{
+		font-size: 1.5rem;
+	}
 }	
 
 @media only screen and (max-width: 320px) {	
 	.masthead .intro-body h1{
 		font-size: 1.5rem;
 	}	
+	#left-bubble p{
+		padding-left: 15px;
+	}
 }

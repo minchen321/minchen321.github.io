@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 	$("#min-btn").click(function(){
 	    $("#about-author").hide();
-	    $("#about-min").show('slide', {direction:'right'}, 800);
+	    $("#about-min").show('slide', {direction:'left'}, 800);
     });
 
     $("#back").click(function(){
