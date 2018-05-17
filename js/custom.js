@@ -25,7 +25,7 @@ $(document).ready(function() {
 //------------------- home ------------------------------
 	$(function(){
 		$("#head-title").typed({
-		    strings: ["Hi! I'm Min.", "I'm a creative web developer based in New York City."],
+		    strings: ["Hi! I'm Min.", "I'm a Front End Developer based in New York City."],
 		    typeSpeed: 100,
 		    loop: true,
 		    startDelay: 100
@@ -114,14 +114,13 @@ $(document).ready(function() {
 		player.load();
     	player.play();
 	});
+	/* -----------------------------  contact modal ----------------------------- */	
+		    $("#message").click(function (){
+		    	$(".contact-modal").show('slide', {direction:'down'}, 500);
+		    });
 
+		    $("#close-modal").click(function (){
+				$(".contact-modal").hide('slide', {direction:'down'}, 500);
+			});
 
-      // var mp4Vid = document.getElementById('demo-video');
-
-      // player.pause();
-
-      // mp4Vid.src = "img/portfolio/payoment.mp4";
-
-      // player.load();
-      // player.play();
 });

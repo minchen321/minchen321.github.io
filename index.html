@@ -14,7 +14,7 @@
 
     <!-- Custom fonts for this template -->
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
 
     <!-- Custom styles for this template -->
@@ -119,7 +119,7 @@
                   <div id="multi-lines">Programming&#95;experience: 2&#43; years,<br>
                     Operating&#95;systems&#58; &#91;Windows, Mac_OS&#93;,<br>
                     Programming&#58; &#91;HTML, CSS, Bootstrap, jQuery, JavaScript, Node.js, Express.js, Java&#93;,<br>
-                    Softwares&#58; &#91;Sublime, Eclipse, Adobe Experience Design, Photoshop, Illustrator, Microsoft Office&#93;
+                    Softwares&#58; &#91;Sublime Text, Eclipse, Adobe Experience Design, Photoshop, Illustrator, Microsoft Office&#93;
                   </div>
                 <p>&#125;&#59;</p>
               </div>
@@ -139,7 +139,7 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12 col-12" id="my-picture"></div>
             <div class="col-lg-8 col-sm-12 col-12" id="introduction">
-              <p>I’m a junior studying Graphic Design and Computer Science at Queens College, CUNY. I'm currently a Front-End Developer at Biscuit &amp; Chai. I enjoy solving complex problems with creative designs. I'm always looking for opportunities to expand my skills as a web developer. If you have any cool projects or opportunities. Let’s get in touch!</p>
+              <p>I’m a senior studying Graphic Design and Computer Science at Queens College, CUNY. I'm currently a Front-End Developer at Biscuit &amp; Chai. I enjoy solving complex problems with creative designs. I'm always looking for opportunities to expand my skills as a web developer. If you have any cool projects or opportunities. Let’s get in touch!</p>
               <div id="right-button">
                 <button id="previous" class="back-to-about">Back <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
               </div>
@@ -155,7 +155,7 @@
         <div class="row">
           <div class="col-md-8 col-sm-12 col-12" id="project-video">
             <img src="img/portfolio/browser.png" alt="portfolio frame">
-            <video id="videoPlayer" autoplay loop>
+            <video id="videoPlayer" autoplay loop muted>
               <source type="video/mp4" id="demo-video">
             </video>
           </div>
@@ -174,12 +174,47 @@
     </section>
 
     <section id="contact">
+      <!-- contact modal -->      
+      <div class="contact-modal">
+        <a id="close-modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+
+        <!-- contact-form -->
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10 col-10">
+              <h2 class="text-center">Send a Message</h2>
+              <br>
+              <form class="contact-form" method="post" action="http://formspree.io/min.chen08@qmail.cuny.edu">        
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" name="yourName" id="name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" name="yourEmail" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="textarea-message">Message:</label>
+                  <textarea name="yourMessage" class="form-control" id="textarea-message" rows="5"></textarea>
+                </div>
+                <button type="submit" name="submit" value="Submit" class="submit-button">Sumbit</button>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
       <div class="container-fluid">
         <div class="row">
            <div class="col-lg-2 col-sm-1"></div>
            <div class="col-lg-8 col-md-12 col-sm-10 col-12 wow slideInUp" data-wow-duration="1000ms" data-wow-delay="500ms" id="phone">
               <div id="social-media">
-                <a href="mailto:min.chen08@qmail.cuny.edu" aria-label="Email"><img src="img/contact/email.png" alt="Email" class="animated shake"></a>
+                <a id="message" aria-label="Email"><img src="img/contact/email.png" alt="Email" class="animated shake"></a>
                 <a href="https://www.linkedin.com/in/minchen321" aria-label="Linkedin"><img src="img/contact/linkedin.png" class="animated shake" alt="Linkedin"></a>
                 <a href="http://www.instagram.com/min75208/?hl=en" aria-label="Instagram"><img src="img/contact/instagram.png" class="animated shake" alt="Instagram"></a>
                 <a href="http://github.com/minchen321" aria-label="GitHub"><img src="img/contact/github.png" class="animated shake" alt="GitHub"></a>

@@ -1,6 +1,6 @@
 html{
 	font-size: 16px;
-	font-family: 'Pangolin', Arial, sans-serif;
+	font-family: 'Ropa Sans', Arial, sans-serif;
 	overflow-x: hidden;
 	min-width: 320px;
 }
@@ -10,12 +10,12 @@ body {
 	background-color: #ffffff;
 }	
 p, li, figcaption, #multi-lines{
-	font-family: 'Pangolin', Arial, sans-serif;
+	font-family: 'Ropa Sans', Arial, sans-serif;
 	font-size: 1rem;	
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #000000;
-	font-family: 'Pangolin', Arial, sans-serif;
+	font-family: 'Ropa Sans', Arial, sans-serif;
 }	
 section h2{
 	font-size: 3rem;
@@ -26,7 +26,7 @@ section .section-heading{
 }
 button{
 	color: #5876b3;
-	font-family: 'Pangolin', Arial, sans-serif;
+	font-family: 'Ropa Sans', Arial, sans-serif;
 }
 footer {
     padding: 1rem 0;
@@ -35,7 +35,7 @@ footer {
     width: 100%;
     height: 100%;
     background: url('../img/preloader.gif') center no-repeat #FFF;
-    background-size: 250px 188px;
+    background-size: auto;
     z-index: 99999;
     position: fixed;
 }
@@ -51,7 +51,7 @@ footer {
     background-color:#ffffff; 
 }
 #mainNav .navbar-brand {
-    font-family: 'Pangolin', Arial, sans-serif;
+    font-family: 'Ropa Sans', Arial, sans-serif;
 }
 #mainNav .navbar-toggler {
      color: #000000;
@@ -60,7 +60,7 @@ footer {
 }
 
 #mainNav a {
-	font-family: 'Pangolin', Arial, sans-serif;
+	font-family: 'Ropa Sans', Arial, sans-serif;
 	font-size: 1.5rem;
     color: #000000;
     border-bottom: 2px solid transparent;
@@ -204,7 +204,7 @@ footer {
 	background-color: #ffffff;
 }
 #about-web-design h2{
-	padding-top: 7vh;
+	padding-top: 8vh;
 	color: #5876b3;
 	font-size: 2.5rem;
 }
@@ -368,6 +368,53 @@ footer {
 .portfolio-btn:focus{
 	outline: none;
 }
+
+/* ---------------------- contact-modal ---------------------------- */
+.contact-modal{
+	z-index: 9999;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    padding-top: 20vh;
+    height: auto;
+    position: fixed;
+    background: rgba(255,255,255,1);
+    display: none;
+    overflow-y: scroll;
+}
+#close-modal{
+	position: absolute;
+	z-index:10000;
+	top: 2%;
+	right: 2%;
+}
+.contact-form label{
+	font-family: 'Ropa Sans', Arial, sans-serif;
+	font-size: 1.7rem;
+}
+.contact-form input, .contact-form textarea{
+	border: 2px solid #616161;
+	border-radius: 0;
+}
+.contact-form input:focus, .contact-form textarea:focus{
+	border: 2px solid #b7b7b7;
+}
+.submit-button{
+	margin-top: 5%;
+	width: 100%;
+	background-color:#000000;
+	color: #ffffff;
+	font-size: 1.7rem;
+	border: 2px solid #000000;
+	font-weight: bold;
+}
+.submit-button:hover{
+	background-color: #ffffff;
+	color: #000000;
+}
+
 /* ---------------------- contact ---------------------------- */
 #contact{
 	overflow: hidden;

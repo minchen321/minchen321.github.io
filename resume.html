@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- =========================CSS files============================== -->
-	<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="css/animate.css" rel="stylesheet"> 
 	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -46,6 +46,39 @@
 	      </div>
 	    </nav>
 
+	  <!-- contact modal -->      
+      <div class="contact-modal">
+        <a id="close-modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+
+        <!-- contact-form -->
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10 col-10">
+              <h2 class="text-center">Send a Message</h2>
+              <br>
+              <form class="contact-form" method="post" action="http://formspree.io/min.chen08@qmail.cuny.edu">        
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" name="yourName" id="name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" name="yourEmail" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="textarea-message">Message:</label>
+                  <textarea name="yourMessage" class="form-control" id="textarea-message" rows="5"></textarea>
+                </div>
+                <button type="submit" name="submit" value="Submit" class="submit-button">Sumbit</button>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
 	<!-- ====================== End of Navigation ====================== -->
 	<section>
 		<div id="personal-info">
@@ -60,7 +93,7 @@
 	            	</div>
 	            	<div class="col-lg-5 col-md-5 col-sm-12 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
 	            		<div class="social-media">
-	                        <a href="mailto:min.chen08@qmail.cuny.edu" class="btn btn-common" aria-label="Email"><img src="img/contact/email.png" alt="Email"></a>
+	                        <a id="message" aria-label="Email" class="btn btn-common"><img src="img/contact/email.png" alt="Email"></a>
 	                        <a href="https://www.linkedin.com/in/minchen321" class="btn btn-common" aria-label="Linkedin"><img src="img/contact/linkedin.png" alt="Linkedin"></a>
 	                        <a href="http://www.instagram.com/min75208/?hl=en" class="btn btn-common" aria-label="Instagram"><img src="img/contact/instagram.png" alt="Instagram"></a>
 	                        <a href="http://github.com/minchen321" class="btn btn-common" aria-label="GitHub"><img src="img/contact/github.png" alt="GitHub"></a>
@@ -168,13 +201,23 @@
 
 	<!-- ============================ Javascript ============================= -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>  
     <script type="text/javascript" src="js/popper.min.js"></script>	
   	<script type="text/javascript" src="js/bootstrap.min.js"></script>
   	<script type="text/javascript" src="js/wow.min.js"></script>
 	<script type="text/javascript">
 		jQuery(function($) {'use strict';
 		    new WOW().init();
+		    /* -----------------------------  contact modal ----------------------------- */	
+		    $("#message").click(function (){
+		    	$(".contact-modal").show('slide', {direction:'down'}, 500);
+		    });
+
+		    $("#close-modal").click(function (){
+				$(".contact-modal").hide('slide', {direction:'down'}, 500);
+			});
 		}); 
+
 	</script>
 </body>
 
