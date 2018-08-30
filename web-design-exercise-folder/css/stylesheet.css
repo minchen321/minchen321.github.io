@@ -1,7 +1,15 @@
+html{
+	font-size: 16px;
+}
 body{
 	text-align: center;
 	background-image: url('http://blog.westelm.com/wp-content/uploads/2014/08/desktop-wallpaper-2-15.jpg');
 	font-family: 'Roboto', sans-serif;
+}
+.profile-picture{
+	width: 150px;
+	height: auto;
+	margin-bottom: 20px; 
 }
 .about-me{
 	text-align: center;
@@ -24,8 +32,6 @@ body{
 	justify-content: center;
 	align-items: flex-start;
 }
-.profile-picture{
-	width: 150px;
-	height: auto;
-	margin-bottom: 20px; 
+.self-intro{
+	font-size: 1.2rem; 
 }
