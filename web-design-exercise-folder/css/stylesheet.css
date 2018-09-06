@@ -3,21 +3,23 @@ html{
 }
 body{
 	text-align: center;
-	background-image: url('http://blog.westelm.com/wp-content/uploads/2014/08/desktop-wallpaper-2-15.jpg');
 	font-family: 'Roboto', sans-serif;
 }
 .profile-picture{
 	width: 150px;
 	height: auto;
-	margin-bottom: 20px; 
+	margin-bottom: 2rem; 
 }
 .about-me{
 	text-align: center;
 }
+.about-me h1{
+	font-size: 2rem;
+}
 .about-me-header{
 	width: 100vw;
-	height: 40vh;
-	background-color: #6e8bb1;
+	height: 400px;
+	background-image: linear-gradient(#255492, #76a2ca);
 	display: flex;
 	justify-content: center;
 	align-items: center;	
