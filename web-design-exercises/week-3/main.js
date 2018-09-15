@@ -64,7 +64,7 @@ backers.innerHTML = '<span>' + kickstarter.backers + '</span>' + ' backers';
 
 let remainingTime = kickstarter.timeLeft();
 let timeLeft = document.getElementById('timeLeft');
-timeLeft.innerHTML = '<span>' + remainingTime[0] + '</span>' + ' &nbsp;Days&nbsp; ' + '<span>' + remainingTime[1] + '</span>' + ' &nbsp;Hours&nbsp; ' + '<span>' + remainingTime[2] + '</span>' + ' &nbsp;Minutes&nbsp; ' + '<span>' +  remainingTime[3] + '</span>' + ' &nbsp;Seconds&nbsp;';
+timeLeft.innerHTML = '<span>' + remainingTime[0] + '</span>' + ' &nbsp;days&nbsp; ' + '<span>' + remainingTime[1] + '</span>' + ' &nbsp;hours&nbsp; ' + '<span>' + remainingTime[2] + '</span>' + ' &nbsp;minutes&nbsp; ' + '<span>' +  remainingTime[3] + '</span>' + ' &nbsp;seconds&nbsp; before funding ends';
 
 let rewardOne = document.getElementById('rewardOne');
 rewardOne.textContent = kickstarter.pledgedLevels[0].name;
