@@ -66,25 +66,12 @@ let remainingTime = kickstarter.timeLeft();
 let timeLeft = document.getElementById('timeLeft');
 timeLeft.innerHTML = '<span>' + remainingTime[0] + '</span>' + ' &nbsp;days&nbsp; ' + '<span>' + remainingTime[1] + '</span>' + ' &nbsp;hours&nbsp; ' + '<span>' + remainingTime[2] + '</span>' + ' &nbsp;minutes&nbsp; ' + '<span>' +  remainingTime[3] + '</span>' + ' &nbsp;seconds&nbsp; before funding ends';
 
-let rewardOne = document.getElementById('rewardOne');
-rewardOne.textContent = kickstarter.pledgedLevels[0].name;
-let rewardTwo = document.getElementById('rewardTwo');
-rewardTwo.textContent = kickstarter.pledgedLevels[1].name;
-let rewardThree = document.getElementById('rewardThree');
-rewardThree.textContent = kickstarter.pledgedLevels[2].name;
-
-let itemOne = document.getElementById('itemOne');
-itemOne.textContent = kickstarter.pledgedLevels[0].includes[0];
-let aboutRewardOne = document.getElementById('aboutRewardOne');
-aboutRewardOne.textContent = kickstarter.pledgedLevels[0].details;
-
-let itemTwo = document.getElementById('itemTwo');
-itemTwo.textContent = kickstarter.pledgedLevels[1].includes[0];
-let aboutRewardTwo = document.getElementById('aboutRewardTwo');
-aboutRewardTwo.textContent = kickstarter.pledgedLevels[1].details;
-
-let itemThree = document.getElementById('itemThree');
-itemThree.textContent = kickstarter.pledgedLevels[2].includes[0];
-let aboutRewardThree = document.getElementById('aboutRewardThree');
-aboutRewardThree.textContent = kickstarter.pledgedLevels[2].details;
+let items = document.getElementsByClassName('items');
+let rewards = document.getElementsByClassName('rewards');
+let aboutReward = document.getElementsByClassName('aboutReward');
+for(let i = 0; i < kickstarter.pledgedLevels.length; i++){
+	items[i].textContent = kickstarter.pledgedLevels[i].includes[0];
+	rewards[i].textContent = kickstarter.pledgedLevels[i].name;
+	aboutReward[i].textContent = kickstarter.pledgedLevels[i].details;
+}
 
