@@ -68,6 +68,7 @@ button:focus{
 	background-repeat: no-repeat;
 	background-position: right top;
 	color: #ffffff;
+	box-shadow: 4px 5px 15px 1px #808080
 }
 #game-info h2{
 	font-size: 3rem;
@@ -153,4 +154,71 @@ button:focus{
 }
 #result-section .theme-btn{
 	margin-top: 10vh;
+}
+/* ------- responsive ------- */
+@media only screen and (max-width: 991px) {
+	#home-section h1{
+		font-size: 2.5rem;
+	}
+	.theme-btn{
+		font-size: 1.5rem;
+	}
+	#game-info h2 {
+	    font-size: 2rem;
+	}
+	#game-info h3 {
+	    font-size: 1.5rem;
+	}	
+	#tiles-section{
+		padding: 7% 6vw;
+	}
+	.tile{
+		width: 13vw;
+		height: 13vw;
+	}
+	#result-section h2{
+		font-size: 2rem;
+	}	
+}
+@media only screen and (max-width: 575px) {
+	#home-section h1{
+		font-size: 1.5rem;
+	}
+	.theme-btn{
+	    padding: 5px 30px;
+	}
+	#game-section{
+		display: block;
+	}
+	#game-info{
+		padding: 20px;
+		height: 330px;
+		width: 100vw;
+		background-image: url('../img/game-mobile-bg.png');
+		background-repeat: no-repeat;
+		box-shadow: 4px 5px 15px 1px #808080
+	}
+	#tiles-section{
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		padding: 20px 10vw;
+	}
+	.tile{
+		display: inline-block;
+		position: relative;
+		width: 20vw;
+		height: 20vw;	
+		padding: 10px;
+	}
+	#game-info h3{
+		margin-top: 15px;
+		font-size: 1rem;
+	}
+	#game-info button{
+		margin-top: 15px;
+	}
+	#result-section h2{
+		font-size: 1.5rem;
+	}
 }
