@@ -3,6 +3,8 @@ $(document).ready(function() {
     let sec = 0;
     let numOfGuesses = 0;
     let matchingPairs = 0
+	let currentSelections = [];
+	let selectedIndex = [];
 
 	//initial page visibility
     $("#home-section").show();
@@ -48,25 +50,32 @@ $(document).ready(function() {
 	    return tileArr;
 	}
 
-	let currentSelections = [];
 	$('.card-content').click(function(){
 		let currentIndex = $('.card-content').index(this);		
+		selectedIndex.push(currentIndex);
+		console.log(selectedIndex);
+
+
 		$(this).addClass('selectedOptions');
 		$('.selectedOptions').css('z-index', '5');
 		currentSelections.push(tiles[currentIndex]);
 		if(currentSelections.length === 2){
-			if(currentSelections[0] === currentSelections[1]){
+			if(currentSelections[0] === currentSelections[1] && selectedIndex[0] != selectedIndex[1]){
 				$('.selectedOptions').css('border', '5px solid #87D1A9');
 				$('.selectedOptions').fadeOut(1300);
 				$('.card-content').removeClass('selectedOptions');	
 				matchingPairs++;
+				numOfGuesses++;
 			}
 			else{
-				$('.selectedOptions').css('border', '5px solid #FF8484');
-				setTimeout(matchingFailure, 400);
+				if(selectedIndex[0] != selectedIndex[1]) {
+					$('.selectedOptions').css('border', '5px solid #FF8484');
+					setTimeout(matchingFailure, 400);
+					numOfGuesses++;
+				}
 			}
 			if(matchingPairs === 8) {
-				setTimeout(successMsg, 1300);
+				setTimeout(successMsg, 1200);
 				//final time
 				let finalTime;
 				if($('#minutes').text() != '00'){
@@ -78,7 +87,7 @@ $(document).ready(function() {
 				$('#final-time').text(finalTime);
 			}
 			currentSelections = [];
-			numOfGuesses++;
+			selectedIndex = [];
 		}
 		$('#numOfGuesses').text(numOfGuesses);
 

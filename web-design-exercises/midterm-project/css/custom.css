@@ -189,6 +189,7 @@ button:focus{
 	}
 	#game-section{
 		display: block;
+		height: auto;
 	}
 	#game-info{
 		padding: 20px;
