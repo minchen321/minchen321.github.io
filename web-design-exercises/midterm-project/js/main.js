@@ -4,13 +4,13 @@ $(document).ready(function() {
     let numOfClicks = 0;
     let matchingPairs = 0
 
-	//initial page status
+	//initial page visibility
     $("#home-section").show();
 	$("#game-section").hide();
 	$("#result-section").hide();
 
-	//refresh when quit btn is clicked
-	$('#quit', '#replay').click(function(){
+	//refresh page
+	$('#quit').click(function(){
 		location.reload();
 	});	
 	$('#replay').click(function(){
@@ -36,27 +36,17 @@ $(document).ready(function() {
 	 	$('#tiles-section').append('<div class="tile"><div class="card-content"><img class="back-img" src="img/tiles/icon-' + tiles[i] + '.png" alt="card"></div></div>');
 	}	
 
-	//shuffle an array
-	function shuffle(array) {
+	//shuffle tiles
+	function shuffle(tileArr) {
 	    let j, x;
-	    for (let i = array.length - 1; i > 0; i--) {
+	    for (let i = tileArr.length - 1; i > 0; i--) {
 	        j = Math.floor(Math.random() * (i + 1));
-	        x = array[i];
-	        array[i] = array[j];
-	        array[j] = x;
+	        x = tileArr[i];
+	        tileArr[i] = tileArr[j];
+	        tileArr[j] = x;
 	    }
-	    return array;
+	    return tileArr;
 	}
-
-	//shuffle cards when replay btn on click	
-	// $('#replay').click(function(){
-	// 	shuffle(tiles);
-	// 	$('.card-content').empty();		
-	// 	for(let i = 0; i < tiles.length; i++){
- //    		$('.card-content').append('<img class="back-img" src="img/tiles/icon-' + tiles[i] + '.png" alt="card">');
- //    	}
- //    	$("#result-section").hide('slide', {direction:'right'}, 700);
-	// });
 
 	let currentSelections = [];
 	$('.card-content').click(function(){
@@ -101,7 +91,7 @@ $(document).ready(function() {
 		$('.selectedOptions').css('border', '5px solid transparent');
 		$('.card-content').removeClass('selectedOptions');	
 	}
-
+	
 	function successMsg(){
 		matchingPairs = 0;
 		$("#result-section").show('slide', {direction:'right'}, 700);
