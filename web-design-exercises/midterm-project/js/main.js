@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	let tiles = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7];
     let sec = 0;
-    let numOfClicks = 0;
+    let numOfGuesses = 0;
     let matchingPairs = 0
 
 	//initial page visibility
@@ -50,10 +50,7 @@ $(document).ready(function() {
 
 	let currentSelections = [];
 	$('.card-content').click(function(){
-		let currentIndex = $('.card-content').index(this);
-		// let selectedIndex = [];
-		// selectedIndex.push(currentIndex);
-		numOfClicks++;
+		let currentIndex = $('.card-content').index(this);		
 		$(this).addClass('selectedOptions');
 		$('.selectedOptions').css('z-index', '5');
 		currentSelections.push(tiles[currentIndex]);
@@ -81,8 +78,9 @@ $(document).ready(function() {
 				$('#final-time').text(finalTime);
 			}
 			currentSelections = [];
+			numOfGuesses++;
 		}
-		$('#numOfGuesses').text(Math.floor(numOfClicks/2));
+		$('#numOfGuesses').text(numOfGuesses);
 
 	});
 
@@ -91,7 +89,7 @@ $(document).ready(function() {
 		$('.selectedOptions').css('border', '5px solid transparent');
 		$('.card-content').removeClass('selectedOptions');	
 	}
-	
+
 	function successMsg(){
 		matchingPairs = 0;
 		$("#result-section").show('slide', {direction:'right'}, 700);
