@@ -53,9 +53,6 @@ $(document).ready(function() {
 	$('.card-content').click(function(){
 		let currentIndex = $('.card-content').index(this);		
 		selectedIndex.push(currentIndex);
-		console.log(selectedIndex);
-
-
 		$(this).addClass('selectedOptions');
 		$('.selectedOptions').css('z-index', '5');
 		currentSelections.push(tiles[currentIndex]);
@@ -68,10 +65,10 @@ $(document).ready(function() {
 				numOfGuesses++;
 			}
 			else{
-				if(selectedIndex[0] != selectedIndex[1]) {
-					$('.selectedOptions').css('border', '5px solid #FF8484');
-					setTimeout(matchingFailure, 400);
-					numOfGuesses++;
+				$('.selectedOptions').css('border', '5px solid #FF8484');
+				setTimeout(matchingFailure, 400);
+				if(selectedIndex[0] != selectedIndex[1]){
+					numOfGuesses++;					
 				}
 			}
 			if(matchingPairs === 8) {
