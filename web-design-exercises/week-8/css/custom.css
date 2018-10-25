@@ -1,0 +1,52 @@
+html{
+	overflow-x: hidden;
+}
+body{
+	text-align: center;
+	color: #000000; 
+	font-size: 16px;
+	line-height: 1.25;
+	font-family: 'Cabin', sans-serif;
+}
+button:focus{
+	outline: none! important;
+}
+header{
+	color: #ffffff;
+	display: flex;;
+	align-items: center;
+	justify-content: center;
+	background-color: #98ccc9;
+	height: 170px;
+	font-family: 'Acme', cursive;
+}
+header h1{
+	font-size: 3rem;
+}
+.tab-content{
+	height: auto;
+}
+.nav{
+	justify-content: center;;
+}
+.nav-tabs{
+	background-color: #98ccc9;
+	border: none;
+}
+.nav-tabs .nav-link{
+	border: none;
+	border-radius: 0;
+	padding: 0.5rem 2rem;
+}
+.nav-item a{
+	color: #ffffff;
+	font-size: 1.5rem;
+}
+/* ---------- tab-content ---------- */
+.tab-content{
+	padding: 4rem 5vw;
+}
+.tab-pane img{
+	width: 80%;
+	height: auto;
+}
