@@ -7,10 +7,10 @@ $(document).ready(function() {
 		$('html, body').animate({scrollTop: 0}, 1000);
 	});	
 	$('#about-link').click(function(){
-		$('html, body').animate({scrollTop: homeHeight - 200}, 1000);
+		$('html, body').animate({scrollTop: homeHeight - 220}, 1000);
 	});
 	$('#albums-link').click(function(){
-		$('html, body').animate({scrollTop: homeHeight + aboutHeight - 200}, 1000);
+		$('html, body').animate({scrollTop: homeHeight + aboutHeight - 220}, 1000);
 	});
 
 
