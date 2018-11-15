@@ -1,0 +1,19 @@
+body{
+	color: #313131;
+	font-family: 'Acme', sans-serif;
+	overflow-y: hidden; 
+}
+#home{
+	width: 100vw;
+	height: 100vh;
+	padding-top: 5vh; 
+	background-color: #ffffff;
+	background-image: url('img/home.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-color: #a9c7f5;
+}
+h1{
+	font-size: 7rem;
+	color: #042d52;
+}
