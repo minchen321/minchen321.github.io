@@ -8,12 +8,46 @@ body{
 	height: 100vh;
 	padding-top: 5vh; 
 	background-color: #ffffff;
-	background-image: url('img/home.png');
-    background-size: auto 100%;
+	background-image: url('img/bg.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: #a9c7f5;
 }
+#self-img{
+	position: fixed;
+	height: 100vh;
+	width: auto;
+	left: 0;
+	top: 0;
+}
+#home a{
+	color: #ffffff;
+}
+#home a:hover{
+	color: #8eb1d5;
+}
 h1{
-	font-size: 7rem;
-	color: #042d52;
+	font-size: 9vw;
+	height: 20vh;
+	position: fixed;
+	right: 15vw;
+	padding-top: 1%: 
+}
+.heading-1{
+	top: 0vh;
+}
+.heading-2{
+	top: 20vh;
+}
+.heading-3{
+	top: 40vh;
+}
+.heading-4{
+	top: 60vh;
+}
+.heading-5{
+	top: 80vh;
+}
+.modal-body img{
+	width: 465px;
 }
