@@ -77,7 +77,7 @@ html{
 }   
 #menu-section{
     background-image:url("../img/menu-bg.jpg");
-    
+    background-attachment: fixed;
 } 
 #menu-section h1{
     margin-bottom: 4rem;
@@ -118,105 +118,6 @@ html{
     padding-top: 3rem;
 }
 
-
-
-/* ------------------- gallery ------------------*/
-#gallery{
-    background-image: url("../img/menu-bg.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color:#000000;
-}
-#gallery h1{
-    color:#ffffff;
-}    
-.section-wrapper {
-    position:relative;
-}
-
-#owl-gallery .item img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-#owl-gallery .owl-controls {
-    margin-bottom: 80px;
-}
-
-#owl-gallery .owl-controls .owl-page span {
-    display: block;
-    width: 9px;
-    height: 9px;
-    margin: 5px 6px;
-    border-radius: 6px;
-    opacity: 1;
-    background: #6d6b6b;
-}
-
-#owl-gallery .owl-controls .owl-page.active span {
-    background: #ffffff;
-}
-
-#owl-gallery .owl-controls .owl-prev,
-#owl-gallery .owl-controls .owl-next {
-    margin-top: -40px;
-    color: transparent;
-    background: none;
-    opacity: 100;
-}
-
-#owl-gallery .owl-controls .owl-prev:before,
-#owl-gallery .owl-controls .owl-next:before {
-    color: #ffffff;
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transition: all .2s ease;
-}
-
-#owl-gallery .owl-controls .owl-prev:hover:before,
-#owl-gallery .owl-controls .owl-next:hover:before {
-    color: #fb0000;
-}
-
-#owl-gallery .owl-buttons {
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
-
-.owl-controls .owl-prev:before{
-    content: "\f104";
-    font-family: FontAwesome;
-    color: #ffffff;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 27px;
-    text-align: center;
-    text-indent: 0;
-    line-height: 50px;
-}
-.owl-controls .owl-next:before {
-    content: "\f105";
-    font-family: FontAwesome;
-    color: #ffffff;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 27px;
-    text-align: center;
-    text-indent: 0;
-    line-height: 50px;
-}
 /* ----------- Reservations ------------- */
 .sub-page-reservations{
     height: 40%;
@@ -411,4 +312,40 @@ html{
 }
 #direction{
     margin: 1.5rem 0;
+}
+
+/* -------------- responsive ---------- */
+@media only screen and (max-width: 991px) {
+    .masthead{
+        background-position: 80% center;
+    }
+    #menu-nav{
+        display: none;
+    }
+    #items{
+        margin-left: 0;
+    }
+}   
+@media only screen and (max-width: 768px) {
+    .sub-page h1{
+        font-size: 4rem;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .masthead{
+        background-position: 30% center;
+    }
+    .masthead .intro-body{
+        text-align: center;
+    }
+    .masthead .intro-body .brand-heading{
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .sub-page h1{
+        bottom: 60%;
+        left: 5%;
+        font-size: 3rem;
+    }
 }
