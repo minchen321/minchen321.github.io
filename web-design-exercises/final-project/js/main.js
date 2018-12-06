@@ -1,6 +1,7 @@
 (function($) {
-  "use strict"; // Start of use strict
-
+  "use strict";
+  new WOW().init();
+  
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -38,5 +39,7 @@
     $('.category').removeClass('selected');
     $(this).addClass('selected');
   });
-
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  });
 })(jQuery); 
