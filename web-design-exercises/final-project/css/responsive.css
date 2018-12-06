@@ -1,5 +1,13 @@
-@media only screen and (max-width: 1024px) {
-
+@media only screen and (max-width: 991px) {
+	.masthead{
+		background-left: left;
+	}
+	#menu-nav{
+		display: none;
+	}
+	#items{
+		margin-left: 0;
+	}
 }	
 @media only screen and (max-width: 768px) {
 	.sub-page h1{
