@@ -1,9 +1,8 @@
-/*red:#fb0000*/
 html{
     overflow-x: hidden;
 }
 .navbar-brand img{
-	height: 3.5rem;
+	height: 3rem;
 }
 .brand-heading{
 	text-transform: none;
@@ -12,13 +11,6 @@ html{
     color: #fb0000;
     border-bottom: 2px solid #fb0000;;
 }
-/*.overlay{
-	width: 100%;
-    height: 100%;
-    z-index: 50;
-    background: rgba(0,0,0,0.4) url(../img/black-dot.png);
-}*/
-
 #scrollDown {
     padding-top: 3rem;
     color: white;
@@ -260,14 +252,11 @@ html{
     align-items: center;
 }
 .date{
-  /*  display: block;*/
     font-size: 4.5rem;
 }
 .month{
-/*    display: block;*/
     font-size: 2.5rem;
 }
-
 /* ----------- contact ------------- */
 .sub-page-contact{
     height: 40%;
