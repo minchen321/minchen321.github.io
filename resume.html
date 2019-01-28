@@ -9,7 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- =========================CSS files============================== -->
-    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+   <!--  <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="css/animate.css" rel="stylesheet"> 
 	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -88,15 +89,23 @@
 	            		<h1 class="title">Min Chen</h1>
 	                    <p>Queens College, CUNY<br>
 						BS in Graphic Design, minor in Computer Science<br>
-						<span>&#45; Degree Expected Dec. 2018</span>
+						<span>&#45; Degree Expected May 2019</span>
 						</p>
 	            	</div>
 	            	<div class="col-lg-5 col-md-5 col-sm-12 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
 	            		<div class="social-media">
-	                        <a id="message" aria-label="Email" class="btn btn-common"><img src="img/contact/email.png" alt="Email"></a>
-	                        <a href="https://www.linkedin.com/in/minchen321" class="btn btn-common" aria-label="Linkedin"><img src="img/contact/linkedin.png" alt="Linkedin"></a>
-	                        <a href="http://www.instagram.com/min75208/?hl=en" class="btn btn-common" aria-label="Instagram"><img src="img/contact/instagram.png" alt="Instagram"></a>
-	                        <a href="http://github.com/minchen321" class="btn btn-common" aria-label="GitHub"><img src="img/contact/github.png" alt="GitHub"></a>
+	                        <a id="message" aria-label="Email" class="btn btn-common" target="_blank">
+	                        	<img src="img/resume/email.png" alt="Email">
+	                        </a>
+	                        <a href="https://www.linkedin.com/in/minchen321" class="btn btn-common" aria-label="Linkedin" target="_blank">
+	                        	<img src="img/resume/linkedin.png" alt="Linkedin">
+	                        </a>
+	                        <a href="http://www.instagram.com/min75208/?hl=en" class="btn btn-common" aria-label="Instagram" target="_blank">
+	                        	<img src="img/resume/instagram.png" alt="Instagram">
+	                        </a>
+	                        <a href="http://github.com/minchen321" class="btn btn-common" aria-label="GitHub" target="_blank">
+	                        	<img src="img/resume/github.png" alt="GitHub">
+	                        </a>
 	                    </div>
 	            		
 	            	</div>
@@ -110,10 +119,7 @@
 		<h2 class="section-heading">Experience</h2>
 			<div class="container">
 	            <div class="row">
-	                <div class="col-lg-6 col-sm-12 col-12 wow fadeInLeft logo" data-wow-duration="500ms" data-wow-delay="300ms" >
-	                    <img src="img/company-logos/logo-single.png" class="img-fluid" alt="Biscuit and Chai" id="biscuitandchai">
-	                </div>
-	                <div class="col-lg-6 col-sm-12 col-12 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+	                <div class="col-lg-6 col-sm-12 col-12 wow fadeInLeft text-right" data-wow-duration="500ms" data-wow-delay="300ms">
 	                    <h2>Biscuit &amp; Chai, LLC	</h2>
 	                    <p>New York, NY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; May 2017 &#45; Present</p>
 	                    <h3>Front-End Developer</h3>
@@ -121,6 +127,24 @@
 	                        	<li>Participated in front-end development and creating standards for web projects </li>
 	                        	<li>Enhanced front-end code for responsiveness and compatibility for a variety of web browsers and devices</li>
 	                        	<li>Designed and developed templates on top of Bootstrap, HTML, CSS and JavaScript</li>
+	                        </ul>
+                    </div>
+	                <div class="col-lg-6 col-sm-12 col-12 wow fadeInRight logo" data-wow-duration="500ms" data-wow-delay="300ms" >
+	                    <img src="img/company-logos/logo-single.png" class="img-fluid" alt="Biscuit and Chai" id="biscuitandchai">
+	                </div>
+                </div>  
+	            <div class="row">
+	                <div class="col-lg-6 col-sm-12 col-12 wow fadeInLeft logo" data-wow-duration="500ms" data-wow-delay="300ms" >
+	                    <img src="img/company-logos/cais.jpg" class="img-fluid" alt="CAIS Group" id="biscuitandchai">
+	                </div>
+	                <div class="col-lg-6 col-sm-12 col-12 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+	                    <h2>CAIS Group</h2>
+	                    <p>New York, NY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; July 2018 &#45; Present</p>
+	                    <h3>Web Design/Development Intern</h3>
+	                        <ul>
+	                        	<li>Designed marketing email templates and UI for structured solutions dashboard</li>
+	                        	<li>Converted mockups into interactive user interface utilizing Ember.js, Handlebars.js and Less</li>
+	                        	<li>Created unit tests in Ember and ensured code quality using SonarQube</li>
 	                        </ul>
                     </div>
                 </div>    
@@ -194,7 +218,7 @@
 	 <footer id="footer">
 		    <div class="container">
 		        <div class="text-center">
-		            <p id="copyright">Copyright &copy; 2018 Min Chen </p>
+		            <p id="copyright">Copyright &copy; Min Chen <span class="currentYear"></span></p>
 		        </div>
 		    </div>
 	</footer>
@@ -216,6 +240,9 @@
 		    $("#close-modal").click(function (){
 				$(".contact-modal").hide('slide', {direction:'down'}, 500);
 			});
+			//get current year for copyright
+		    let year = new Date().getFullYear();
+		    $('.currentYear').text(year);
 		}); 
 
 	</script>

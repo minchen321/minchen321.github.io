@@ -1,6 +1,6 @@
 html{
 	font-size: 16px;
-	font-family: 'Ropa Sans', Arial, sans-serif;
+	font-family: 'Dosis', Arial, sans-serif;
 	overflow-x: hidden;
 	min-width: 320px;
 }
@@ -10,12 +10,12 @@ body {
 	background-color: #ffffff;
 }	
 p, li, figcaption, #multi-lines{
-	font-family: 'Ropa Sans', Arial, sans-serif;
+	font-family: 'Dosis', Arial, sans-serif;
 	font-size: 1rem;	
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #000000;
-	font-family: 'Ropa Sans', Arial, sans-serif;
+	font-family: 'Dosis', Arial, sans-serif;
 }	
 section h2{
 	font-size: 3rem;
@@ -26,10 +26,17 @@ section .section-heading{
 }
 button{
 	color: #5876b3;
-	font-family: 'Ropa Sans', Arial, sans-serif;
+	font-family: 'Dosis', Arial, sans-serif;
 }
 footer {
     padding: 1rem 0;
+}
+.white-links{
+	color: #ffffff;
+}
+.white-links:hover{
+	color: #ffffff;
+	margin-left: 10px;
 }
 .hameid-loader-overlay {
     width: 100%;
@@ -38,6 +45,7 @@ footer {
     background-size: auto;
     z-index: 99999;
     position: fixed;
+    overflow: hidden;
 }
 /*-------------------- navbar -------------------------*/
 .navbar {
@@ -47,11 +55,10 @@ footer {
 	padding-bottom: 0;
 }
 #mainNav {
-    border-bottom: 2px solid #000000;
     background-color:#ffffff; 
 }
 #mainNav .navbar-brand {
-    font-family: 'Ropa Sans', Arial, sans-serif;
+    font-family: 'Dosis', Arial, sans-serif;
 }
 #mainNav .navbar-toggler {
      color: #000000;
@@ -60,7 +67,7 @@ footer {
 }
 
 #mainNav a {
-	font-family: 'Ropa Sans', Arial, sans-serif;
+	font-family: 'Dosis', Arial, sans-serif;
 	font-size: 1.5rem;
     color: #000000;
     border-bottom: 2px solid transparent;
@@ -90,8 +97,6 @@ footer {
 	padding-bottom: 5rem;
 }	
 /*-------------------- about -------------------------*/
-
-
 
 #about-author{
 	height: 100vh;
@@ -205,7 +210,6 @@ footer {
 }
 #about-web-design h2{
 	padding-top: 8vh;
-	color: #5876b3;
 	font-size: 2.5rem;
 }
 #concept{
@@ -216,15 +220,11 @@ footer {
 	height: auto;
 }
 #about-web-design figcaption{
-	padding-top: 2vh;
-	font-size: 1.5rem;
-	color: #5876b3;
-}
+	font-size: 1.5rem;}
 #code{
 	padding: 3vh 2vw 0 9vw;
 }
 #code p, #multi-lines{
-	color: #5876b3;
 	font-size: 1.7rem;
 	padding-bottom: 0;
 	margin-bottom: 0;
@@ -309,7 +309,6 @@ footer {
 	align-items: center;
 	flex-direction: column;
 	border-top: 3px solid #000000;
-	border-bottom: 3px solid #000000;
 }  
 #project-video img{
 	width: 60vw;
@@ -391,7 +390,7 @@ footer {
 	right: 2%;
 }
 .contact-form label{
-	font-family: 'Ropa Sans', Arial, sans-serif;
+	font-family: 'Dosis', Arial, sans-serif;
 	font-size: 1.7rem;
 }
 .contact-form input, .contact-form textarea{
@@ -428,22 +427,24 @@ footer {
   	background-size: cover; 
 }
 #phone{
-	height: 100vh;
+	min-height: 770px;
 	background-image: url('../img/contact/iphone.png');
 	background-repeat: no-repeat;
-	background-position: bottom;
-	background-size: auto 100vh;
+	background-position: center;
+	background-size: auto 100%;
   	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 }
 #social-media{
-	margin-left: 3vw;
 	width: 30%;
 }
+#social-media a:hover{
+	cursor: pointer;
+}
 #social-media a img{
-	width: 8vw;
+	width: 48%;
 	height:auto;
 	-webkit-animation-iteration-count: 2;
 	-webkit-animation-delay: 2s;
@@ -469,6 +470,12 @@ footer {
 }
 .social-media{
 	margin-top: 3.5rem;
+}
+.social-media a{
+	cursor: pointer;
+}
+.social-media a:focus{
+	box-shadow: none;
 }
 .social-media img{
 	height: auto;

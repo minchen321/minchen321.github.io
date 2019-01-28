@@ -122,5 +122,7 @@ $(document).ready(function() {
 		    $("#close-modal").click(function (){
 				$(".contact-modal").hide('slide', {direction:'down'}, 500);
 			});
-
+	  //get current year for copyright
+	  let year = new Date().getFullYear();
+	  $('.currentYear').text(year);
 });
