@@ -1,10 +1,10 @@
 html{
+  	height: 100%;
 	font-size: 16px;
 	font-family: 'Dosis', Arial, sans-serif;
 	overflow-x: hidden;
 	min-width: 320px;
 }
-
 body {
 	color: #000000;
 	background-color: #ffffff;
@@ -38,6 +38,37 @@ footer {
 	color: #ffffff;
 	margin-left: 10px;
 }
+.black-btn{
+	border: 2px solid #000000;
+	font-size: 1.25rem;
+	height: 40px;
+	width: 100%;
+	border-radius: 20px;
+	margin-top: 20px;
+	background-color: #000000;
+	color: #ffffff;
+}
+.black-btn:hover{
+	color: #000000;
+	background-color: transparent;
+}
+.black-btn:focus{
+	outline: none;
+}
+::-moz-selection {
+  background: #436394;
+  text-shadow: none;
+}
+::selection {
+  background: #436394;
+  text-shadow: none; 
+}
+img::selection {
+  background: transparent; 
+}
+img::-moz-selection {
+  background: transparent; 
+}
 .hameid-loader-overlay {
     width: 100%;
     height: 100%;
@@ -56,6 +87,7 @@ footer {
 }
 #mainNav {
     background-color:#ffffff; 
+  	margin-bottom: 0;
 }
 #mainNav .navbar-brand {
     font-family: 'Dosis', Arial, sans-serif;
@@ -73,18 +105,18 @@ footer {
     border-bottom: 2px solid transparent;
 	margin: 0 2px
 }
-#mainNav a:hover {
-	border-bottom: 2px solid #000000;
-}
 #mainNav .nav-link.active {
-    border-bottom: 3px solid #000000;
+    background-image: url('../img/line.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
 } 
 /*-------------------- home -------------------------*/
 #moving-helicopter{
     position: absolute;
     left: 0;
     right: 50%;
-    top: 8vh;
+    top: 60px;
     z-index: 99;
     -webkit-animation-duration: 19s;
     -webkit-animation-iteration-count: infinite;
@@ -114,8 +146,11 @@ footer {
 	text-align: center;
 }
 #left-bubble{
+	display: -webkit-box;
+	display: -ms-flexbox;	
 	display: flex;
-	justify-content: left;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	background-image: url('../img/about/left-bubble.png');
 	background-repeat: no-repeat;
@@ -127,11 +162,17 @@ footer {
 #left-bubble p{
 	font-size: 2.2vw;
 	padding-left: 50px;
-	padding-top: 30px;
+	padding-top: 15px;
 }
 #right-bubble{
+  	display: -webkit-box;
+  	display: -ms-flexbox;	
 	display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;	
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;	
 	align-items: center;
 	background-image: url('../img/about/right-bubble.png');
 	background-repeat: no-repeat;
@@ -143,63 +184,12 @@ footer {
 }
 #right-bubble p{
 	font-size: 2.2vw;
-	padding-top: 30px;
+	padding-top: 15px;
 }	
 .more-btn{
 	color: #5876b3;
     -webkit-animation-iteration-count: infinite;
 }
-
-/*#about-author h2{
-	padding-top: 12vh;
-}
-.more-btn{
-	border:none;
-    background-image:none;
-    background-color:transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    padding: 0;
-    -webkit-animation-iteration-count: infinite;
-}
-.more-btn:focus{
-	outline:none;
-}	
-#left-bubble{
-	text-align: center;
-	width: 25vw;
-	height: 130px;
-	margin-top: 10%;
-	margin-left: 20%;
-	padding-top: 20px;
-	padding-right: 35px;
-	background-image: url('../img/about/left-bubble.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100% auto; 
-}
-#left-bubble p{
-	font-size: 2.2vw;
-}
-#right-bubble{
-	text-align: center;
-	width: 23vw;
-	height: 130px;
-	margin-left: 57%;
-	padding-top: 35px;
-	padding-left: 25px;
-	background-image: url('../img/about/right-bubble.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100% auto;
-}
-#right-bubble p{
-	font-size: 2.2vw;
-}*/
-
-
-
 
 /* ---- about-web-design --- */
 #front-end-developer{
@@ -279,9 +269,15 @@ footer {
 	background-image: url("../img/about/word-bubble.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	background-position: center;	
+	background-position: center;
+  	display: -webkit-box;
+  	display: -ms-flexbox;
 	display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;	
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 #introduction p{
@@ -300,74 +296,64 @@ footer {
 }
 /* ---------------------- portfolio ---------------------------- */
 #portfolio{
-	margin-top: 5%;
+	height: 100%;
+	width: 100vw;
+	min-height: 600px;
 }
-#project-video{
-	height: 100vh;
+#portfolio .row, #portfolio .container{
+	height: 100%;
+} 
+.center-content{
+	height: 100%;
+	width: 100%;
+  	display: -webkit-box;
+  	display: -ms-flexbox;
 	display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;	
 	align-items: center;
-	flex-direction: column;
-	border-top: 3px solid #000000;
-}  
-#project-video img{
-	width: 60vw;
-}	
-#project-video video{
-	width:60vw;
-	height:auto;
-	margin: 0;
 }
-#about-project{
-	padding: 0 5vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	background-image: url("../img/portfolio/poster.jpg");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-position: center;	
-	text-align: left;
+#browser-frame{
+	width: 100%;
+	margin-bottom: -2px;
 }
-#about-project h3{
-	font-size: 3rem;
+#video-player{
+	width: 100%;
+	border: 2px solid #000000;
+	border-radius: 0 0 20px 20px;
+	-webkit-box-shadow: 0px 10px 49px -10px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 10px 49px -10px rgba(0,0,0,1);
+	box-shadow: 0px 10px 49px -10px rgba(0,0,0,1);
 }
-#about-project h4{
+.project-description{
+    width: 255px;
+    height: 300px;
+    padding-left: 20px;
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+    display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;    
+    flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;    
+    justify-content: space-between;
+}
+.project-description h3{
 	font-size: 2rem;
+	font-weight: bold;
 }
-#about-project p{
-	font-size: 1.2rem;
+.project-description h4{
+	font-size: 1.5rem;
+	font-weight: bold;
 }
-#previous-project{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width:50%;	
+.project-description p{
+	font-size: 1.25rem;
 }
-#next-project{
-	position: absolute;
-	right: 0;
-	top: 0;
-	width:50%;
-}
-.portfolio-btn{
-	border:1px solid #000000;
-    background-image:none;
-    background-color:#2d2d2d;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    color: #ffffff;
-    padding: 15px 0;
-}
-.portfolio-btn:hover{
-	background-color: #4c4c4c;
-}
-.portfolio-btn:focus{
-	outline: none;
-}
-
 /* ---------------------- contact-modal ---------------------------- */
 .contact-modal{
 	z-index: 9999;
@@ -376,7 +362,7 @@ footer {
     bottom: 0px;
     right: 0px;
     width: 100%;
-    padding-top: 20vh;
+    padding: 20vh 0;
     height: auto;
     position: fixed;
     background: rgba(255,255,255,1);
@@ -389,13 +375,16 @@ footer {
 	top: 2%;
 	right: 2%;
 }
+.contact-modal h2{
+	font-weight: bold;
+}
 .contact-form label{
 	font-family: 'Dosis', Arial, sans-serif;
-	font-size: 1.7rem;
+	font-size: 1.5rem;
 }
 .contact-form input, .contact-form textarea{
-	border: 2px solid #616161;
-	border-radius: 0;
+	border: 2px solid #000000;
+	border-radius: 20px;
 }
 .contact-form input:focus, .contact-form textarea:focus{
 	border: 2px solid #b7b7b7;
@@ -405,9 +394,10 @@ footer {
 	width: 100%;
 	background-color:#000000;
 	color: #ffffff;
-	font-size: 1.7rem;
+	font-size: 1.5rem;
 	border: 2px solid #000000;
 	font-weight: bold;
+	border-radius: 20px;
 }
 .submit-button:hover{
 	background-color: #ffffff;
@@ -421,10 +411,7 @@ footer {
 	background-image: url('../img/contact/blue-strokes.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover; 
+  	background-size: 100vw 100%; 
 }
 #phone{
 	min-height: 770px;
@@ -432,10 +419,18 @@ footer {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: auto 100%;
+	display: -webkit-box;
+  	display: -ms-flexbox;
   	display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;	
 	align-items: center;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	margin-top: 30px;
 }
 #social-media{
 	width: 30%;

@@ -75,7 +75,7 @@ $(document).ready(function() {
 	});
 
 /* -----------------------------  Portfolio Projects ----------------------------- */	
-	var player = document.getElementById('videoPlayer');	
+	var player = document.getElementById('video-player');	
 	var projectImg = document.getElementById('demo-video');
 	var project = document.getElementById('project');
 	var tech = document.getElementById('tech-stack');
@@ -102,18 +102,18 @@ $(document).ready(function() {
 		player.load();
     	player.play();
 	});
-	$("#previous-project").click(function () {
-		counter--;
-		if(counter < 0){
-			counter=6;
-		}
-		project.innerHTML= description[counter][0];
-		tech.innerHTML = description[counter][1];
-		player.pause();	
-		projectImg.src = imgPath[counter];
-		player.load();
-    	player.play();
-	});
+	// $("#previous-project").click(function () {
+	// 	counter--;
+	// 	if(counter < 0){
+	// 		counter=6;
+	// 	}
+		// project.innerHTML= description[counter][0];
+		// tech.innerHTML = description[counter][1];
+		// player.pause();	
+		// projectImg.src = imgPath[counter];
+		// player.load();
+  //   	player.play();
+	// });
 	/* -----------------------------  contact modal ----------------------------- */	
 		    $("#message").click(function (){
 		    	$(".contact-modal").show('slide', {direction:'down'}, 500);
