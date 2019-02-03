@@ -441,8 +441,14 @@ img::-moz-selection {
 #social-media a img{
 	width: 48%;
 	height:auto;
-	-webkit-animation-iteration-count: 2;
-	-webkit-animation-delay: 2s;
+}
+.zoom{
+	transition: all 0.2s ease;
+}
+.zoom:hover{
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1); 
+	transform: scale(1.1); 
 }
 /* ---------------------- Resume ---------------------------- */
 #personal-info{
