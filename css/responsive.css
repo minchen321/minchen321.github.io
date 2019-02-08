@@ -31,6 +31,9 @@
 	#about-author h2{
 		font-size: 2.5rem;
 	}
+	#social-media{
+		width: 35%;
+	}	
 }
 @media only screen and (max-width: 991px) {
 	#mainNav {
@@ -114,7 +117,7 @@
 		font-size: 1rem;
 	}
 	#social-media{
-		width: 25%;
+		width: 30%;
 	}
 	#portfolio{
 		height: auto;
@@ -200,7 +203,7 @@
 		width:85vw;
 	}
 	#social-media{
-		width: 45%;
+		width: 40%;
 	}	
 	#left-bubble p{
 		font-size: 1.4rem;
@@ -236,7 +239,7 @@
 		top:-4.5rem;
 		left: 5%;
 		right: 5%;
-	}	 	
+	}
 }
 @media only screen and (max-width: 575px) {
 	.masthead .intro-body h1{
@@ -303,6 +306,9 @@
 	#about-project p{
 		font-size: 1rem;
 	}		
+	#social-media{
+		width: 50%;
+	}	
 }	
 @media only screen and (max-width: 414px) {
 	#moving-helicopter img{
