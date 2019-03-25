@@ -96,7 +96,6 @@ img::-moz-selection {
   height: auto;
   position: absolute;
   top: 60px;
-  right: 0;
   -webkit-animation: rightToLeft 25s infinite;
   animation: rightToLeft 25s infinite;
 }
