@@ -1,38 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Min Chen's Personal Website">
-    <meta name="keywords" content="Web Developer, Graphic Designer">
-    <meta name="author" content="Min Chen">
-    <title>Min Chen</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:500,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.css">
-
-    <!-- Custom styles for this template -->
-    <link href="css/theme.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-  </head>
-
-  <body id="page-top">
-    <div class="hameid-loader-overlay"></div>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Min Chen's Portfolio Website">
+  <meta name="keywords" content="Front End Web Developer, Graphic Designer">
+  <meta name="author" content="Min Chen">	
+	<title>Min Chen</title>
+	<!-- core stylesheets -->
+  <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/css/animate.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:500,700" rel="stylesheet">  
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+</head>
+<body id="page-top">
+    <div class="loader-overlay"></div>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg fixed-top main-nav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Min Chen</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#mobile-nav" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse" id="mobile-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
@@ -50,132 +42,100 @@
         </div>
       </div>
     </nav>
-
-    <!-- Intro Header -->
-    <header class="masthead">
-      <div class="row">
-        <div class="animated slideInRight" id="moving-helicopter">
-          <img src="img/helicopter.png" class="img-fluid" alt="job wanted">
-        </div>
+    <!-- =================== Home =================== -->
+    <section id="home">
+      <div class="job-wanted-msg">
+        <img src="img/helicopter.png" alt="job wanted">
       </div>
-      <div class="intro-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7 col-md-7 col-sm-6 col-8 mx-auto">
-              <h1 class="brand-heading"><span id="head-title"></span></h1>
-            </div>
-          </div>
-        </div>
+      <div class="intro-container mx-auto">
+        <h1 id="introduction"></h1>
       </div>
-    </header>
-
-    <!-- About Section -->
+    </section>
+    <!-- =================== About =================== -->
     <section id="about">
-      <!-- about me -->
-      <div class="container-fluid" id="about-author">
-        <h2>About Me</h2>
-        <div class="row">
-          <div class="col-lg-1"></div>
-          <div class="col-lg-4 col-sm-5 col-6">
-            <div id="left-bubble" class="wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="500ms">
-              <p>I'm a front-end<br>developer. <a href="#front-end-developer" id="developer-btn" class="animated pulse more-btn"><u>More</u></a></p>
+      <div id="aboutMe">
+        <h2 class="text-center section-title">About Me</h2>        
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 col-sm-5 col-6">
+              <div class="fix-wow-bug wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="500ms"></div>
+              <div class="left-bubble word-bubble wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="800ms">
+                <p>I'm a Front End Developer. <span id="coding-bg-btn">More</span></p>
+              </div>
             </div>
+            <div class="col-lg-2 col-sm-2 col-1"></div>            
+            <div class="col-lg-4 col-sm-5 col-5">
+              <div class="right-bubble word-bubble wow fadeInRight" data-wow-duration="800ms" data-wow-delay="700ms">
+                <p>I'm Min. <span id="my-bg-btn">More</span></p>
+              </div>
+            </div>            
+            <div class="col-lg-1"></div>
           </div>
-          <div class="col-lg-2 col-sm-2 col-1">
-          </div>
-          <div class="col-lg-4 col-sm-5 col-5">
-            <div id="right-bubble" class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="400ms">
-              <p>I'm Min. <a href="#about-min" id="min-btn" class="animated pulse more-btn"><u>More</u></a></p>
-            </div>
-          </div>
-          <div class="col-lg-1"></div>
         </div>
       </div>
-
-      <!-- front-end developer -->
-      <div id="front-end-developer">
+      <div id="aboutCoding">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-8 col-sm-12 col-12" id="about-web-design">
-              <h2 class="text-center">What do I consider in my front-end design?</h2>
-              <div class="row text-center" id="concept">     
-                <div class="col-sm-4 col-4">
-                  <img src="img/about/creativity.png" class="img-fluid developer-icons" alt="creativity">
-                  <figcaption>Creativity</figcaption>
-                </div>
-                <div class="col-sm-4 col-4">
-                  <img src="img/about/responsive-design.png" class="developer-icons img-fluid" alt="responsive design">
-                  <figcaption>Responsive Design</figcaption>
-                </div>
-                <div class="col-sm-4 col-4">
-                  <img src="img/about/accessibility.png" class="developer-icons img-fluid" alt="accessibility">
-                  <figcaption>Accessibility</figcaption>
-                </div>
-              </div> 
-              <div id="code">
-                <p>let Min &#61; &#123;</p>
-                  <div id="multi-lines">programming&#95;experience: 2&#43; years,<br>
-                    operating&#95;systems&#58; &#91;Windows, Mac_OS&#93;,<br>
-                    programming&#58; &#91;HTML, CSS, Sass/Less, jQuery, JavaScript, Node.js, Ember.js, Express.js, Bootstrap&#93;,<br>
-                    Softwares&#58; &#91;Sublime Text, Sketch, Adobe Experience Design, Photoshop, Illustrator, Microsoft Office&#93;
-                  </div>
-                <p>&#125;&#59;</p>
-              </div>
-              <div id="left-button">
-                <button id="back" class="back-to-about"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-12 col-12" id="developer-img">
-              <img src="img/about/web-developer.png" id="self illustration" class="img-fluid">               
-            </div>
-          </div>
-        </div>  
-      </div>
-      <!-- about Min-->
-      <div id="about-min">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-4 col-sm-12 col-12" id="my-picture"></div>
-            <div class="col-lg-8 col-sm-12 col-12" id="introduction">
-              <p>I’m a senior studying Graphic Design and Computer Science at Queens College, CUNY. I'm currently a Freelance Front-End Developer at Biscuit &amp; Chai. I enjoy solving complex problems with creative designs. I'm always looking for opportunities to expand my skills as a web developer. If you have any cool projects or opportunities. Let’s get in touch! &nbsp; <a href="#contact" class="white-links js-scroll-trigger"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
-              <div id="right-button">
-                <button id="previous" class="back-to-about">Back <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-              </div>
+            <div class="col-lg-8 col-sm-12 col-12 self-intro">
+              <p>let Min &#61; &#123;<br>
+                <span class="code-lines">programmingExperience: &#39;2&#43; years&#39;,<br>
+                  operatingSystems&#58; &#91;&#39;Windows&#39;, &#39;Mac_OS&#39;&#93;,<br>
+                  programming&#58; &#91;&#39;HTML&#39;, &#39;CSS&#39;, &#39;Sass/Less&#39;, &#39;jQuery&#39;, &#39;JavaScript&#39;, &#39;Node.js&#39;, &#39;Ember.js&#39;, &#39;Express.js&#39;, &#39;Bootstrap&#39;&#93;,<br>
+                  softwares&#58; &#91;&#39;Sublime Text&#39;, &#39;Sketch&#39;, &#39;InVision&#39;, &#39;Principle&#39;, &#39;Adobe XD&#39;, &#39;Photoshop&#39;, &#39;Illustrator&#39;, &#39;Microsoft Office&#39;&#93;
+                </span>
+              &#125;&#59;</p>
+              <a class="btn" id="left-back">Back <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>            
+            <div class="col-lg-4 col-sm-12 col-12 aside-img">
+              <img src="img/developer.png" id="self illustration" class="img-fluid">
             </div>
           </div>
         </div>
       </div>
-    </section>   
-    
+      <!-- =================== About Min =================== -->
+      <div id="aboutMin">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-4 col-sm-12 col-12 aside-img"></div>
+            <div class="col-lg-8 col-sm-12 col-12 self-intro">
+              <p>I’m a senior studying Graphic Design and Computer Science at Queens College, CUNY. I'm currently a Freelance Front-End Developer at Biscuit &amp; Chai. I enjoy solving complex problems with creative designs. I'm always looking for opportunities to expand my design and coding skills. If you have any cool projects or opportunities. Let’s get in touch! &nbsp; <a href="#contact" class="white-links js-scroll-trigger"> <i class="fa fa-arrow-right" aria-hidden="true"></i></a> </p>
+              <a class="btn" id="right-back"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
+            </div>
+          </div>
+        </div>        
+      </div>            
+    </section>
+    <!-- =================== portfolio =================== -->
     <section id="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-9 col-sm-12 col-12 center-content">
-            <div id="web-demo-container">
-              <img src="img/portfolio/browser.png" alt="portfolio frame" id="browser-frame">
-              <video id="video-player" autoplay loop muted>
+            <div class="web-demo-container">
+              <img class="browser-frame" src="img/portfolio/browser.png" alt="portfolio demo">
+              <video id="project-player" autoplay loop muted class="animated fadeIn">
                 <source type="video/mp4" id="demo-video">
               </video>
             </div>
           </div>
           <div class="col-lg-3 col-sm-12 col-12 center-content">
-            <div class="project-description">
-                <h3 id="project"></h3>
-                <br>
-                <h4>Tech Stack:</h4>
-                <p id="tech-stack"></p>
-                <button class="black-btn" id="next-project">Next Project</button>
+            <div class="project-info-container">
+              <h3 id="projectName"></h3>
+              <p><span class="paragraph-title">Tech Stack:</span>
+                <span id="techStack"></span>
+              </p>
+              <button class="black-btn" id="next-project">Next Project</button>
             </div>
-          </div>
+
+          </div>          
         </div>
       </div>
     </section>
-
+    <!-- =================== portfolio =================== -->
     <section id="contact">
       <!-- contact modal -->      
       <div class="contact-modal">
         <a id="close-modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
-        <!-- contact-form -->
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8 col-sm-10 col-10">
@@ -214,36 +174,22 @@
            <div class="col-lg-2 col-sm-1"></div>
         </div>
       </div>
-      
     </section>
-
-    <!-- Footer -->
+    <!-- =================== footer =================== -->
     <footer>
       <div class="container text-center">
+        <p>Designed and Coded with <span><i class="fa fa-coffee" aria-hidden="true"></i></span> &amp; <span><i class="fa fa-heart" aria-hidden="true"></i></span></p>
         <p>Copyright &copy; Min Chen <span class="currentYear"></span></p>
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="js/typed.js"></script>
-    <script type="text/javascript" src="js/wow.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script type="text/javascript" src="js/grayscale.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-    <script>
-      $(window).on('load', function(){
-          $(".hameid-loader-overlay").hide();  
-      });
-    </script>
-
-  </body>
-
+    <script type="text/javascript" src="vendor/js/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/js/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="vendor/js/popper.min.js"></script>
+    <script type="text/javascript" src="vendor/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/js/wow.min.js"></script>      
+    <script type="text/javascript" src="vendor/js/typed.min.js"></script>
+    <script type="text/javascript" src="vendor/js/jquery.easing.min.js"></script>    
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>

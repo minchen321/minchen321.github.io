@@ -1,417 +1,238 @@
-@media only screen and (min-width: 1450px) {
-	#introduction p{
-		font-size: 2rem;
-	}
-}
 @media only screen and (max-width: 1199px) {
-	#left-bubble{
+	/* ----------- about ----------- */	
+	.word-bubble p{
+		font-size: 2.8vw;
+	}
+	.left-bubble{
 		margin-left: 0;
 	}
-	#left-bubble p{
-		font-size: 1.8rem;
+	.right-bubble{
+		margin-right: 15%;
 	}
-	#right-bubble{
-		margin-right: 10%;
+	#aboutMin .self-intro p {
+	    font-size: 1.5rem;
 	}
-	#right-bubble p{
-		font-size: 1.8rem;
+	#aboutMin #right-back{
+	  font-size: 1.5rem;
 	}
-	#about-web-design figcaption {
-	    font-size: 1.2rem;
+	#aboutCoding .self-intro p {
+	    font-size: 1.4rem;
 	}
-	#code p, #multi-lines{
-		font-size: 1.5rem;
+	#aboutCoding #left-back{
+	  font-size: 1.4rem;
 	}
-	.back-to-about{
-		font-size: 1.5rem;
-	}
-	#introduction p{
-		font-size: 1.5rem;
-	}
-	#about-author h2{
-		font-size: 2.5rem;
-	}
+	/* ----------- portfolio ----------- */	
 	#social-media{
 		width: 35%;
 	}	
 }
 @media only screen and (max-width: 991px) {
-	#mainNav {
-		-webkit-box-shadow: 0px 15px 31px -14px rgba(66,66,66,0.3);
-		-moz-box-shadow: 0px 15px 31px -14px rgba(66,66,66,0.3);
-		box-shadow: 0px 15px 31px -14px rgba(66,66,66,0.3);
+	.section-title {
+	    font-size: 2.5rem;
 	}
-	#mainNav .nav-link.active {
-	    background-size: 100px auto;
-	    background-position: left;
-	} 
-	#mainNav .navbar-toggler:focus{
+	/* ----------- navigation ----------- */
+	.main-nav{
+		-webkit-box-shadow: 0px 15px 15px -14px rgba(66,66,66,0.3);
+	    -moz-box-shadow: 0px 15px 15px -14px rgba(66,66,66,0.3);
+	    box-shadow: 0px 15px 15px -14px rgba(66,66,66,0.3);
+	}
+	.main-nav .navbar-toggler:focus{
 		outline: none;
 	}
-	section .section-heading{
-		margin-bottom: 1rem;
+	.navbar-nav a{
+		margin: 0;
 	}
-	#about-author h2{
-		left: 40%;
-    	right: 38%;
+	.main-nav .nav-link.active {
+	    background-size: 100px auto;
+	    background-position: left;
 	}
-	#left-bubble{
-		margin-left: 15%;
+	/* ----------- about ----------- */
+	.left-bubble {
+	    margin-left: 15%;
 	}
-	#left-bubble p{
-		padding-left: 30px;
+	.word-bubble p{
+		font-size: 3.2vw;
 	}
-	#right-bubble{
-		margin-right: 20%;
+	#aboutMin .aside-img{
+		display: none;
 	}
-	#front-end-developer{
-		height: auto;
+	#aboutMin .self-intro{
+	  background-image: url(../img/min-bg-mobile.jpg);
 	}
-	#concept{
-		padding: 2vh 4vw;
+	#aboutCoding .aside-img{
+		display: none;
 	}
-	#developer-img{
-		position: absolute;
-		left:0;
-		z-index: 99;
-		text-align: center;
-		height: 350px;
-		background-image: url("../img/about/blue-stroke-horizontal.jpg");
-	}
-	#about-web-design{
-		height: 650px;
-		position: relative;
-		margin-top: 350px;
-	}
-	#about-web-design h2 {
-    	padding-top: 2rem;
-    }	
-	#developer-img img{
-		width:auto;
-		height: 100%;
-		position: relative;
-		bottom: 0;
-	}
-	#about-min{
-		height: auto;
-	}
-	#my-picture{
-		height: 500px;
-		background-image: url("../img/about/min-mobile.jpg");
-		background-position: 0% 5%;
-	}
-	#introduction{
-		height: 500px;
-		background-image: url("../img/about/word-bubble-mobile.jpg");
-	}
-	#introduction p{
-		width: 70vw;
-	}
-	#about-project h3{
-		font-size: 2rem;
-	}
-	#about-project h4{
-		font-size: 1.5rem;
-	}
-	#about-project p{
-		font-size: 1rem;
-	}
-	#social-media{
-		width: 30%;
-	}
+	/* ----------- portfolio ----------- */
 	#portfolio{
-		height: auto;
+		height: 100%;
 		padding: 60px 0;
 	}
-	.project-description{
-		height: auto;
-		width: 100%;
+	.project-info-container{
 		margin-top: 40px;
+		height: 200px;
+		width: 100%;
 	}
-	.black-btn{
-		width: 160px;
+	.black-btn {
+	    width: 160px;
 	}
+	.web-demo-container {
+	    height: auto;
+	    min-height: 200px;
+	}
+	#portfolio #project-player{
+		border: 2px solid #000000;
+	}
+	/* ----------- portfolio ----------- */	
 	#contact{
   		background-size: auto 100%;
 	}
-}
-
-@media only screen and (max-width: 850px) {
-	#about-author{
-		background-size: auto 75vh;
+	#social-media {
+	    width: 28%;
 	}
-	#left-bubble p{
-		font-size: 1.6rem;
+	/* ----------- resume ----------- */		
+	.job-descriptions{
+	    text-align: left!important;		
 	}
-	#right-bubble p{
-		font-size: 1.6rem;
-	}	
+	.company-logo{
+		display: none;
+	}
 }
-
 @media only screen and (max-width: 768px) {
-	#about-author{
-		background-image: url('../img/about/about-me-mobile.jpg');
-		background-size: auto 100vh;
+	#aboutMe{
+		background-image: url("../img/about-bg-mobile.jpg");
 	}
-    #my-picture{
-		height: 400px;
+	.left-bubble {
+	    margin-left: 0;
 	}
-	#introduction p{
-		font-size: 1.4rem;
+	.right-bubble {
+	    margin-right: 10%;
+	}
+	#aboutMin .self-intro p {
+	    width: 70%;
 	}
 }
-
-@media only screen and (max-width: 767px) {	
-	section h2{
+@media only screen and (max-width: 767px) {
+	/* ----------- home ----------- */
+	#home{
+		min-height: 550px;
+  		background-image: url("../img/home-bg-mobile.jpg");
+	}
+	.job-wanted-msg img{
+	 	width: 145px;
+		-webkit-animation: rightToLeft 20s infinite;
+		animation: rightToLeft 20s infinite;
+	}
+	#introduction{
+		max-width: 60%;
 		font-size: 2rem;
 	}
-	.masthead {
-		background-image: url(../img/nyc-mobile.jpg);
-	}  
-	.masthead .intro-body h1{
-		font-size: 2rem;
-		margin-bottom: 6rem;
-		padding-bottom: 0rem;
+	/* ----------- about ----------- */	
+	#aboutMe{
+		background-size: 100% auto;
 	}
-	#about-web-design h2{
-		font-size: 2rem;
+	.left-bubble{
+		height: 140%;
 	}
-	#concept{
-		padding: 2vh 0vw;
+	.word-bubble p {
+	    font-size: 3.5vw;
 	}
-	#code p, #multi-lines{
-		font-size: 1.3rem;
+	.right-bubble p {
+	    padding: 15% 0;
 	}
-	.back-to-about{
-		font-size: 1.3rem;
+	#aboutCoding .self-intro p {
+	    font-size: 1.2rem;
+	}
+	#aboutCoding #left-back{
+	  font-size: 1.2rem;
 	}	
-	.developer-icons {
-	    width: 6rem;
-	} 
-	#project-video {
-    	height: 500px;
-    }	
-    #about-project{
-    	height:480px;
-    	padding: 0 20vw;
-    	background-image: url("../img/portfolio/poster-mobile.jpg");
-    }
-	#project-video img{
-		width: 85vw;
-	}	
-	#project-video video{
-		width:85vw;
-	}
-	#social-media{
-		width: 40%;
-	}	
-	#left-bubble p{
-		font-size: 1.4rem;
-	}
-	#right-bubble p{
-		font-size: 1.4rem;
-	}
-	#left-bubble{
-		margin-left: 0;
-		margin-top: 25%;
-	}
-	#right-bubble{
-		margin-right: 5%;
-		margin-top: 0;
-	}
-	#about-author h2 {
-	    left: 30%;
-	    right: 30%;
-	}
-/* =============	resume   =================  */
+	/* ----------- portfolio ----------- */
+	#social-media {
+	    width: 44%;
+	}		
+	/* ----------- resume ----------- */
 	#personal-info{
+		padding-top: 4rem;
 		text-align: center;
-		height: 50%;
 	}
 	.social-media {
-	    margin-top: 2rem;
-	}
-}	
-
-@media only screen and (max-height: 590px) {
-	.masthead .intro-body h1{
-		position: absolute;
-		top:-4.5rem;
-		left: 5%;
-		right: 5%;
+	    text-align: center;
+	    margin-top: 1rem;
 	}
 }
 @media only screen and (max-width: 575px) {
-	.masthead .intro-body h1{
+	.section-title {
+	    font-size: 2rem;
+	}	
+	/* ----------- home ----------- */
+	#introduction{
 		font-size: 1.8rem;
-	}	
-	#moving-helicopter{
-		top:12vh;
-	}	
-	#about-author{
-		background-size: auto 75vh;
 	}
-	#about-author .col-6{
+	/* ----------- about ----------- */
+	#aboutMe .col-6{
 		padding-left: 0;
 	}
-	#about-author .col-5{
+	#aboutMe .col-1, #aboutMe .col-5{
 		padding-right: 0;
+		padding-left: 0;
+	}		
+	.word-bubble p {
+	    font-size: 4.2vw;
 	}
-	#about-author h2 {
-	    font-size: 2rem;
-	    top: 115%;
+	.left-bubble {
+	    margin-right: 10px;
 	}
-	#left-bubble{
-		margin-top: 35%;
+	.right-bubble {
+	    margin-right: 0;
+	    padding-left: 20%;
+	    height: 145%;
 	}
-	#right-bubble{
-		margin-right: 0;
-	}	
-	#right-bubble p{
-		font-size: 1.3rem;
+	#aboutMin .self-intro p {
+	    font-size: 1.2rem;
 	}
-	#left-bubble p{
-		padding-left: 25px;
-		font-size: 1.3rem;
-	}	
-	#developer-img{
-		height: 300px;
+	#aboutMin #right-back{
+	  font-size: 1.2rem;
 	}
-	#about-web-design{
-		height: 700px;
-		margin-top: 300px;
+	#aboutCoding .self-intro{
+	  background-image: url(../img/coding-bg-mobile.jpg);
+	  background-size: 95% 75%;
 	}
-	.developer-icons {
-	    width: 5rem;
-	} 	
-	#my-picture{
-		height: 300px;
-	}
-	#introduction {
-	    height: 450px;
-	}
-	#introduction p{
+	#aboutCoding .self-intro p {
+		width: 75%;
 		font-size: 1.1rem;
 	}
-	#about-project{
-		background-size: 110% 90%;
-		background-color: #5876b3
+	#aboutCoding #left-back{
+	  font-size: 1.1rem;
 	}
-	#about-project h3{
-		font-size: 1.5rem;
+	.code-lines {
+	  margin-left: 25px;
 	}
-	#about-project h4{
-		font-size: 1.2rem;
-	}
-	#about-project p{
-		font-size: 1rem;
-	}		
+	/* ----------- contact ----------- */
 	#social-media{
 		width: 50%;
-	}	
-}	
+	}
+}
 @media only screen and (max-width: 414px) {
-	#moving-helicopter img{
-		width:140px;
-		height: auto;
-	}	
-	.masthead {
-	  background-position: center bottom;
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover; 
-	  background-attachment: scroll;
-	} 	
-	#about-author{
-		background-size: auto 60vh;
-	}
-	#about-author h2{
-		top: 120%;
-	}
-	#left-bubble p{
-		font-size: 1rem;
-	}
-	#right-bubble p{
-		font-size: 1rem;
-    }
-	#right-bubble{
-		margin-right: 0;
-	}    
-    #developer-img{
-		height: 220px;
-	}
-    #about-web-design {
-    	margin-top: 220px;
-    	height: 550px;
-    }
-	#about-web-design h2 {
-    	padding-top: 10px;
-    	font-size: 1.5rem;
-    }	
-	#about-web-design .row{
-		margin: 0;
-	}	
-	#code p, #multi-lines{
-		font-size: 1rem;
-	}
-	.back-to-about{
-		font-size: 1rem;
-	}	
-	#about-web-design figcaption {
+	/* ----------- about ----------- */
+	#aboutMin .self-intro p {
 	    font-size: 1rem;
 	}
-	#about-web-design .col-sm-4{
-		padding-left: 0;
-		padding-right: 0;
+	#aboutMin #right-back{
+	  font-size: 1rem;
 	}
-	#my-picture {
-	    height: 245px;
-	}	
-	#project-video {
-	    height: 300px;
+	#aboutCoding .self-intro p {
+	    font-size: 0.9rem;
 	}
-	#project-video img{
-		width: 90vw;
-	}	
-	#project-video video{
-		width:90vw;
+	#aboutCoding #left-back {
+	    font-size: 0.9rem;
 	}
+	.left-bubble {
+	    height: 130%;
+	}
+	/* ----------- contact ----------- */	
 	#phone{
 		background-size: auto 90%;
 	}
 	#social-media{
 		width: 60%;
-	}	
-	#work-experience img {
-	    max-width: 70%;
-	    padding-bottom: 2rem;
-	}
-}
-
-@media only screen and (max-width: 375px) {
-	#introduction p{
-		font-size: 1rem;
-	}
-	#code {
-	    padding: 0 2vw 0 9vw;
-	}
-	#about-author .col-5{
-		padding-left: 0;
-	}
-	#about-author .col-1{
-		padding: 0;
-	}
-	#about-author h2{
-		font-size: 1.5rem;
-	}
-}	
-
-@media only screen and (max-width: 320px) {	
-	.masthead .intro-body h1{
-		font-size: 1.5rem;
-	}	
-	#left-bubble p{
-		padding-left: 15px;
 	}
 }
