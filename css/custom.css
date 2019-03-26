@@ -1,3 +1,6 @@
+html{
+  overflow-x: hidden;  
+}
 body{
   height: 100%;
   min-width: 320px;  
@@ -101,8 +104,8 @@ img::-moz-selection {
 }
 @-webkit-keyframes rightToLeft{
   from{
-    -webkit-transform: translate(90vw);
-    transform: translate(90vw);
+    -webkit-transform: translate(95vw);
+    transform: translate(95vw);
     visibility: visible;
   }
   to{
@@ -112,8 +115,8 @@ img::-moz-selection {
 }
 @keyframes rightToLeft{
   from{
-    -webkit-transform: translate(90vw);    
-    transform: translate(90vw);
+    -webkit-transform: translate(95vw);    
+    transform: translate(95vw);
     visibility: visible;
   }
   to{

@@ -59,48 +59,56 @@ $(document).ready(function() {
     {
       id:1,
       videoPath: 'img/portfolio/dish-finder.webm',
+      alternativePath: 'img/portfolio/dish-finder.mp4',
       projectName: 'DishFinder',
       techStack: 'HTML, CSS, JavaScript, jQuery, Bootstrap, Node.js, Express.js, Handlebars, MongoDB'
     },
     {
       id:2,
       videoPath: 'img/portfolio/lumi.webm',
+      alternativePath: 'img/portfolio/lumi.mp4',
       projectName: 'Lumi Asian Fusion',
       techStack: 'HTML, CSS, JavaScript, jQuery, Bootstrap'
     },    
     {
       id:3,
       videoPath: 'img/portfolio/payoment.webm',
+      alternativePath: 'img/portfolio/payoment.mp4',
       projectName: 'Payoment',
       techStack: 'HTML, CSS, JavaScript, jQuery, Bootstrap'
     },
     {
       id:4,
       videoPath: 'img/portfolio/wellness-biscuit.webm',
+      alternativePath: 'img/portfolio/wellness-biscuit.mp4',
       projectName: 'Wellness Biscuit',
       techStack: 'HTML, CSS, JavaScript, jQuery, Bootstrap'
     },
     {
       id:5,
       videoPath: 'img/portfolio/boxing-gym.webm',
+      alternativePath: 'img/portfolio/boxing-gym.mp4',
       projectName: 'Boxing Gym',
       techStack: 'HTML, CSS, JavaScript, jQuery, Bootstrap'
     },
     {
       id:6,
       videoPath: 'img/portfolio/lily.webm',
+      alternativePath: 'img/portfolio/lily.mp4',
       projectName: 'Yoga Studio',
       techStack: 'HTML, CSS, JavaScript, jQuery, Bootstrap'
     },              
     {
       id:7,
       videoPath: 'img/portfolio/surtom.webm',
+      alternativePath: 'img/portfolio/surtom.mp4',
       projectName: 'Surtom Construction',
       techStack: 'HTML, CSS, JavaScript, jQuery, Bootstrap'
     }, 
     {
       id:8,
       videoPath: 'img/portfolio/smart-capital.webm',
+      alternativePath: 'img/portfolio/smart-capital.mp4',
       projectName: 'Smart Capital',
       techStack: 'HTML, CSS, JavaScript, Wordpress'
     }
@@ -110,7 +118,8 @@ $(document).ready(function() {
 
   $('#projectName').text(projects[counter].projectName);
   $('#techStack').text(projects[counter].techStack);
-  $('#demo-video').attr('src', projects[counter].videoPath);
+  $('#web-video').attr('src', projects[counter].videoPath);
+  $('#alternative-video').attr('src', projects[counter].alternativePath);
   player.pause();
   player.load();
   player.play();  
@@ -124,7 +133,8 @@ $(document).ready(function() {
     $('#techStack').text(projects[counter].techStack);
     player.load();
     player.play();
-    $('#demo-video').attr('src', projects[counter].videoPath);
+    $('#web-video').attr('src', projects[counter].videoPath);
+    $('#alternative-video').attr('src', projects[counter].alternativePath);
   });
   /* -----------------------------  contact modal ----------------------------- */  
   $("#message").click(function (){
