@@ -25,6 +25,10 @@ img::selection {
 img::-moz-selection {
   background: transparent; 
 }
+button:focus{
+  outline: none!important;
+  box-shadow: none!important;
+}
 .section-title{
   margin-top: 15vh;
   font-size: 3rem;
@@ -34,7 +38,6 @@ img::-moz-selection {
 .black-btn{
   border: 2px solid #000000;
   font-size: 1.25rem;
-  height: 40px;
   width: 100%;
   border-radius: 20px;
   margin-top: 20px;
@@ -52,8 +55,8 @@ img::-moz-selection {
 .loader-overlay {
     width: 100vw;
     height: 100vh;
-    background: url('../img/loader.gif') center no-repeat #ffffff;
-    background-size: auto;
+    background: url('../img/loader.gif') center no-repeat #fbfbfb;
+    background-size: 170px;
     z-index: 9999;
     position: fixed;
     overflow: hidden;

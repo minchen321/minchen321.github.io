@@ -49,7 +49,7 @@ $(document).ready(function() {
     });
 	//animated typing message
 	$("#introduction").typed({
-		strings: ["Hi! I'm Min.", "I'm a Front End Developer based in New York City."],
+		strings: ["Hi! I'm Min.", "I'm a UI Designer & Developer based in New York City."],
 		typeSpeed: 100,
 		loop: true,
 		startDelay: 100

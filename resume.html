@@ -209,10 +209,12 @@
     <script type="text/javascript" src="vendor/js/wow.min.js"></script> 
 	<script type="text/javascript">
 		jQuery(function($) {'use strict';
+		  	new WOW().init();
+		}); 
+		$(document).ready(function(){
 		    $(window).on('load', function(){
 		    	$('.loader-overlay').hide();  
 		  	});
-		  	new WOW().init();
 		    $("#message").click(function (){
 		    	$(".contact-modal").show('slide', {direction:'down'}, 500);
 		    });
@@ -221,7 +223,7 @@
 			});
 		    let year = new Date().getFullYear();
 		    $('.currentYear').text(year);
-		}); 
+		});
 	</script>
 </body>
 
