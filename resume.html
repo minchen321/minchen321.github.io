@@ -209,6 +209,9 @@
     <script type="text/javascript" src="vendor/js/wow.min.js"></script> 
 	<script type="text/javascript">
 		jQuery(function($) {'use strict';
+		    $(window).on('load', function(){
+		    	$('.loader-overlay').hide();  
+		  	});			
 		  	new WOW().init();
 		    $("#message").click(function (){
 		    	$(".contact-modal").show('slide', {direction:'down'}, 500);
