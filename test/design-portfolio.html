@@ -44,9 +44,14 @@
   			width: 9vw;
   			min-width: 120px;
   		}
+  		.loader-overlay{
+			top: 0;
+			left: 0;
+		}
   	</style>
 </head>
 <body>
+	<div class="loader-overlay"></div>
 	<section class="demo-container">
 		<a href="index.html#portfolio" class="zoom back-to-home-btn">
 			<img src="img/back-btn.png">
@@ -72,6 +77,11 @@
     <script type="text/javascript" src="vendor/js/jquery-ui.min.js"></script>    
     <script type="text/javascript" src="vendor/js/popper.min.js"></script>
     <script type="text/javascript" src="vendor/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+		$(window).on('load', function(){
+        	$(".loader-overlay").hide();  
+      	});
+	</script>
 </body>
 
 </html>

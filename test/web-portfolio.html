@@ -16,6 +16,10 @@
   	<link href="css/custom.css" rel="stylesheet">
   	<link href="css/responsive.css" rel="stylesheet">
   	<style type="text/css">
+  		.loader-overlay{
+			top: 0;
+			left: 0;
+		}
   		.back-to-home-btn{
   			position: fixed;
   			left: 2vw;
@@ -31,8 +35,8 @@
   	</style>
 </head>
 <body>
+	<div class="loader-overlay"></div>
 	<a href="index.html#portfolio" class="zoom back-to-home-btn">
-		<!-- <i class="fa fa-backward" aria-hidden="true"></i>  -->
 		<img src="img/back-btn.png">
 	</a>
 	<div id="fullpage">
@@ -239,6 +243,11 @@
 
 	        }
 	    });
+	</script>
+	<script type="text/javascript">
+		$(window).on('load', function(){
+        	$(".loader-overlay").hide();  
+      	});
 	</script>
 </body>
 
