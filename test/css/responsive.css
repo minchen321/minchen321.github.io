@@ -1,0 +1,254 @@
+@media only screen and (max-width: 1199px) {
+	/* ----------- about ----------- */	
+	.word-bubble p{
+		font-size: 2.8vw;
+	}
+	.left-bubble{
+		margin-left: 0;
+	}
+	.right-bubble{
+		margin-right: 15%;
+	}
+	#aboutMin .self-intro p {
+	    font-size: 1.5rem;
+	}
+	#aboutMin #right-back{
+	  font-size: 1.5rem;
+	}
+	#aboutCoding .self-intro p {
+	    font-size: 1.4rem;
+	}
+	#aboutCoding #left-back{
+	  font-size: 1.4rem;
+	}
+	/* ----------- portfolio ----------- */	
+	#social-media{
+		width: 35%;
+	}
+	.design-section, .web-section{
+		width: 100%;
+		height: 55%;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.section-title {
+	    font-size: 2.5rem;
+	}
+	/* ----------- navigation ----------- */
+	.main-nav{
+		-webkit-box-shadow: 0px 15px 15px -14px rgba(66,66,66,0.3);
+	    -moz-box-shadow: 0px 15px 15px -14px rgba(66,66,66,0.3);
+	    box-shadow: 0px 15px 15px -14px rgba(66,66,66,0.3);
+	}
+	.main-nav .navbar-toggler:focus{
+		outline: none;
+	}
+	.navbar-nav a{
+		margin: 0;
+	}
+	.main-nav .nav-item.active {
+/*		background-image: url('../img/active-bg.png');*/
+	    background-size: 100px auto;
+	    background-position: bottom left;
+	}
+	/* ----------- about ----------- */
+	.left-bubble {
+	    margin-left: 15%;
+	}
+	.word-bubble p{
+		font-size: 3.2vw;
+	}
+	#aboutMin .aside-img{
+		display: none;
+	}
+	#aboutMin .self-intro{
+	  background-image: url(../img/min-bg-mobile.jpg);
+	}
+	#aboutCoding .aside-img{
+		display: none;
+	}
+	/* ----------- portfolio ----------- */
+	#portfolio{
+		height: 100%;
+		padding: 60px 0;
+	}
+	.project-info-container{
+		margin-top: 40px;
+		height: 250px;
+		width: 100%;
+	}
+	.black-btn {
+	    width: 160px;
+	}
+	.web-demo-container {
+	    height: auto;
+	    min-height: 200px;
+	}
+	#portfolio #project-player{
+		border: 2px solid #000000;
+	}
+	#section2 .container {
+	    margin-top: 70px;
+	}
+	.design-section, .web-section{
+		height: 80%;
+	}
+	.web-section{
+		text-align: right;
+		background-position: left;
+		background-size: 70%;
+	}
+	/* ----------- portfolio ----------- */	
+	#section3{
+  		background-size: auto 100%;
+	}
+	#social-media {
+	    width: 28%;
+	}
+	/* ----------- resume ----------- */		
+	.job-descriptions{
+	    text-align: left!important;		
+	}
+	.company-logo{
+		display: none;
+	}
+}
+@media only screen and (max-width: 768px) {
+	#aboutMe{
+		background-image: url("../img/about-bg-mobile.jpg");
+	}
+	.left-bubble {
+	    margin-left: 0;
+	}
+	.right-bubble {
+	    margin-right: 10%;
+	}
+	#aboutMin .self-intro p {
+	    width: 70%;
+	}
+}
+@media only screen and (max-width: 767px) {
+	/* ----------- home ----------- */
+	.home{
+		min-height: 550px;
+  		background-image: url("../img/home-bg-mobile.jpg");
+	}
+	.job-wanted-msg img{
+	 	width: 145px;
+		-webkit-animation: rightToLeft 20s infinite;
+		animation: rightToLeft 20s infinite;
+	}
+	#introduction{
+		max-width: 60%;
+		font-size: 2rem;
+	}
+	/* ----------- about ----------- */	
+	#aboutMe{
+		background-size: 100% auto;
+	}
+	.left-bubble{
+		height: 140%;
+	}
+	.word-bubble p {
+	    font-size: 3.5vw;
+	}
+	.right-bubble p {
+	    padding: 15% 0;
+	}
+	#aboutCoding .self-intro p {
+	    font-size: 1.2rem;
+	}
+	#aboutCoding #left-back{
+	  font-size: 1.2rem;
+	}	
+	/* ----------- portfolio ----------- */
+	#social-media {
+	    width: 44%;
+	}		
+	/* ----------- resume ----------- */
+	#personal-info{
+		padding-top: 4rem;
+		text-align: center;
+	}
+	.social-media {
+	    text-align: center;
+	    margin-top: 1rem;
+	}
+}
+@media only screen and (max-width: 575px) {
+	.section-title {
+	    font-size: 2rem;
+	}	
+	/* ----------- home ----------- */
+	#introduction{
+		font-size: 1.8rem;
+	}
+	/* ----------- about ----------- */
+	#aboutMe .col-6{
+		padding-left: 0;
+	}
+	#aboutMe .col-1, #aboutMe .col-5{
+		padding-right: 0;
+		padding-left: 0;
+	}		
+	.word-bubble p {
+	    font-size: 4.2vw;
+	}
+	.left-bubble {
+	    margin-right: 10px;
+	}
+	.right-bubble {
+	    margin-right: 0;
+	    padding-left: 20%;
+	    height: 145%;
+	}
+	#aboutMin .self-intro p {
+	    font-size: 1.2rem;
+	}
+	#aboutMin #right-back{
+	  font-size: 1.2rem;
+	}
+	#aboutCoding .self-intro{
+	  background-image: url(../img/coding-bg-mobile.jpg);
+	  background-size: 95% 65%;
+	}
+	#aboutCoding .self-intro p {
+		width: 75%;
+		font-size: 1.1rem;
+	}
+	#aboutCoding #left-back{
+	  font-size: 1.1rem;
+	}
+	.code-lines {
+	  margin-left: 25px;
+	}
+	/* ----------- contact ----------- */
+	#social-media{
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 414px) {
+	/* ----------- about ----------- */
+	#aboutMin .self-intro p {
+	    font-size: 1rem;
+	}
+	#aboutMin #right-back{
+	  font-size: 1rem;
+	}
+	#aboutCoding .self-intro p {
+	    font-size: 0.9rem;
+	}
+	#aboutCoding #left-back {
+	    font-size: 0.9rem;
+	}
+	.left-bubble {
+	    height: 130%;
+	}
+	/* ----------- contact ----------- */	
+	#phone{
+		background-size: auto 90%;
+	}
+	#social-media{
+		width: 60%;
+	}
+}
