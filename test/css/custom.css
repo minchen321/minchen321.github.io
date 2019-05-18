@@ -223,6 +223,10 @@ button:focus{
   width: 1px;
   background:transparent;
 }
+.back-to-home-btn img{
+  width: 9vw;
+  min-width: 120px;
+}
 /* ----------- about min ----------- */
 #aboutMin{
   width: 100%;
