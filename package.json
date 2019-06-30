@@ -21,10 +21,13 @@
   "homepage": "https://github.com/minchen321/minchen321.github.io#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^6.0.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2"
   }
 }
