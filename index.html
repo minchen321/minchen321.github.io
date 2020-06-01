@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Min Chen's Portfolio Website">
+  <meta name="keywords" content="Web Developer, UI Designer">
+  <meta name="author" content="Min Chen">	
+	<title>Min Chen</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="vendor/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="vendor/css/animate.min.css" rel="stylesheet">
+	<link href="dist/css/main.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="loader-overlay"></div>
+  <nav class="navbar">
+    <button class="hamburger-icon">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="container animated">
+      <a class="site-brand">Min Chen</a>
+      <ul class="link-list">
+        <li class="active"><a class="js-scroll-trigger" href="#home">Home</a></li>
+        <li><a class="js-scroll-trigger" href="#about">About</a></li>
+        <li><a class="js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+        <li><a class="js-scroll-trigger" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <!--  =================== Home ===================  -->
+    <section class="home" id="home">
+      <div class="helicopter-container animated slideInRight">
+        <img src="dist/img/helicopter.png" alt="welcome">
+      </div>
+      <div class="intro-container">
+        <h1 id="intro-text"></h1>
+      </div>
+    </section>
+    <!-- =================== About =================== -->
+    <section id="about">
+      <!-- =================== About Me =================== -->
+      <div id="aboutMe">
+        <h2>About Me</h2>        
+        <div class="container">
+          <div class="left-bubble word-bubble wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="800ms">
+            <p><a id="coding-bg-btn">I'm a UI Developer <br>and Designer. 
+              <span class="more-link">More</span>
+            </a></p>
+          </div>
+          <div class="right-bubble word-bubble wow fadeInRight" data-wow-duration="800ms" data-wow-delay="700ms">
+            <p><a id="my-bg-btn">I'm Min. <span class="more-link">More</span></a></p>
+          </div>
+        </div>
+      </div>
+      <!-- =================== About Coder =================== -->
+      <div id="aboutCoding">
+        <div class="container">
+          <div class="coder-intro">
+            <p>let Min &#61; &#123;<br>
+              <span class="code-lines">codingExperience: &#39;3&#43; years&#39;,<br>
+                operatingSystems&#58; &#91;&#39;Windows&#39;, &#39;Mac_OS&#39;&#93;,<br>
+                programming&#58; &#91;&#39;HTML&#39;, &#39;CSS&#39;, &#39;Sass/Less&#39;, &#39;jQuery&#39;, &#39;JavaScript&#39;, &#39;Node.js&#39;, &#39;Vue.js&#39;, &#39;Ember.js&#39;, &#39;Express.js&#39;, &#39;Bootstrap&#39;&#93;,<br>
+                softwares&#58; &#91; &#39;Sketch&#39;, &#39;InVision&#39;, &#39;Principle&#39;, &#39;Adobe XD&#39;, &#39;Photoshop&#39;, &#39;Illustrator&#39;&#93;
+              </span>
+            &#125;</p>
+            <a class="zoom back-btn" id="left-back"><img src="dist/img/blue-back-btn.svg" alt="back button"></a>
+          </div>            
+          <div class="side-img">
+            <img src="dist/img/self-portrait.png" id="self illustration">
+          </div>
+        </div>
+      </div>
+      <!-- =================== About Min =================== -->
+      <div id="aboutMin">
+        <div class="container">
+          <div class="side-img">
+            <picture>
+                <source srcset="dist/img/min.jpg" media="(min-width: 769px)">
+                <img src="dist/img/min-mobile.jpg" alt="Min" />
+            </picture>
+          </div>
+          <div class="self-intro">
+            <div class="intro-content">
+              <p>Thanks for visiting my personal website!</p>
+              <p>As a developer and designer, I focus on front-end web development and UI/UX design. I started my journey studying Graphic Design and Computer Science at Queens College. In my current role as a Front-End Developer at Thesis, I build landing pages to increase conversion rates for some of the leading ecommerce companies. I enjoy solving complex problems with creative design and clean&nbsp;code.</p>
+              <p>If you have any cool projects, <a href="#contact" class="contact-arrow js-scroll-trigger"> let’s get in touch! <i class="fa fa-arrow-right" aria-hidden="true"></i></a> </p>
+            </div>
+            <a class="btn zoom back-btn" id="right-back"><img src="dist/img/blue-back-btn.svg"></a>
+          </div>
+        </div>        
+      </div>
+    </section>
+    <!-- =================== portfolio =================== -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="card-container">
+          <div class="card zoom">
+            <img src="dist/img/web-illustration.jpg" alt="web illustration" />
+            <h2>Front-End Development</h2>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card zoom">
+            <img src="dist/img/design-illustration.jpg" alt="design illustration" />
+            <h2>UI/UX Design</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =================== contact =================== -->
+    <section id="contact">
+      <div class=" wow slideInUp" data-wow-duration="1000ms" data-wow-delay="600ms" id="phone">
+        <div class="phone-content">
+          <h2>Contact</h2>
+          <div class="social-media">
+            <a id="message" aria-label="Email"><img src="dist/img/email.png" alt="Email" class="zoom"></a>
+            <a href="https://www.linkedin.com/in/minchen321" aria-label="Linkedin" target="_blank"><img src="dist/img/linkedin.png" class="zoom" alt="Linkedin"></a>
+            <a href="http://www.instagram.com/min75208/?hl=en" aria-label="Instagram" target="_blank"><img src="dist/img/instagram.png" class="zoom" alt="Instagram"></a>
+            <a href="http://github.com/minchen321" aria-label="GitHub" target="_blank"><img src="dist/img/github.png" class="zoom" alt="GitHub"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =================== contact modal =================== -->
+    <section class="contact-modal">
+      <a id="close-modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+      <div class="container">
+        <div class="modal-content">
+          <h2>Send a Message</h2>
+          <form class="contact-form" method="post" action="http://formspree.io/min.chen7520@gmail.com">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" name="yourName" id="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" name="yourEmail" id="email" class="form-control">
+            </div>
+            <div class="form-group">
+            <label for="textarea-message">Message:</label>
+            <textarea name="yourMessage" class="form-control" id="textarea-message" rows="5"></textarea>
+            </div>
+            <button type="submit" name="submit" value="Submit" class="submit-button">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="text/javascript" src="vendor/js/jquery.min.js"></script>
+  <script type="text/javascript" src="vendor/js/jquery-ui.min.js"></script>    
+  <script type="text/javascript" src="vendor/js/wow.min.js"></script>      
+  <script type="text/javascript" src="vendor/js/typed.min.js"></script>
+  <script type="text/javascript" src="vendor/js/jquery.easing.min.js"></script>    
+  <script type="text/javascript" src="dist/js/main.min.js"></script>
+</body>
+</html>
