@@ -132,6 +132,7 @@ button:focus {
 }
 .hamburger-icon {
 	font-size: 1.5rem;
+	text-align: center;
 	color: $theme-blue;
 	position: fixed;
 	z-index: 11;
@@ -143,6 +144,10 @@ button:focus {
 	border-radius: 2rem;
 	box-shadow: 0px 0px 6px 4px rgba(50,50,50,.08);
 	border: none;
+	padding: .75rem;
+	i {
+		display: block;
+	}
 	@include breakpoint(md) {
 		display: none;
 	}
@@ -156,7 +161,7 @@ button:focus {
   background-image: url("../img/home-bg-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 90%;
+  background-size: cover;
   position: relative;
   .intro-container {
   	height: 100%;
@@ -185,6 +190,7 @@ button:focus {
   }
   @include breakpoint(sm) {
   	min-height: 40rem;
+  	background-size: 90%;
 		background-image: url("../img/home-bg.jpg");
 		#intro-text {
 			font-size: 2rem;
