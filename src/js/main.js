@@ -1,5 +1,14 @@
 $(document).ready(function() {
 	//-----------------------------
+  //loader
+  //-----------------------------
+	$(window).on('load', function(){
+    setTimeout(function(){
+    $('.loader-overlay').hide();
+		}, 1000);
+  });
+
+	//-----------------------------
   //third party plugins
   //-----------------------------
 	new WOW().init();
@@ -36,13 +45,6 @@ $(document).ready(function() {
 	    }
 	  })
 	});
-
-	//-----------------------------
-  //loader
-  //-----------------------------
-	$(window).on('load', function(){
-    $('.loader-overlay').hide();
-  });
 
   //-----------------------------
   //mobile menu icon
