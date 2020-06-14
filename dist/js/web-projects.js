@@ -2,21 +2,22 @@ $(document).ready(function() {
 	//-----------------------------
   //loader
   //-----------------------------
-	// $(window).on('load', function(){
- //    setTimeout(function(){
- //    $('.loader-overlay').hide();
-	// 	}, 1000);
- //  });
-
+	$(window).on('load', function(){
+    setTimeout(function(){
+    	$('.loader').hide();
+		}, 1000);
+  });
+	//-----------------------------
+  //slick slider
+  //-----------------------------
 	$('.projects-container').slick({
-		infinite: true,
 	  mobileFirst: true,
 	  responsive: [{
 	    breakpoint: 992,
 	      settings: {
 	        slidesToShow: 1,
 	        dots: false,
-	        infinite: false,
+	        infinite: true,
 	        arrows: true
 	      }
 
@@ -31,7 +32,9 @@ $(document).ready(function() {
 
 	    }]
 	});
- 	$('.slick-arrow').addClass('zoom');
+	//-----------------------------
+  //close button
+  //-----------------------------
  	$("#close-iframe").click(function (){
  		let parentDoc = window.parent.document;
     let body = parentDoc.querySelector('body');

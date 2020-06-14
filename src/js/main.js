@@ -2,11 +2,11 @@ $(document).ready(function() {
 	//-----------------------------
   //loader
   //-----------------------------
-	// $(window).on('load', function(){
- //    setTimeout(function(){
- //    $('.loader-overlay').hide();
-	// 	}, 1000);
- //  });
+	$(window).on('load', function(){
+    setTimeout(function(){
+    $('.loader-overlay').hide();
+		}, 1000);
+  });
 
 	//-----------------------------
   //third party plugins
@@ -106,7 +106,7 @@ $(document).ready(function() {
 	//-----------------------------
   $("#web-card").click(function (){
   	$('body').addClass('no-scroll');
-    $("#portfolio-iframe").fadeIn(500);
+    $("#portfolio-iframe").fadeIn();
     $("#portfolio-iframe iframe").attr('src', 'web-projects.html');
   });
 	//-----------------------------

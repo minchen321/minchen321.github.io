@@ -38,9 +38,10 @@ button:focus {
   transition: all 0.2s ease;
 }
 .zoom:hover{
-  transform: scale(1.05); 
+  transform: scale(1.1); 
 }
 /* ----------- loader ----------- */
+.loader,
 .loader-overlay {
   width: 100vw;
   height: 100vh;
@@ -858,12 +859,12 @@ button:focus {
 		}
 	}
 	.slick-arrow {
-		background-size: contain;
+		background-size: auto 100%;
 		background-repeat: no-repeat;
 		background-position: center;
-		width: 4.5rem;
-		height: 4.5rem;
-		z-index: 999;
+		min-width: 4.5rem;
+		min-height: 4.5rem;
+		z-index: 98;
 		&:before {
 			content: '';
 		}
