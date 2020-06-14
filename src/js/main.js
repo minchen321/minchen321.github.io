@@ -2,11 +2,11 @@ $(document).ready(function() {
 	//-----------------------------
   //loader
   //-----------------------------
-	$(window).on('load', function(){
-    setTimeout(function(){
-    $('.loader-overlay').hide();
-		}, 1000);
-  });
+	// $(window).on('load', function(){
+ //    setTimeout(function(){
+ //    $('.loader-overlay').hide();
+	// 	}, 1000);
+ //  });
 
 	//-----------------------------
   //third party plugins
@@ -104,11 +104,10 @@ $(document).ready(function() {
 	//-----------------------------
 	//projects
 	//-----------------------------
-	let iframe = $("#portfolio-iframe iframe")
   $("#web-card").click(function (){
-  	console.log('passssss')
-    $("#portfolio-iframe").fadeIn();
-    iframe.src = 'https://minchen321.github.io/web-projects.html';
+  	$('body').addClass('no-scroll');
+    $("#portfolio-iframe").fadeIn(500);
+    $("#portfolio-iframe iframe").attr('src', 'web-projects.html');
   });
 	//-----------------------------
 	//contact modal

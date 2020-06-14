@@ -32,4 +32,11 @@ $(document).ready(function() {
 	    }]
 	});
  	$('.slick-arrow').addClass('zoom');
+ 	$("#close-iframe").click(function (){
+ 		let parentDoc = window.parent.document;
+    let body = parentDoc.querySelector('body');
+  	body.classList.remove('no-scroll');
+  	let portfolioIframe = parentDoc.querySelector('#portfolio-iframe');
+    portfolioIframe.style.display = 'none'
+  });
 });
