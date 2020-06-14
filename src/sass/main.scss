@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 @import 'normalize';
 @import 'variables';
 
@@ -37,7 +38,7 @@ button:focus {
   transition: all 0.2s ease;
 }
 .zoom:hover{
-  transform: scale(1.1); 
+  transform: scale(1.05); 
 }
 /* ----------- loader ----------- */
 .loader-overlay {
@@ -417,13 +418,13 @@ button:focus {
 				}
 				p {
 					padding: 3rem 7% 5rem 13%;
-					font-size: 1.25rem;
+					font-size: 1.5rem;
 				}
 			}
 			@include breakpoint(lg) {
 				p {
 					padding: 5rem 15%;
-					font-size: 1.5rem;
+					font-size: 1.75rem;
 				}
 			}
 	  }
@@ -526,11 +527,14 @@ button:focus {
 			  background-position: center;
 				background-size: 100% 100%;
 		 		padding: 1.5rem 10% 4rem 5%;
+		 		p {
+		 			font-size: 1.5rem;
+		 		}
 		 	}
 		 	@include breakpoint(lg) {
 				max-width: 50rem;
 		 		p {
-		 			font-size: 1.5rem;
+		 			font-size: 1.75rem;
 		 		}
 		 	}
 		}
@@ -705,7 +709,7 @@ button:focus {
   	max-width: 4.75rem;
   	img {
   		border-radius: 1rem;
-  		box-shadow: 0 0 .75rem 0 rgba(100,100,100,.3);
+			box-shadow: 0 0 .5rem .25rem rgba(90,90,90,.3);
   	}
   	@include breakpoint(sm) {
   		max-width: 6.75rem;
@@ -803,4 +807,116 @@ button:focus {
 		outline: none;
 	}
 }
+/* ----------- projects modal ----------- */
+#portfolio-iframe {
+	display: none;
+}
+.projects-modal {
+	background-color: $theme-white;
+	position:fixed; 
+	top:0; 
+	left:0; 
+	bottom:0; 
+	right:0; 
+	width:100%; 
+	height:100%; 
+	border:none; 
+	margin:0; 
+	padding:0; 
+	overflow:hidden;
+	z-index:999;
+}
+#web-projects {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	#close-iframe {
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+	}
+	.projects-container {
+		max-width: 80rem;
+		width: 100%;
+		margin: 6.5rem auto;
+	}
+	.project-player {
+		width: 100%;
+		box-shadow: 0 0 .625rem 0 rgba(0,0,0,0.5);
+	}
+	.project-info {
+		padding: 2rem 0;
+		width: 100%;
+	}
+	.slick-slide {
+		display: flex;
+		flex-direction: column;
+		padding: 0 1.5rem;
+		&:focus {
+			outline: none;
+		}
+	}
+	.slick-arrow {
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 4.5rem;
+		height: 4.5rem;
+		z-index: 999;
+		&:before {
+			content: '';
+		}
+	}
+	.slick-prev{
+		left: .5rem;
+		background-image: url('../img/web-projects/left-btn.png');
+	}
+	.slick-next{
+		right: .5rem;
+		background-image: url('../img/web-projects/right-btn.png');
+	}
+	.slick-dots li button::before {
+		font-size: 1rem;
+		color: $theme-blue;
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
+	p {
+		font-size: 1rem;
+	}
+	@include breakpoint(sm) {
+		min-height: 35rem;
+		h3 {
+			font-size: 2.5rem;
+		}
+		p {
+			font-size: 1.25rem;
+		}
+	}
+	@include breakpoint(md) {
+		height: 100vh;
+		.projects-container {
+			margin: 0 auto;
+		}
+		.project-player {
+			width: 65%;
+		}
+		.project-info {
+			width: 35%;
+			padding: 2rem 0 2rem 3rem ;
+		}
+		.slick-slide {
+			padding: 2rem 7rem;
+			align-items: center;
+			flex-direction: row;
+		}
+	}
+}
+
+
+
+
+
 

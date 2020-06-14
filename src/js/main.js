@@ -102,6 +102,15 @@ $(document).ready(function() {
   });
 
 	//-----------------------------
+	//projects
+	//-----------------------------
+	let iframe = $("#portfolio-iframe iframe")
+  $("#web-card").click(function (){
+  	console.log('passssss')
+    $("#portfolio-iframe").fadeIn();
+    iframe.src = 'https://minchen321.github.io/web-projects.html';
+  });
+	//-----------------------------
 	//contact modal
 	//-----------------------------
   $("#message").click(function (){
