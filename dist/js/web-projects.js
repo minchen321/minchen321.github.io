@@ -2,11 +2,9 @@ $(document).ready(function() {
 	//-----------------------------
   //loader
   //-----------------------------
-	$(window).on('load', function(){
-    setTimeout(function(){
-    	$('.loader').hide();
-		}, 1000);
-  });
+  setTimeout(function(){
+  	$('.loader-overlay').hide();
+	}, 1000);
 	//-----------------------------
   //slick slider
   //-----------------------------
@@ -37,9 +35,9 @@ $(document).ready(function() {
   //-----------------------------
  	$("#close-iframe").click(function (){
  		let parentDoc = window.parent.document;
-    let body = parentDoc.querySelector('body');
-  	body.classList.remove('no-scroll');
-  	let portfolioIframe = parentDoc.querySelector('#portfolio-iframe');
-    portfolioIframe.style.display = 'none'
+    parentDoc.querySelector('body').classList.remove('no-scroll');
+  	let iframeContainer = parentDoc.querySelector('#portfolio-iframe');
+    iframeContainer.style.display = 'none';
+    parentDoc.querySelector('#portfolio-iframe iframe').src = '';
   });
 });

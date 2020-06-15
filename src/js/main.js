@@ -2,11 +2,9 @@ $(document).ready(function() {
 	//-----------------------------
   //loader
   //-----------------------------
-	$(window).on('load', function(){
-    setTimeout(function(){
-    $('.loader-overlay').hide();
-		}, 1000);
-  });
+  setTimeout(function(){
+  	$('.loader-overlay').hide();
+	}, 1000);
 
 	//-----------------------------
   //third party plugins
