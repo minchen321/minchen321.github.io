@@ -121,4 +121,9 @@ $(document).ready(function() {
     $(".contact-modal").hide('slide', {direction:'down'}, 300);
     $("html, body").removeClass("no-scroll");
   });
+	//-----------------------------
+	// footer
+	//-----------------------------
+  let year = new Date().getFullYear();
+  $('.currentYear').text(year);
 });
