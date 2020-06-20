@@ -51,11 +51,11 @@ $(document).ready(function() {
   $('.hamburger-icon, .link-list a').click(function(){
   	if($(window).width() < 992){
 	  	if(navLinkContainer.hasClass('open')){
-				$('.hamburger-icon i').removeClass('fa-times').addClass('fa-bars');
+				$('.hamburger-icon img').attr('src', 'dist/img/icons/bars.svg')
 	  		navLinkContainer.removeClass('open slideInRight');
 	  	}else{
 				navLinkContainer.addClass('open slideInRight');
-				$('.hamburger-icon i').removeClass('fa-bars').addClass('fa-times');
+				$('.hamburger-icon img').attr('src', 'dist/img/icons/blue-close-icon.svg')
 	  	}
   	}
 	});
@@ -63,6 +63,7 @@ $(document).ready(function() {
 	$(window).on('resize', function(){
 	  if($(window).width() > 992) {
 	  	navLinkContainer.removeClass('open');
+	  	$('.hamburger-icon img').attr('src', 'dist/img/icons/bars.svg')
 	  }
 	});
 	
