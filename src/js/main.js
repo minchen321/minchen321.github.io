@@ -104,7 +104,7 @@ $(document).ready(function() {
 	//projects
 	//-----------------------------
   $("#web-card").click(function (){
-  	$('body').addClass('no-scroll');
+  	$('html, body').addClass('no-scroll');
     $("#portfolio-iframe").fadeIn();
     $("#portfolio-iframe iframe").attr('src', 'web-projects.html');
   });
@@ -114,11 +114,11 @@ $(document).ready(function() {
   $("#message").click(function (){
     $(".contact-modal").show('slide', {direction:'down'}, 300);
     setTimeout(function(){
-    	$("body").addClass("no-scroll");
+    	$("html, body").addClass("no-scroll");
 		}, 500);
   });
   $("#close-modal").click(function (){
     $(".contact-modal").hide('slide', {direction:'down'}, 300);
-    $("body").removeClass("no-scroll");
+    $("html, body").removeClass("no-scroll");
   });
 });

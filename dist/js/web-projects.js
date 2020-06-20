@@ -36,7 +36,7 @@ $(document).ready(function() {
   //-----------------------------
  	$("#close-iframe").click(function (){
  		let parentDoc = window.parent.document;
-    parentDoc.querySelector('body').classList.remove('no-scroll');
+    parentDoc.querySelector('html, body').classList.remove('no-scroll');
   	let iframeContainer = parentDoc.querySelector('#portfolio-iframe');
     iframeContainer.style.display = 'none';
     parentDoc.querySelector('#portfolio-iframe iframe').src = '';
