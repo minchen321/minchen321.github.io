@@ -5,7 +5,6 @@
 *:after {
   box-sizing: border-box;
 }
-
 body {
   color: $theme-black;
   font-family: $font-primary;
@@ -655,6 +654,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+  overflow: hidden;
   @include breakpoint(sm) {
     background-size: 100vw 100%;
   }
