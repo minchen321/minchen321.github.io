@@ -1,10 +1,11 @@
+//-----------------------------
+//loader
+//-----------------------------
+setTimeout(function(){
+  document.querySelector('.loader-overlay').style.display = "none";
+}, 1000);
+
 $(document).ready(function() {
-	//-----------------------------
-  //loader
-  //-----------------------------
-  setTimeout(function(){
-  	$('.loader-overlay').hide();
-	}, 1000);
 	//-----------------------------
   //slick slider
   //-----------------------------
