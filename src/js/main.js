@@ -101,14 +101,6 @@ $(document).ready(function() {
   });
 
 	//-----------------------------
-	//projects
-	//-----------------------------
-  $("#web-card").click(function (){
-  	$('html, body').addClass('no-scroll');
-    $("#portfolio-iframe").fadeIn();
-    $("#portfolio-iframe iframe").attr('src', 'web-projects.html');
-  });
-	//-----------------------------
 	//contact modal
 	//-----------------------------
   $("#message").click(function (){

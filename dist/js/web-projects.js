@@ -6,6 +6,28 @@ setTimeout(function(){
 }, 1000);
 
 $(document).ready(function() {
+  //-----------------------------
+  //mobile menu icon
+  //-----------------------------
+  let navLinkContainer = $('.navbar .container');
+  $('.hamburger-icon, .link-list a').click(function(){
+  	if($(window).width() < 992){
+	  	if(navLinkContainer.hasClass('open')){
+				$('.hamburger-icon img').attr('src', 'dist/img/icons/bars.svg')
+	  		navLinkContainer.removeClass('open slideInRight');
+	  	}else{
+				navLinkContainer.addClass('open slideInRight');
+				$('.hamburger-icon img').attr('src', 'dist/img/icons/blue-close-icon.svg')
+	  	}
+  	}
+	});
+	//remove 'open' class the window resizes
+	$(window).on('resize', function(){
+	  if($(window).width() > 992) {
+	  	navLinkContainer.removeClass('open');
+	  	$('.hamburger-icon img').attr('src', 'dist/img/icons/bars.svg')
+	  }
+	});	
 	//-----------------------------
   //slick slider
   //-----------------------------
@@ -19,9 +41,8 @@ $(document).ready(function() {
 	        infinite: true,
 	        arrows: true
 	      }
-
-	    },{
-
+	    },
+	    {
 	      breakpoint: 0,
 	      settings: {
 	      	slidesToShow: 1,
@@ -31,14 +52,4 @@ $(document).ready(function() {
 
 	    }]
 	});
-	//-----------------------------
-  //close button
-  //-----------------------------
- 	$("#close-iframe").click(function (){
- 		let parentDoc = window.parent.document;
-    parentDoc.querySelector('html, body').classList.remove('no-scroll');
-  	let iframeContainer = parentDoc.querySelector('#portfolio-iframe');
-    iframeContainer.style.display = 'none';
-    parentDoc.querySelector('#portfolio-iframe iframe').src = '';
-  });
 });
