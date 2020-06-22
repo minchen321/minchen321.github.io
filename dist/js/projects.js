@@ -31,25 +31,26 @@ $(document).ready(function() {
 	//-----------------------------
   //slick slider
   //-----------------------------
-	$('.projects-container').slick({
-	  mobileFirst: true,
-	  responsive: [{
-	    breakpoint: 992,
-	      settings: {
-	        slidesToShow: 1,
-	        dots: false,
-	        infinite: true,
-	        arrows: true
-	      }
-	    },
-	    {
-	      breakpoint: 0,
-	      settings: {
-	      	slidesToShow: 1,
-	        dots: true,
-	        arrows: false
-	      }
-
-	    }]
-	});
+  if($('.projects-container').length > 0) {
+	  $('.projects-container').slick({
+		  mobileFirst: true,
+		  responsive: [{
+		    breakpoint: 992,
+		      settings: {
+		        slidesToShow: 1,
+		        dots: false,
+		        infinite: true,
+		        arrows: true
+		      }
+		    },
+		    {
+		      breakpoint: 0,
+		      settings: {
+		      	slidesToShow: 1,
+		        dots: true,
+		        arrows: false
+		      }
+		    }]
+		});
+  }
 });

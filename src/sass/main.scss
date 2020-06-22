@@ -837,7 +837,7 @@ footer {
   padding: .25rem 2rem;
 }
 
-/* ----------- projects modal ----------- */
+/* ----------- web projects ----------- */
 #web-projects {
   position: relative;
   display: flex;
@@ -926,3 +926,11 @@ footer {
     }
   }
 }
+/* ----------- design sections ----------- */
+#design-section {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
