@@ -950,10 +950,9 @@ footer {
 }
 /* ----------- design sections ----------- */
 #design-section {
+  min-height: 100vh;
   padding: 4rem 0;
-  &.modal-open {
-    position: fixed;
-  }
+
   .container {
     padding: 0 1rem;
     max-width: 80rem;
@@ -1081,27 +1080,32 @@ footer {
 
 .project-modal {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
+  bottom: 0;
+  overflow-y: auto;
   width: 100%;
+  height: auto;
   background-color: $theme-white;
   z-index: 100;
-  @include breakpoint(md) {
-    padding: 7rem 5rem;
-  }
+
   .container {
     border-radius: 1rem;
     max-width: 80rem;
     margin: 0 auto;
     box-shadow: 0px 0px 6px 4px rgba(50, 50, 50, .08);
-    img:first-child {
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
-    }
-    img:last-child {
-      border-bottom-left-radius: 1rem;
-      border-bottom-right-radius: 1rem;
+  }
+  @include breakpoint(md) {
+    padding: 7rem 5rem;
+    .container {
+      img:first-child {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+      img:last-child {
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
     }
   }
   video,

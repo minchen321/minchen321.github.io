@@ -55,16 +55,20 @@ $(document).ready(function() {
   }
   if($('.project-modal').length > 0) {
   	$('.open-craft').click(function(){
-  		$('#design-section').addClass('modal-open');
-  		$('.craft-modal').show();
+  		$('.craft-modal').show('slide', {direction:'down'}, 700);
+  		$('main').addClass('no-scroll');
   	});
+  	$('.craft-modal .close-modal-btn').click(function(){
+  		$('main').removeClass('no-scroll');
+  		$('.craft-modal').hide('slide', {direction:'down'}, 700);
+  	});  
   	$('.open-xbook').click(function(){
-  		$('#design-section').addClass('modal-open');
-  		$('.xbook-modal').show();
+  		$('.xbook-modal').show('slide', {direction:'down'}, 700);
+  		$('main').addClass('no-scroll');
   	});
-  	$('.close-modal-btn').click(function(){
-  		$('#design-section').removeClass('modal-open');
-  		$('.project-modal').hide();
+  	$('.xbook-modal .close-modal-btn').click(function(){
+  		$('main').removeClass('no-scroll');
+  		$('.xbook-modal').hide('slide', {direction:'down'}, 700);
   	});  	
   }
 });
