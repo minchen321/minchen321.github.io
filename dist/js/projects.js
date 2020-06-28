@@ -55,20 +55,43 @@ $(document).ready(function() {
   }
   if($('.project-modal').length > 0) {
   	$('.open-craft').click(function(){
-  		$('.craft-modal').show('slide', {direction:'down'}, 700);
-  		$('main').addClass('no-scroll');
+	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+	  	const body = document.body;
+			body.style.position = 'fixed';
+			body.style.top = `-${scrollY}`;
+
+  		$('.craft-modal').show('slide', {direction:'down'}, 300);
   	});
   	$('.craft-modal .close-modal-btn').click(function(){
-  		$('main').removeClass('no-scroll');
-  		$('.craft-modal').hide('slide', {direction:'down'}, 700);
+  		$('.craft-modal').hide('slide', {direction:'down'}, 300);
+
+  		const body = document.body;
+			const scrollY = body.style.top;
+			body.style.position = '';
+			body.style.top = '';
+			window.scrollTo(0, parseInt(scrollY || '0') * -1);
   	});  
   	$('.open-xbook').click(function(){
+	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+	  	const body = document.body;
+			body.style.position = 'fixed';
+			body.style.top = `-${scrollY}`;
+
   		$('.xbook-modal').show('slide', {direction:'down'}, 700);
   		$('main').addClass('no-scroll');
   	});
   	$('.xbook-modal .close-modal-btn').click(function(){
   		$('main').removeClass('no-scroll');
   		$('.xbook-modal').hide('slide', {direction:'down'}, 700);
+
+  		const body = document.body;
+			const scrollY = body.style.top;
+			body.style.position = '';
+			body.style.top = '';
+			window.scrollTo(0, parseInt(scrollY || '0') * -1);
   	});  	
   }
+	window.addEventListener('scroll', () => {
+	  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+	});
 });
