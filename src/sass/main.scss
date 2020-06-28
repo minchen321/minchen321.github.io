@@ -70,7 +70,7 @@ button:focus {
     margin: 0 auto;
     padding: .5rem 1.5rem;
     font-size: 1.25rem;
-    font-family: $font-secondary;
+    font-family: $font-primary;
     &.open {
       max-width: none;
       width: 100vw;
@@ -94,9 +94,6 @@ button:focus {
         padding: .5rem 0;
       }
     }
-  }
-  .site-brand {
-    padding: 0 1rem;
   }
   .link-list {
     padding: 0;
@@ -628,15 +625,15 @@ button:focus {
     .card-container {
       padding: 0 15%;
     }
-    h2 {
-      font-size: 1.75rem;
-      min-height: 4.5rem;
-    }
   }
   @include breakpoint(lg) {
     .container {
       max-width: 70rem;
       grid-gap: 5rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+      min-height: 4.5rem;
     }
   }
 }
@@ -928,9 +925,129 @@ footer {
 }
 /* ----------- design sections ----------- */
 #design-section {
+  padding: 4rem 0;
+  .container {
+    padding: 0 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
   img {
     display: block;
     width: 100%;
+  }
+  h2 {
+    margin: 0 auto;
+    width: 15rem;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    background-image: url('../img/icons/wavy-line.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+  }
+  h3{
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .web-pic {
+    box-shadow: 0 0 .5rem .25rem rgba(186,186,186,0.5);
+  }
+  .project-group {
+    margin-top: 3rem
+  }
+  .project-content {
+    margin-top: 1.5rem;
+    max-height: 34.5rem;
+  }
+  .project-type {
+    font-weight: 600;
+    color: $theme-blue;
+  }
+  .view-btn {
+    color: $theme-blue;
+    display: inline-block;
+    border-bottom: 3px solid $theme-blue;
+    font-size: 1.125rem;
+    &:hover {
+      border-bottom: 3px solid transparent;
+    }
+  }
+  @include breakpoint(sm) {
+    padding: 5rem 0;
+    h2 {
+      width: 18rem;
+      font-size: 2.5rem;
+    }
+    .container {
+      padding: 0 4rem;
+    }
+    .project-content {
+      margin-top: 2.5rem;
+    }
+  }
+  @include breakpoint(md) {
+    .container {
+      padding: 0 4rem;
+    }
+    h2 {
+      width: 26rem;
+      font-size: 3.5rem;
+      padding-bottom: 2rem;
+    }
+    img {
+      margin-right: 2rem;
+    }
+    .project-group {
+      margin-top: 8rem;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      & > * {
+        width: 50%;
+      }
+      &.reverse {
+        flex-direction: row-reverse;
+        img {
+          margin-right: 0;
+          margin-left: 2rem;
+        }
+      }
+    }
+    .project-content {
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 40vw;
+      border-radius: 50%;
+      background-color: rgba(123, 191, 241, .1);
+    }
+    .about-project {
+      max-width: 60%;
+    }
+  }
+  @include breakpoint(lg) {
+    .container {
+      padding: 0 1.5rem;
+    }
+    h3 {
+      font-size: 2.25rem;
+    }
+    .view-btn,
+    .project-type {
+      font-size: 1.5rem;
+    }
+    img {
+      margin-right: 4rem;
+    }
+    .about-project {
+      max-width: 65%;
+    }
+    .project-group.reverse img{
+      margin-left: 4rem;
+    }
   }
 }
 

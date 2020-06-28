@@ -43,19 +43,6 @@ $(document).ready(function() {
 	    }
 	  })
 	});
-	$(window).on('load', function () {
-	  let currentTop = $(window).scrollTop() + 60;
-	  let elems = $('section');
-	  elems.each(function(index){
-	    let elemTop = $(this).offset().top;
-	    let elemBottom = elemTop + $(this).height();
-	    if(currentTop >= elemTop && currentTop <= elemBottom){
-	      let id = $(this).attr('id');
-	      let navElem = $('.navbar a[href="#' + id+ '"]');
-	    	navElem.parent().addClass('active').siblings().removeClass('active');
-	    }
-	  })
-  });
   //-----------------------------
   //mobile menu icon
   //-----------------------------
