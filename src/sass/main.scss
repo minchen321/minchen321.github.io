@@ -951,6 +951,9 @@ footer {
 /* ----------- design sections ----------- */
 #design-section {
   padding: 4rem 0;
+  &.modal-open {
+    position: fixed;
+  }
   .container {
     padding: 0 1rem;
     max-width: 80rem;
@@ -1074,5 +1077,48 @@ footer {
       margin-left: 4rem;
     }
   }
+}
+
+.project-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $theme-white;
+  z-index: 100;
+  @include breakpoint(md) {
+    padding: 7rem 5rem;
+  }
+  .container {
+    border-radius: 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    box-shadow: 0px 0px 6px 4px rgba(50, 50, 50, .08);
+    img:first-child {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+    img:last-child {
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+  }
+  video,
+  img {
+    width: 100%;
+    display: block;
+  }
+  #close-modal{
+    position: fixed;
+    width: 2rem;
+    img {
+      background-color: $theme-white;
+      padding: .35rem;
+      border-radius: 50%;
+      box-shadow: 0px 0px 6px 4px rgba(50, 50, 50, .08);
+    }
+
+  } 
 }
 

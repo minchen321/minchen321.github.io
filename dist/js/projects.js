@@ -53,4 +53,18 @@ $(document).ready(function() {
 		    }]
 		});
   }
+  if($('.project-modal').length > 0) {
+  	$('.open-craft').click(function(){
+  		$('#design-section').addClass('modal-open');
+  		$('.craft-modal').show();
+  	});
+  	$('.open-xbook').click(function(){
+  		$('#design-section').addClass('modal-open');
+  		$('.xbook-modal').show();
+  	});
+  	$('.close-modal-btn').click(function(){
+  		$('#design-section').removeClass('modal-open');
+  		$('.project-modal').hide();
+  	});  	
+  }
 });
