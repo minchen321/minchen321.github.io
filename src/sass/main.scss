@@ -541,11 +541,11 @@ button:focus {
         background-size: 100% 100%;
         padding: 1.5rem 10% 4rem 6%;
         p {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
       }
       @include breakpoint(lg) {
-        max-width: 50rem;
+        max-width: 45rem;
         p {
           font-size: 1.625rem;
         }
@@ -1055,7 +1055,7 @@ footer {
       align-items: center;
       height: 40vw;
       border-radius: 50%;
-      background-color: rgba(123, 191, 241, .1);
+      background-color: rgba(232, 232, 232, 0.2);
     }
     .about-project {
       max-width: 60%;
