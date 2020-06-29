@@ -55,15 +55,16 @@ $(document).ready(function() {
   }
   if($('.project-modal').length > 0) {
   	$('.open-craft').click(function(){
+  		$('.craft-modal').fadeIn(300);
 	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
 	  	const body = document.body;
 			body.style.position = 'fixed';
 			body.style.top = `-${scrollY}`;
+			body.style.left = 0;
 
-  		$('.craft-modal').show('slide', {direction:'down'}, 300);
   	});
   	$('.craft-modal .close-modal-btn').click(function(){
-  		$('.craft-modal').hide('slide', {direction:'down'}, 300);
+  		$('.craft-modal').fadeOut(300);
 
   		const body = document.body;
 			const scrollY = body.style.top;
@@ -77,12 +78,10 @@ $(document).ready(function() {
 			body.style.position = 'fixed';
 			body.style.top = `-${scrollY}`;
 
-  		$('.xbook-modal').show('slide', {direction:'down'}, 700);
-  		$('main').addClass('no-scroll');
+  		$('.xbook-modal').fadeIn(300);
   	});
   	$('.xbook-modal .close-modal-btn').click(function(){
-  		$('main').removeClass('no-scroll');
-  		$('.xbook-modal').hide('slide', {direction:'down'}, 700);
+  		$('.xbook-modal').fadeOut(300);
 
   		const body = document.body;
 			const scrollY = body.style.top;

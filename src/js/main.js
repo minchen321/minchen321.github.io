@@ -104,9 +104,7 @@ $(document).ready(function() {
 	//-----------------------------
   $("#message").click(function (){
     $(".contact-modal").show('slide', {direction:'down'}, 300);
-    setTimeout(function(){
-    	$("html, body").addClass("no-scroll");
-		}, 500);
+    $("html, body").addClass("no-scroll");
   });
   $("#close-modal").click(function (){
     $(".contact-modal").hide('slide', {direction:'down'}, 300);
