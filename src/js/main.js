@@ -141,23 +141,14 @@ $(document).ready(function() {
 	//-----------------------------
   if($('.project-modal').length > 0) {
   	$('.open-craft').click(function(){
-  		$('.craft-modal').fadeIn(300);
 	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
 	  	const body = document.body;
 			body.style.position = 'fixed';
 			body.style.top = `-${scrollY}`;
-			body.style.left = 0;
 
+  		$('.craft-modal').fadeIn(300);
   	});
-  	$('.craft-modal .close-modal-btn').click(function(){
-  		$('.craft-modal').fadeOut(300);
 
-  		const body = document.body;
-			const scrollY = body.style.top;
-			body.style.position = '';
-			body.style.top = '';
-			window.scrollTo(0, parseInt(scrollY || '0') * -1);
-  	});  
   	$('.open-xbook').click(function(){
 	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
 	  	const body = document.body;
@@ -166,15 +157,15 @@ $(document).ready(function() {
 
   		$('.xbook-modal').fadeIn(300);
   	});
-  	$('.xbook-modal .close-modal-btn').click(function(){
-  		$('.xbook-modal').fadeOut(300);
+  	$('.close-modal-btn').click(function(){
+  		$('.project-modal').fadeOut(300);
 
   		const body = document.body;
 			const scrollY = body.style.top;
 			body.style.position = '';
 			body.style.top = '';
 			window.scrollTo(0, parseInt(scrollY || '0') * -1);
-  	});  	
+  	});
   }
   if($('#design-section').length > 0) {
 		window.addEventListener('scroll', () => {
