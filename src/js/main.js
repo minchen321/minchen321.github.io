@@ -9,7 +9,31 @@ $(document).ready(function() {
 	//-----------------------------
   //third party plugins
   //-----------------------------
-	new WOW().init();
+  if($('.wow').length > 0) {
+		new WOW().init();
+  }
+  if($('.projects-container').length > 0) {
+	  $('.projects-container').slick({
+		  mobileFirst: true,
+		  responsive: [{
+		    breakpoint: 992,
+		      settings: {
+		        slidesToShow: 1,
+		        dots: false,
+		        infinite: true,
+		        arrows: true
+		      }
+		    },
+		    {
+		      breakpoint: 0,
+		      settings: {
+		      	slidesToShow: 1,
+		        dots: true,
+		        arrows: false
+		      }
+		    }]
+		});
+  }
 
 	// smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -69,36 +93,38 @@ $(document).ready(function() {
 	//-----------------------------
 	//animated typing intro message
 	//-----------------------------
-	$("#intro-text").typed({
-		strings: ["Hi! I'm Min.", "I'm a UI Developer and Designer based in New York City."],
-		typeSpeed: 100,
-		loop: true,
-		startDelay: 100
-	});
-
+	if($('#intro-text').length > 0) {
+		$("#intro-text").typed({
+			strings: ["Hi! I'm Min.", "I'm a UI Developer and Designer based in New York City."],
+			typeSpeed: 100,
+			loop: true,
+			startDelay: 100
+		});
+	}
 	//-----------------------------
 	//about section
 	//-----------------------------
-  $("#aboutCoding").hide();
-  $("#aboutMin").hide();
-	$("#aboutMe").show();
-  $("#coding-bg-btn").click(function(){
-    $("#aboutMe").hide("slide", { direction: "right"  }, 700 );
-    $("#aboutCoding").show( "slide", { direction: "left"  }, 700 );
-  });
-  $("#left-back").click(function(){
-    $("#aboutCoding").hide("slide", { direction: "left"  }, 700 );
-    $("#aboutMe").show( "slide", { direction: "right"  }, 700 );
-  });
-  $("#my-bg-btn").click(function(){
-    $("#aboutMe").hide("slide", { direction: "left"  }, 700 );
-       $("#aboutMin").show( "slide", { direction: "right"  }, 700 );
-    });
-    $("#right-back").click(function(){
-    	$("#aboutMin").hide("slide", { direction: "right"  }, 700 );
-    	$("#aboutMe").show( "slide", { direction: "left"  }, 700 );
-  });
-
+	if($('#about').length > 0) {
+	  $("#aboutCoding").hide();
+	  $("#aboutMin").hide();
+		$("#aboutMe").show();
+	  $("#coding-bg-btn").click(function(){
+	    $("#aboutMe").hide("slide", { direction: "right"  }, 700 );
+	    $("#aboutCoding").show( "slide", { direction: "left"  }, 700 );
+	  });
+	  $("#left-back").click(function(){
+	    $("#aboutCoding").hide("slide", { direction: "left"  }, 700 );
+	    $("#aboutMe").show( "slide", { direction: "right"  }, 700 );
+	  });
+	  $("#my-bg-btn").click(function(){
+	    $("#aboutMe").hide("slide", { direction: "left"  }, 700 );
+	       $("#aboutMin").show( "slide", { direction: "right"  }, 700 );
+	    });
+	    $("#right-back").click(function(){
+	    	$("#aboutMin").hide("slide", { direction: "right"  }, 700 );
+	    	$("#aboutMe").show( "slide", { direction: "left"  }, 700 );
+	  });
+	}
 	//-----------------------------
 	//contact modal
 	//-----------------------------
@@ -106,10 +132,55 @@ $(document).ready(function() {
     $(".contact-modal").show('slide', {direction:'down'}, 300);
     $("html, body").addClass("no-scroll");
   });
-  $("#close-modal").click(function (){
+  $(".close-msg-btn").click(function (){
     $(".contact-modal").hide('slide', {direction:'down'}, 300);
     $("html, body").removeClass("no-scroll");
   });
+  //-----------------------------
+	//design projects
+	//-----------------------------
+  if($('.project-modal').length > 0) {
+  	$('.open-craft').click(function(){
+  		$('.craft-modal').fadeIn(300);
+	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+	  	const body = document.body;
+			body.style.position = 'fixed';
+			body.style.top = `-${scrollY}`;
+			body.style.left = 0;
+
+  	});
+  	$('.craft-modal .close-modal-btn').click(function(){
+  		$('.craft-modal').fadeOut(300);
+
+  		const body = document.body;
+			const scrollY = body.style.top;
+			body.style.position = '';
+			body.style.top = '';
+			window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  	});  
+  	$('.open-xbook').click(function(){
+	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+	  	const body = document.body;
+			body.style.position = 'fixed';
+			body.style.top = `-${scrollY}`;
+
+  		$('.xbook-modal').fadeIn(300);
+  	});
+  	$('.xbook-modal .close-modal-btn').click(function(){
+  		$('.xbook-modal').fadeOut(300);
+
+  		const body = document.body;
+			const scrollY = body.style.top;
+			body.style.position = '';
+			body.style.top = '';
+			window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  	});  	
+  }
+  if($('#design-section').length > 0) {
+		window.addEventListener('scroll', () => {
+		  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+		});
+  }
 	//-----------------------------
 	// footer
 	//-----------------------------
