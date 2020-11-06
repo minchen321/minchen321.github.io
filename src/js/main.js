@@ -156,10 +156,17 @@ $(document).ready(function() {
 			body.style.top = `-${scrollY}`;
 
   		$('.xbook-modal').fadeIn(300);
+		});
+		$('.open-bc').click(function(){
+	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+	  	const body = document.body;
+			body.style.position = 'fixed';
+			body.style.top = `-${scrollY}`;
+
+  		$('.bc-modal').fadeIn(300);
   	});
   	$('.close-modal-btn').click(function(){
   		$('.project-modal').fadeOut(300);
-
   		const body = document.body;
 			const scrollY = body.style.top;
 			body.style.position = '';
