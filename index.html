@@ -29,12 +29,12 @@
       <img src="dist/img/icons/bars.svg" alt="mobile menu">
     </button>
     <div class="container animated">
-      <a class="site-brand">Min Chen</a>
+      <a class="site-brand" data-category="site-brand">Min Chen</a>
       <ul class="link-list">
-        <li class="active"><a class="js-scroll-trigger" href="#home">Home</a></li>
-        <li><a class="js-scroll-trigger" href="#about">About</a></li>
-        <li><a class="js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-        <li><a class="js-scroll-trigger" href="#contact">Contact</a></li>
+        <li class="active"><a class="js-scroll-trigger" href="#home" data-category="nav-home">Home</a></li>
+        <li><a class="js-scroll-trigger" href="#about" data-category="nav-about">About</a></li>
+        <li><a class="js-scroll-trigger" href="#portfolio" data-category="nav-portfolio">Portfolio</a></li>
+        <li><a class="js-scroll-trigger" href="#contact" data-category="nav-contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -55,12 +55,12 @@
         <h2>About Me</h2>        
         <div class="container">
           <div class="left-bubble word-bubble wow animate__animated animate__fadeInLeft" data-wow-delay="400ms" data-wow-duration="800ms">
-            <p><a id="coding-bg-btn">I'm a UI Developer <br>and Designer. 
-              <span class="more-link">More</span>
+            <p><a id="coding-bg-btn" data-category="role-read-more">I'm a UI Developer <br>and Designer. 
+              <span class="more-link" >More</span>
             </a></p>
           </div>
           <div class="right-bubble word-bubble wow animate__animated animate__fadeInRight" data-wow-duration="800ms" data-wow-delay="700ms">
-            <p><a id="my-bg-btn">I'm Min. <span class="more-link">More</span></a></p>
+            <p><a id="my-bg-btn" data-category="Min-read-more">I'm Min. <span class="more-link">More</span></a></p>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
                 softwares&#58; &#91; &#39;Sketch&#39;, &#39;InVision&#39;, &#39;Principle&#39;, &#39;Adobe XD&#39;, &#39;Photoshop&#39;, &#39;Illustrator&#39;&#93;
               </span>
             &#125;</p>
-            <a class="zoom back-btn" id="left-back"><img src="dist/img/icons/back-btn-right.png" alt="back button"></a>
+            <a class="zoom back-btn" id="left-back" data-category="about-back-btn"><img src="dist/img/icons/back-btn-right.png" alt="back button"></a>
           </div>            
           <div class="side-img">
             <img src="dist/img/about/self-portrait.png" id="self illustration">
@@ -96,7 +96,7 @@
               <p>As a developer and designer, I focus on front-end web development and UI/UX design. I started my journey studying Graphic Design and Computer Science at Queens College. In my current role as a Front-End Developer at <a href="http://www.thesistesting.com" target="_blank" class="text-link">Thesis</a>, I build landing pages to increase conversion rates for some of the leading ecommerce companies. I enjoy solving complex problems with creative design and clean&nbsp;code.</p>
               <p>If you have any cool projects, <a href="#contact" class="text-link js-scroll-trigger"> let’s get in touch!</a> </p>
             </div>
-            <a class="btn zoom back-btn" id="right-back"><img src="dist/img/icons/back-btn-left.png"></a>
+            <a class="btn zoom back-btn" id="right-back" data-category="about-back-btn"><img src="dist/img/icons/back-btn-left.png"></a>
           </div>
         </div>        
       </div>
@@ -105,13 +105,13 @@
     <section id="portfolio">
       <div class="container">
         <div class="card-container">
-          <a class="card zoom" href='design-projects.html'>
+          <a class="card zoom" href='design-projects.html' data-category="design-portfolio">
             <img src="dist/img/portfolio/design-illustration.jpg" alt="design illustration" />
             <h2>UI/UX Design</h2>
           </a>
         </div>
         <div class="card-container">
-          <a class="card zoom" id="web-card" href='web-projects.html'>
+          <a class="card zoom" id="web-card" href='web-projects.html' data-category="web-portfolio">
             <img src="dist/img/portfolio/web-illustration.jpg" alt="web illustration" />
             <h2>Front-End Development</h2>
           </a>

@@ -7,6 +7,26 @@ setTimeout(function(){
 
 $(document).ready(function() {
 	//-----------------------------
+  // tracking
+  //-----------------------------
+	$('a').click(function(){
+		let action   = 'cta-click'
+		let category = 'cta';
+		let label = window.location.pathname;
+		if ($(this).data('category')) {
+			category = $(this).data('category');
+		}
+		if (typeof gtag !== 'undefined') {
+			gtag('event', action, {
+				'event_category': category,
+				'event_label': label
+			});
+		}
+		if (typeof ga !== 'undefined') {
+      ga('send', 'event', category, action, label);
+    }
+	})
+	//-----------------------------
   //third party plugins
   //-----------------------------
   if($('.wow').length > 0) {
@@ -147,7 +167,7 @@ $(document).ready(function() {
 			const projectType = $(this).data('project')
 			body.style.position = 'fixed';
 			body.style.top = `-${scrollY}`;
-  		$(`.${projectType}-modal`).fadeIn(300);
+			$(`.${projectType}-modal`).fadeIn(300);
 		});
   	$('.close-modal-btn').click(function(){
   		$('.project-modal').fadeOut(300);
