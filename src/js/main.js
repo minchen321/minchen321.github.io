@@ -140,31 +140,15 @@ $(document).ready(function() {
 	//design projects
 	//-----------------------------
   if($('.project-modal').length > 0) {
-  	$('.open-craft').click(function(){
+		
+  	$('.open-project-modal').click(function() {
 	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-	  	const body = document.body;
+			const body = document.body;
+			const projectType = $(this).data('project')
 			body.style.position = 'fixed';
 			body.style.top = `-${scrollY}`;
-
-  		$('.craft-modal').fadeIn(300);
-  	});
-
-  	$('.open-xbook').click(function(){
-	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-	  	const body = document.body;
-			body.style.position = 'fixed';
-			body.style.top = `-${scrollY}`;
-
-  		$('.xbook-modal').fadeIn(300);
+  		$(`.${projectType}-modal`).fadeIn(300);
 		});
-		$('.open-bc').click(function(){
-	  	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-	  	const body = document.body;
-			body.style.position = 'fixed';
-			body.style.top = `-${scrollY}`;
-
-  		$('.bc-modal').fadeIn(300);
-  	});
   	$('.close-modal-btn').click(function(){
   		$('.project-modal').fadeOut(300);
   		const body = document.body;
