@@ -1,0 +1,14 @@
+export { ReactComponent as Arrow } from './arrow.svg';
+export { default as AboutBg } from './about-bg.jpg';
+export { default as AboutBgLeft } from './about-bg-left.png';
+export { default as AboutBgRight } from './about-me-right.png';
+export { default as AboutBgMobile } from './about-bg-mobile.jpg';
+export { default as Min } from './min.jpg';
+export { default as MinMobile } from './min-mobile.jpg';
+export { default as SelfPortrait } from './self-portrait.png';
+export { default as LeftBubbleIcon } from './left-bubble.svg';
+export { default as RightBubbleIcon } from './right-bubble.svg';
+export { default as WordBubbleLeft } from './word-bubble-left.png';
+export { default as WordBubbleRight } from './word-bubble-right.png';
+export { default as BackBtnLeft } from './back-btn-left.png';
+export { default as BackBtnRight } from './back-btn-right.png';
