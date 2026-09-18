@@ -1,4 +1,7 @@
+export { ReactComponent as Arrow } from './arrow.svg';
 export { default as AboutBg } from './about-bg.jpg';
+export { default as AboutBgLeft } from './about-bg-left.png';
+export { default as AboutBgRight } from './about-me-right.png';
 export { default as AboutBgMobile } from './about-bg-mobile.jpg';
 export { default as Min } from './min.jpg';
 export { default as MinMobile } from './min-mobile.jpg';
