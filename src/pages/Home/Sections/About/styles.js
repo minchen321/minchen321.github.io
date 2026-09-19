@@ -29,7 +29,8 @@ const panelLayer = css`
   width: 100%;
   height: 100%;
   background-color: ${({ theme }) => theme.white};
-  animation-duration: 300ms;
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
   &.is-exiting {
     z-index: 1;
   }

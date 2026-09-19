@@ -30,7 +30,7 @@ import {
 } from './styles';
 
 const PANELS = { MENU: 'menu', CODING: 'coding', PERSONAL: 'personal' };
-const EXIT_TIMEOUT = 600; // Safety net if animationend never fires
+const EXIT_TIMEOUT = 1000; // Safety net if animationend never fires
 const MAX_BG_OFFSET = 32; // Total travel range
 const MAX_BUBBLE_OFFSET = 16; // Total travel range
 const PARALLAX_SPLIT_INSET = 32;
