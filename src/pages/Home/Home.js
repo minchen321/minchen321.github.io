@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import ReactPageScroller from 'react-page-scroller';
 import { Navbar, Footer } from '../../components';
-import { About, Portfolio, Contact, ContactModal } from './Sections';
-import { Section, ScrollableContainer } from './homeStyles';
+import { Hero, About, Portfolio, Contact, ContactModal } from './Sections';
+import { HomeMain, ScrollableContainer } from './homeStyles';
 
 const SHORT_VIEWPORT_HEIGHT = 500;
 const CONTACT_PAGE = 3;
@@ -54,12 +54,10 @@ export const Home = () => {
   return (
     <Fragment>
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
-      <main>
+      <HomeMain>
         {isShortViewport ? (
           <ScrollableContainer>
-            <Section>
-              <p>Content for page 1</p>
-            </Section>
+            <Hero isShortViewport={isShortViewport} />
             <About />
             <Portfolio isShortViewport={isShortViewport} />
             <Contact
@@ -70,16 +68,13 @@ export const Home = () => {
           </ScrollableContainer>
         ) : (
           <ReactPageScroller
-            containerHeight={'calc(100vh - 3.5rem)'}
+            containerHeight="var(--home-page-height)"
             pageOnChange={handlePageChange}
-            // onBeforePageScroll={handlePageChange}
             customPageNumber={currentPage}
             animationTimer={600}
             animationTimerBuffer={300}
           >
-            <Section>
-              <p>Content for page 1</p>
-            </Section>
+            <Hero isActive={currentPage === 0} />
             <About onContactClick={() => handlePageChange(CONTACT_PAGE)} />
             <Portfolio />
             <Contact
@@ -92,7 +87,7 @@ export const Home = () => {
           <ContactModal setShowContactModal={setShowContactModal} />
         )}
         {!isShortViewport && currentPage === CONTACT_PAGE && <Footer />}
-      </main>
+      </HomeMain>
     </Fragment>
   );
 };
