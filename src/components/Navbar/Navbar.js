@@ -11,6 +11,10 @@ import {
   MobileMenuList,
   MobileMenuListItem,
 } from './styles';
+import theme from '../../theme';
+import { HOME_SECTIONS } from '../../navigation';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { useBodyScrollLock } from '../../hooks/useBodyScrollLock';
 import { ReactComponent as Line } from './assets/line.svg';
 
 export const Navbar = ({
@@ -19,97 +23,64 @@ export const Navbar = ({
   isScrollable = true,
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [isMobile, setIsMobile] = React.useState(false);
-  const MENU_ITEMS = ['Home', 'About', 'Portfolio', 'Contact'];
+  const isDesktop = useMediaQuery(`(min-width: ${theme.sm})`);
+  useBodyScrollLock(isOpen && !isDesktop);
 
   React.useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    if (isDesktop) setIsOpen(false);
+  }, [isDesktop]);
 
   const DynamicTag = isScrollable ? 'button' : 'a';
+  const navigationProps = (index) =>
+    isScrollable
+      ? {
+          type: 'button',
+          onClick: () => {
+            handlePageChange(index);
+            setIsOpen(false);
+          },
+        }
+      : { href: `/#${HOME_SECTIONS[index].id}` };
+
+  const renderItems = (Item) =>
+    HOME_SECTIONS.map(({ id, label }, index) => (
+      <Item key={id}>
+        <DynamicTag
+          {...navigationProps(index)}
+          aria-current={currentPage === index ? 'page' : undefined}
+        >
+          {label}
+          {currentPage === index && <Line aria-hidden="true" />}
+        </DynamicTag>
+      </Item>
+    ));
 
   return (
     <NavbarWrapper>
       <Container>
-        {!isMobile ? (
+        {isDesktop ? (
           <>
             <SiteBrand>
-              <DynamicTag
-                {...(isScrollable
-                  ? {
-                      onClick: () => {
-                        handlePageChange(0);
-                      },
-                    }
-                  : {
-                      href: '/',
-                    })}
-              >
-                Min Chen
-              </DynamicTag>
+              <DynamicTag {...navigationProps(0)}>Min Chen</DynamicTag>
             </SiteBrand>
-            <MenuList>
-              {MENU_ITEMS.map((item, index) => (
-                <MenuListItem key={index}>
-                  <DynamicTag
-                    {...(isScrollable
-                      ? {
-                          onClick: () => {
-                            handlePageChange(index);
-                          },
-                        }
-                      : {
-                          href: `/#${item.toLowerCase()}`,
-                        })}
-                  >
-                    {item}
-                    {currentPage === index && <Line />}
-                  </DynamicTag>
-                </MenuListItem>
-              ))}
-            </MenuList>
+            <MenuList>{renderItems(MenuListItem)}</MenuList>
           </>
         ) : (
           <>
             <HamburgerButton>
               <Hamburger
                 rounded
-                color="#5876b3"
+                color={theme.primaryBlue}
                 label="Show menu"
                 toggled={isOpen}
                 size={24}
-                toggle={() => setIsOpen(!isOpen)}
+                toggle={setIsOpen}
               />
             </HamburgerButton>
             {isOpen && (
               <MenuPanel>
                 <MobileMenuList>
-                  {MENU_ITEMS.map((item, index) => (
-                    <MobileMenuListItem key={index}>
-                      <DynamicTag
-                        {...(isScrollable
-                          ? {
-                              onClick: () => {
-                                handlePageChange(index);
-                                setIsOpen(false);
-                              },
-                            }
-                          : {
-                              href: `/#${item.toLowerCase()}`,
-                            })}
-                      >
-                        {item}
-                        {currentPage === index && <Line />}
-                      </DynamicTag>
-                    </MobileMenuListItem>
-                  ))}
+                  {renderItems(MobileMenuListItem)}
                 </MobileMenuList>
               </MenuPanel>
             )}

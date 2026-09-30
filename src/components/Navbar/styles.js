@@ -15,7 +15,7 @@ export const NavbarWrapper = styled.nav`
   }
 `;
 
-export const SiteBrand = styled.h1`
+export const SiteBrand = styled.div`
   display: none;
   justify-content: center;
   align-items: center;
@@ -83,6 +83,8 @@ export const HamburgerButton = styled.div`
 export const MenuPanel = styled.div`
   width: 100%;
   height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
   background-color: ${({ theme }) => theme.primaryBlue};
   display: flex;
   justify-content: center;

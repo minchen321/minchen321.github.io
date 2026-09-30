@@ -1,5 +1,6 @@
 import React from 'react';
 import theme from '../../../../theme';
+import { useMediaQuery } from '../../../../hooks/useMediaQuery';
 import {
   Arrow,
   AboutBgLeft,
@@ -48,23 +49,15 @@ export const About = ({ onContactClick }) => {
   const [exitingPanel, setExitingPanel] = React.useState(null);
   const [direction, setDirection] = React.useState('right');
   const [parallax, setParallax] = React.useState(NO_PARALLAX);
-  const [isParallaxEnabled, setIsParallaxEnabled] = React.useState(false);
+  const isParallaxEnabled = useMediaQuery(
+    `(min-width: ${theme.md}) and (prefers-reduced-motion: no-preference)`
+  );
   const sectionRef = React.useRef(null);
   const exitTimerRef = React.useRef(null);
 
-  // Mirrors the breakpoint that reveals the parallax layers in styles.js
   React.useEffect(() => {
-    const query = window.matchMedia(`(min-width: ${theme.md})`);
-    const handleChange = ({ matches }) => {
-      setIsParallaxEnabled(matches);
-      if (!matches) setParallax(NO_PARALLAX);
-    };
-
-    handleChange(query);
-    query.addEventListener('change', handleChange);
-
-    return () => query.removeEventListener('change', handleChange);
-  }, []);
+    if (!isParallaxEnabled) setParallax(NO_PARALLAX);
+  }, [isParallaxEnabled]);
 
   // Warm the photo so it is decoded before the panel slides in
   React.useEffect(() => {

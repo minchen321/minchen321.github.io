@@ -3,62 +3,49 @@ import ReactPageScroller from 'react-page-scroller';
 import { Navbar, Footer } from '../../components';
 import { Hero, About, Portfolio, Contact, ContactModal } from './Sections';
 import { HomeMain, ScrollableContainer } from './homeStyles';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { useSectionWheel } from '../../hooks/useSectionWheel';
+import { HOME_SECTIONS, getPageFromHash } from '../../navigation';
 
-const SHORT_VIEWPORT_HEIGHT = 500;
 const CONTACT_PAGE = 3;
 
 export const Home = () => {
-  const [currentPage, setCurrentPage] = React.useState(0);
+  const [currentPage, setCurrentPage] = React.useState(getPageFromHash);
   const [showContactModal, setShowContactModal] = React.useState(false);
-  const [isShortViewport, setIsShortViewport] = React.useState(false);
+  const isShortViewport = useMediaQuery('(max-height: 499px)');
+  const scrollRef = useSectionWheel(!isShortViewport);
 
   React.useEffect(() => {
-    const handleResize = () => {
-      setIsShortViewport(window.innerHeight < SHORT_VIEWPORT_HEIGHT);
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => window.removeEventListener('resize', handleResize);
+    const handleHashChange = () => setCurrentPage(getPageFromHash());
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  // Prevent body scroll when contact modal is open
-  React.useEffect(() => {
-    document.body.style.overflow = showContactModal ? 'hidden' : 'auto';
-  }, [showContactModal]);
-
-  // Get the current page from the URL hash on initial load
-  React.useEffect(() => {
-    const sectionIdMap = {
-      '#home': 0,
-      '#about': 1,
-      '#portfolio': 2,
-      '#contact': CONTACT_PAGE,
-    };
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.getElementById(hash.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-    setCurrentPage(sectionIdMap[hash] || 0);
+  const scrollToPage = React.useCallback((number) => {
+    const element = document.getElementById(HOME_SECTIONS[number]?.id);
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    element?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
   }, []);
 
-  // Handle page change from the navbar
-  const handlePageChange = React.useCallback((number) => {
+  React.useEffect(() => {
+    if (isShortViewport) scrollToPage(currentPage);
+  }, [isShortViewport, currentPage, scrollToPage]);
+
+  const handlePageChange = (number) => {
     setCurrentPage(number);
-  }, []);
+    if (isShortViewport && number === currentPage) scrollToPage(number);
+  };
 
   return (
     <Fragment>
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
-      <HomeMain>
+      <HomeMain ref={scrollRef}>
         {isShortViewport ? (
           <ScrollableContainer>
             <Hero isShortViewport={isShortViewport} />
-            <About />
+            <About onContactClick={() => handlePageChange(CONTACT_PAGE)} />
             <Portfolio isShortViewport={isShortViewport} />
             <Contact
               setShowContactModal={setShowContactModal}
@@ -69,7 +56,7 @@ export const Home = () => {
         ) : (
           <ReactPageScroller
             containerHeight="var(--home-page-height)"
-            pageOnChange={handlePageChange}
+            pageOnChange={setCurrentPage}
             customPageNumber={currentPage}
             animationTimer={600}
             animationTimerBuffer={300}
