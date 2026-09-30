@@ -1,38 +1,19 @@
 import React, { Fragment } from 'react';
 import { Navbar, Footer } from '../../components';
-import { PROJECTS, MODAL_ASSETS, CloseIcon } from './assets';
+import { PROJECTS, MODAL_ASSETS } from './assets';
 import {
   Section,
   Container,
-  PageTite,
+  ProjectPageTitle,
   ProjectGroup,
   ProjectContent,
   AboutProject,
   ProjectModal,
   ProjectModalContent,
-  ModalCloseButton,
 } from './styles';
 
 export const DesignPortfolio = () => {
   const [modalType, setModalType] = React.useState(null);
-  const [startSlideOut, setStartSlideOut] = React.useState(false);
-
-  // Prevent body scroll when contact modal is open
-  React.useEffect(() => {
-    document.body.style.overflow = modalType ? 'hidden' : 'auto';
-  }, [modalType]);
-
-  const handleCloseModal = () => {
-    setStartSlideOut(true);
-    setTimeout(() => {
-      setModalType(null);
-    }, 300);
-  };
-
-  const handleOpenModal = (name) => {
-    setStartSlideOut(false);
-    setModalType(name);
-  };
 
   return (
     <Fragment>
@@ -40,17 +21,19 @@ export const DesignPortfolio = () => {
       <main>
         <Section>
           <Container>
-            <PageTite>Design Projects</PageTite>
+            <ProjectPageTitle>Design Projects</ProjectPageTitle>
             <div className="project-list">
-              {PROJECTS.map((project) => (
+              {PROJECTS.map((project, index) => (
                 <ProjectGroup key={project.key}>
                   <button
                     data-project={project.key}
                     data-category={project.btnCategory}
-                    onClick={() => handleOpenModal(project.key)}
+                    onClick={() => setModalType(project.key)}
                   >
                     <picture>
                       <img
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                        decoding="async"
                         src={project.img.src}
                         alt={project.img.alt}
                         className={project.img.className}
@@ -67,7 +50,7 @@ export const DesignPortfolio = () => {
                         className="view-btn open-project-modal"
                         data-project={project.key}
                         data-category={project.btnCategory}
-                        onClick={() => handleOpenModal(project.key)}
+                        onClick={() => setModalType(project.key)}
                       >
                         View Project
                       </button>
@@ -81,24 +64,21 @@ export const DesignPortfolio = () => {
 
         {modalType && (
           <ProjectModal
-            className={`animate__animated ${
-              startSlideOut
-                ? 'animate__faster animate__fadeOut'
-                : 'animate__fast animate__fadeIn'
-            }`}
+            label={PROJECTS.find(({ key }) => key === modalType).title}
+            onClose={() => setModalType(null)}
           >
-            <ModalCloseButton
-              data-category="close-project-modal"
-              onClick={handleCloseModal}
-            >
-              <img src={CloseIcon} alt="close button" />
-            </ModalCloseButton>
             <ProjectModalContent id={`${modalType}-modal-content`}>
               {MODAL_ASSETS[modalType].map((media, idx) =>
                 media.type === 'img' ? (
-                  <img key={idx} src={media.src} alt={media.alt} />
+                  <img
+                    key={media.src}
+                    src={media.src}
+                    alt={media.alt}
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                  />
                 ) : (
-                  <video key={idx} autoPlay muted loop playsInline>
+                  <video key={media.src} autoPlay muted loop playsInline>
                     <source src={media.src} type="video/mp4" />
                     {media.alt}
                   </video>

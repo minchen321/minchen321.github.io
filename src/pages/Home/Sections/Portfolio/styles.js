@@ -2,18 +2,8 @@ import styled from 'styled-components';
 import { BackgroundImg } from './assets';
 
 export const Section = styled.section`
-  // height: 100%;
-  // max-width: 105rem;
-  // width: 100vw;
-  // margin: 0 auto;
-  // min-height: 48rem;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // overflow: hidden;
   height: 100%;
   padding: 1rem;
-  // min-height: 48rem;
 `;
 
 export const Container = styled.div`
@@ -72,7 +62,7 @@ export const Card = styled.a`
   box-shadow: 0 0 1rem 0 rgba(100, 100, 100, 0.6);
   cursor: pointer;
   display: block;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease;
   &:hover {
     transform: scale(1.02);
   }

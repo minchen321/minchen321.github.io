@@ -55,6 +55,12 @@ const GlobalStyle = createGlobalStyle`
     color: inherit;
     cursor: pointer;
   }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid ${({ theme }) => theme.primaryBlue};
+    outline-offset: 4px;
+  }
 `;
 
 export default GlobalStyle;

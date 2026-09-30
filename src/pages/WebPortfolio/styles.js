@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import WaveLine from './assets/wavy-line.png';
+import { PageTitle } from '../../components';
 
 export const Main = styled.main`
   min-height: 100vh;
@@ -30,16 +30,9 @@ export const TitleContainer = styled.div`
   }
 `;
 
-export const PageTite = styled.h2`
-  margin: 0 auto;
+export const ProjectPageTitle = styled(PageTitle)`
   width: 14rem;
   padding-bottom: 1rem;
-  font-size: 2rem;
-  text-align: center;
-  background-image: url(${WaveLine});
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain;
   margin-bottom: 2rem;
   @media (min-width: ${({ theme }) => theme.sm}) {
     width: 16rem;
@@ -67,7 +60,7 @@ export const SliderWrapper = styled.div`
   }
   .slick-slide {
     padding: 0 1.5vw;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
     transform: scale(0.9);
     &.slick-center {
       transform: scale(1.1);
@@ -100,7 +93,6 @@ export const Slide = styled.div`
 `;
 
 export const VideoWrapper = styled.div`
-  // border: 1px solid ${({ theme }) => theme.primaryBlack};
   box-shadow:
     rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -109,9 +101,6 @@ export const VideoWrapper = styled.div`
   display: flex;
   object-fit: cover;
   aspect-ratio: 16 / 9;
-  // .video-player {
-  //   object-fit: cover;
-  // }
   mux-player::part(pre-play) {
     --media-control-background: ${({ theme }) => theme.primaryBlue} !important;
   }
@@ -122,7 +111,7 @@ export const ArrowButton = styled.button`
   bottom: 0.5rem;
   z-index: 5;
   width: 3.5rem;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease;
   &.right-arrow {
     right: 1rem;
   }

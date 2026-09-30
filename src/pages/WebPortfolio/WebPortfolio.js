@@ -3,12 +3,16 @@ import MuxPlayer from '@mux/mux-player-react';
 import Slider from 'react-slick';
 import { Navbar, Footer } from '../../components';
 import theme from '../../theme';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { WEB_PROJECTS } from './projects';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import LeftArrow from './assets/left-arrow.svg';
 import RightArrow from './assets/right-arrow.svg';
 import {
   Main,
   VideoWrapper,
-  PageTite,
+  ProjectPageTitle,
   TitleContainer,
   Container,
   SliderWrapper,
@@ -20,75 +24,29 @@ export const Arrow = (props) => {
   const { onClick, left } = props;
   return (
     <ArrowButton
+      type="button"
+      aria-label={left ? 'Previous project' : 'Next project'}
       onClick={onClick}
       className={left ? 'left-arrow' : 'right-arrow'}
     >
-      <img src={left ? LeftArrow : RightArrow} />
+      <img src={left ? LeftArrow : RightArrow} alt="" />
     </ArrowButton>
   );
 };
 
 export const WebPortfolio = () => {
-  React.useEffect(() => {}, []);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const sliderRef = React.useRef(null);
+  const isTablet = useMediaQuery(`(min-width: ${theme.sm})`);
+  const isDesktop = useMediaQuery(`(min-width: ${theme.md})`);
+  const centerPadding = isDesktop ? '28%' : isTablet ? '15%' : '12%';
 
-  const ASSETS = [
-    {
-      title: 'Paper Girls',
-      subtitle: 'Premium Title Page',
-      playbackId: '4lqPFMjSy1e7rcHQnmHrFRHKQIEL8eyf7ihH8XWnMNM',
-      // Seconds into the video; Mux uses this frame as the poster thumbnail.
-      posterTime: 5,
-    },
-    {
-      title: 'San Diego Comic - Con',
-      subtitle: 'IMDb Poll',
-      playbackId: 'K02o2CDU6Zy3bt4Z4CPmodgapLs7r02MAQYhQLO5lErCU',
-      posterTime: 1,
-    },
-    {
-      title: 'The Boys',
-      subtitle: 'Premium Title Page',
-      playbackId: 'dG64cigWlzLLYIB02Toh1dS8mw3SCBaVA5FJjaADJkgs',
-      posterTime: 3,
-    },
-    {
-      title: 'Dune',
-      subtitle: 'Premium Title Page',
-      playbackId: 'ZZTPZ17LhthT02RTYOS01bMTFYOoWZ8tIpTR2BxWgja02s',
-      posterTime: 1,
-    },
-    {
-      title: 'Encanto',
-      subtitle: 'Premium Title Page',
-      playbackId: '6HL8GVWD47t5ypAefSBz00wOYBzJE1ADYeFWrJcvzbXE',
-      posterTime: 6,
-    },
-    {
-      title: 'From',
-      subtitle: 'Premium Title Page',
-      playbackId: 'M02KvGcs025trvItk1SB501yEWJplGioLyTjckORLxJSYE',
-      posterTime: 7,
-    },
-    {
-      title: 'Emmys Ballot',
-      subtitle: 'Special Section',
-      playbackId: '9Q7AfO00aHV8TQ00cbUeKKQblBEPfnagADSNvKJTnEzhc',
-      posterTime: 1,
-    },
-    {
-      title: 'The Wheel of Time',
-      subtitle: 'Premium Title Page',
-      playbackId: 'FvZ02V73EKzh788VIy2fTZe7bARrmdiI9nKtIAQJh8Ps',
-      posterTime: 1,
-    },
-    {
-      title: "Oscars' Ballot",
-      subtitle: 'Video Wall',
-      playbackId: 'FLwzRiEtv8lKkOsNOOuktg5ReO6oC00aLVU8xy7xKye8',
-      posterTime: 4,
-    },
-  ];
+  const handleSlideChange = (current, next) => {
+    sliderRef.current?.querySelectorAll('mux-player').forEach((player) => {
+      player.pause();
+    });
+    setCurrentSlideIndex(next);
+  };
 
   const settings = {
     className: 'center',
@@ -98,18 +56,10 @@ export const WebPortfolio = () => {
     speed: 500,
     dots: false,
     slidesToScroll: 1,
-    centerPadding: '28%',
+    centerPadding,
     nextArrow: <Arrow left={false} />,
     prevArrow: <Arrow left={true} />,
-    beforeChange: (current, next) => setCurrentSlideIndex(next),
-    responsive: [
-      {
-        breakpoint: parseInt(theme.md, 10),
-        settings: {
-          centerPadding: '15%',
-        },
-      },
-    ],
+    beforeChange: handleSlideChange,
   };
 
   return (
@@ -117,21 +67,20 @@ export const WebPortfolio = () => {
       <Navbar currentPage={2} isScrollable={false} />
       <Main>
         <TitleContainer>
-          <PageTite>Web Projects</PageTite>
+          <ProjectPageTitle>Web Projects</ProjectPageTitle>
           <p>
             I&#39;m proud to partner with talented designers to translate
             creative design into polished, functional front-end experiences.
           </p>
         </TitleContainer>
         <Container>
-          <SliderWrapper>
+          <SliderWrapper ref={sliderRef}>
             <Slider {...settings}>
-              {ASSETS.map((item, i) => (
-                <Slide key={item}>
+              {WEB_PROJECTS.map((item, i) => (
+                <Slide key={item.playbackId}>
                   <VideoWrapper>
                     <MuxPlayer
                       preload="none"
-                      // autoPlay={true}
                       loop={true}
                       playbackId={item.playbackId}
                       poster={

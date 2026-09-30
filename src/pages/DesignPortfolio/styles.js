@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import WaveLine from './assets/wavy-line.png';
+import { Modal, PageTitle } from '../../components';
 
 export const Section = styled.section`
   min-height: 100vh;
@@ -21,18 +21,11 @@ export const Container = styled.div`
   }
 `;
 
-export const PageTite = styled.h2`
-  margin: 0 auto;
+export const ProjectPageTitle = styled(PageTitle)`
   width: 15rem;
-  font-size: 2rem;
-  text-align: center;
   padding-bottom: 1.5rem;
-  background-image: url(${WaveLine});
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain;
   @media (min-width: ${({ theme }) => theme.sm}) {
-    width: 18rem;
+    width: 20rem;
     font-size: 2.5rem;
   }
   @media (min-width: ${({ theme }) => theme.md}) {
@@ -126,18 +119,7 @@ export const AboutProject = styled.div`
   }
 `;
 
-export const ProjectModal = styled.section`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: auto;
-  width: 100%;
-  height: auto;
-  background-color: ${({ theme }) => theme.white};
-  z-index: 100;
-
+export const ProjectModal = styled(Modal)`
   @media (min-width: ${({ theme }) => theme.md}) {
     padding: 7rem 5rem;
   }
@@ -184,19 +166,5 @@ export const ProjectModalContent = styled.div`
         }
       }
     }
-  }
-`;
-
-export const ModalCloseButton = styled.button`
-  position: fixed;
-  width: 2rem;
-  right: 1.5rem;
-  top: 1rem;
-  z-index: 100;
-  img {
-    background-color: ${({ theme }) => theme.white};
-    padding: 0.35rem;
-    border-radius: 50%;
-    box-shadow: 0 0 6px 0.25rem rgba(50, 50, 50, 0.08);
   }
 `;
