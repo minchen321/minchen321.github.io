@@ -1,43 +1,24 @@
 import React from 'react';
-import { CloseIcon } from './assets'
 import {
   ContactModalWrapper,
-  CloseModalBtn,
   ModalContainer,
   ContactForm,
   SubmitButton,
 } from './styles';
 
 export const ContactModal = ({ setShowContactModal }) => {
-  const [startSlideOut, setStartSlideOut] = React.useState(false);
-  const handleCloseModal = () => {
-    setStartSlideOut(true);
-    setTimeout(() => {
-      setShowContactModal(false);
-    }, 850);
-  };
-
   return (
     <ContactModalWrapper
-      className={`wow animate__animated ${
-        startSlideOut
-          ? 'animate__fast animate__slideOutDown'
-          : 'animate__faster animate__slideInUp'
-      }`}
+      label="Send a Message"
+      onClose={() => setShowContactModal(false)}
+      enterAnimation="animate__slideInUp"
+      exitAnimation="animate__slideOutDown"
+      exitDuration={800}
     >
-      <CloseModalBtn onClick={handleCloseModal}>
-        <img
-          src={CloseIcon}
-          alt="close button"
-        />
-      </CloseModalBtn>
       <ModalContainer>
         <div className="modal-content">
           <h2>Send a Message</h2>
-          <ContactForm
-            method="post"
-            action="https://formspree.io/f/mjvpygby"
-          >
+          <ContactForm method="post" action="https://formspree.io/f/mjvpygby">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
               <input
@@ -68,17 +49,12 @@ export const ContactModal = ({ setShowContactModal }) => {
                 required
               ></textarea>
             </div>
-            <SubmitButton
-              type="submit"
-              name="submit"
-              value="Submit"
-            >
-                Submit
+            <SubmitButton type="submit" name="submit" value="Submit">
+              Submit
             </SubmitButton>
           </ContactForm>
         </div>
       </ModalContainer>
     </ContactModalWrapper>
   );
-
 };

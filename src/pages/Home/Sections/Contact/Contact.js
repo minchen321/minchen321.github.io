@@ -29,12 +29,14 @@ export const Contact = ({ setShowContactModal, isActive }) => {
     <Section id="contact">
       <Phone
         ref={phoneRef}
-        className="wow animate__animated animate__slideInUp"
+        className="animate__animated animate__slideInUp"
       >
         <PhoneContent>
           <Title>Contact</Title>
           <SocialMediaContainer>
             <SocialMediaLink
+              as="button"
+              type="button"
               onClick={() => setShowContactModal(true)}
               aria-label="Email"
               data-category="contact-email"
@@ -51,7 +53,7 @@ export const Contact = ({ setShowContactModal, isActive }) => {
               <img src={Linkedin} alt="Linkedin" />
             </SocialMediaLink>
             <SocialMediaLink
-              href="http://www.instagram.com/min75208/?hl=en"
+              href="https://www.instagram.com/min75208/?hl=en"
               aria-label="Instagram"
               target="_blank"
               data-category="contact-instagram"
@@ -60,7 +62,7 @@ export const Contact = ({ setShowContactModal, isActive }) => {
               <img src={Instagram} alt="Instagram" />
             </SocialMediaLink>
             <SocialMediaLink
-              href="http://github.com/minchen321"
+              href="https://github.com/minchen321"
               aria-label="GitHub"
               target="_blank"
               data-category="contact-github"

@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { Modal } from '../../../../components';
 import { BackgroundImg } from './assets';
 
 const slideInFromBelowViewport = keyframes`
@@ -18,7 +19,7 @@ export const Section = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   max-width: 105rem;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   min-height: 48rem;
   display: flex;
@@ -104,8 +105,7 @@ export const SocialMediaLink = styled.a`
   display: block;
   max-width: 4.75rem;
   cursor: pointer;
-  display: block;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease;
   &:hover {
     transform: scale(1.1);
   }
@@ -119,17 +119,8 @@ export const SocialMediaLink = styled.a`
   }
 `;
 
-export const ContactModalWrapper = styled.section`
-  z-index: 99;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
+export const ContactModalWrapper = styled(Modal)`
   padding: 5rem 0 2.5rem;
-  height: 100%;
-  position: fixed;
-  background: ${({ theme }) => theme.white};
-  overflow-y: scroll;
 `;
 
 export const ModalContainer = styled.div`
@@ -184,14 +175,6 @@ export const ContactForm = styled.form`
   }
 `;
 
-export const CloseModalBtn = styled.button`
-  position: absolute;
-  z-index: 100;
-  right: 1.5rem;
-  top: 1rem;
-  width: 1.75rem;
-`;
-
 export const SubmitButton = styled.button`
   margin: 5% auto 0;
   width: 100%;
@@ -208,8 +191,5 @@ export const SubmitButton = styled.button`
   &:hover {
     background-color: ${({ theme }) => theme.white};
     color: ${({ theme }) => theme.primaryBlack};
-  }
-  &:focus {
-    outline: none;
   }
 `;
