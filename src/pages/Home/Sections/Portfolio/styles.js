@@ -3,6 +3,7 @@ import { BackgroundImg } from './assets';
 
 export const Section = styled.section`
   height: 100%;
+  min-height: 25rem;
   padding: 1rem;
 `;
 
@@ -38,6 +39,11 @@ export const CardContainer = styled.div`
   & + * {
     margin-top: 2rem;
   }
+  @media (min-width: 41rem) {
+    & + * {
+      margin-top: 3.5rem;
+    }
+  }
   @media (min-width: ${({ theme }) => theme.sm}) {
     background-size: ${({ $isShortViewport }) =>
       $isShortViewport ? '100% 100%' : '100% auto'};
@@ -55,6 +61,7 @@ export const CardContainer = styled.div`
 export const Card = styled.a`
   width: 100%;
   max-width: 18rem;
+  min-height: 16rem;
   padding: 2rem 0;
   text-align: center;
   border-radius: 1.5rem;
