@@ -13,7 +13,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media (min-width: ${({ theme }) => theme.sm}) {
+  @media (min-width: 41rem) {
     max-width: 56rem;
     display: grid;
     grid-template-columns: 1fr 1fr;

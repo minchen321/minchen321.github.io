@@ -7,6 +7,18 @@ import {
 } from './styles';
 
 export const ContactModal = ({ setShowContactModal }) => {
+  const hasSubmitted = React.useRef(false);
+
+  React.useEffect(() => {
+    const handlePageShow = () => {
+      if (hasSubmitted.current) setShowContactModal(false);
+    };
+
+    // Browser history can restore the open modal after a Formspree submission.
+    window.addEventListener('pageshow', handlePageShow);
+    return () => window.removeEventListener('pageshow', handlePageShow);
+  }, [setShowContactModal]);
+
   return (
     <ContactModalWrapper
       label="Send a Message"
@@ -18,7 +30,13 @@ export const ContactModal = ({ setShowContactModal }) => {
       <ModalContainer>
         <div className="modal-content">
           <h2>Send a Message</h2>
-          <ContactForm method="post" action="https://formspree.io/f/mjvpygby">
+          <ContactForm
+            method="post"
+            action="https://formspree.io/f/mjvpygby"
+            onSubmit={() => {
+              hasSubmitted.current = true;
+            }}
+          >
             <div className="form-group">
               <label htmlFor="name">Name:</label>
               <input

@@ -57,9 +57,13 @@ export const Section = styled.section`
     );
   }
 
-  @media (min-width: ${({ theme }) => theme.sm}) {
+  @media (min-width: 41rem) {
     min-height: ${({ $isShortViewport }) => ($isShortViewport ? '40rem' : '0')};
     background-image: url(${HomeBg});
+    background-size: cover;
+  }
+
+  @media (min-width: ${({ theme }) => theme.sm}) {
     background-size: 100%;
   }
 `;
@@ -68,7 +72,7 @@ export const Helicopter = styled.div`
   --helicopter-width: 8rem;
   position: absolute;
   z-index: 0;
-  top: 4.5rem;
+  top: 4rem;
   left: 0;
   width: 100%;
   pointer-events: none;
@@ -78,11 +82,14 @@ export const Helicopter = styled.div`
   img {
     position: absolute;
     left: 0;
-    width: var(--helicopter-width);
+    width: 6.5rem;
     height: auto;
   }
   @media (min-width: ${({ theme }) => theme.sm}) {
     animation-duration: 26s;
+    img {
+      width: var(--helicopter-width);
+    }
   }
   @media (min-width: ${({ theme }) => theme.md}) {
     top: 1rem;
@@ -102,7 +109,7 @@ export const IntroTitle = styled.h1`
   display: grid;
   align-items: center;
   max-width: 18rem;
-  margin-bottom: 40%;
+  margin-bottom: 30%;
   font-size: 1.5rem;
   font-family: ${({ theme }) => theme.secondaryFont};
   text-align: center;

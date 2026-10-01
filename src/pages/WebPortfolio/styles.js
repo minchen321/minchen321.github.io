@@ -19,7 +19,7 @@ export const Main = styled.main`
 
 export const TitleContainer = styled.div`
   margin: 0 auto;
-  width: 18rem;
+  width: 20rem;
   text-align: center;
   font-size: 1rem;
   @media (min-width: ${({ theme }) => theme.sm}) {
