@@ -10,6 +10,7 @@ export const Modal = ({
   children,
   className,
   label,
+  closeCategory = 'cta',
   onClose,
   enterAnimation = 'animate__fadeIn',
   exitAnimation = 'animate__fadeOut',
@@ -47,7 +48,12 @@ export const Modal = ({
       }`}
       style={{ '--animate-duration': `${isClosing ? exitDuration : 500}ms` }}
     >
-      <ModalCloseButton type="button" onClick={close} aria-label="Close dialog">
+      <ModalCloseButton
+        type="button"
+        onClick={close}
+        aria-label="Close dialog"
+        data-category={closeCategory}
+      >
         <img src={CloseIcon} alt="" />
       </ModalCloseButton>
       {children}

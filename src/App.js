@@ -7,6 +7,7 @@ import GlobalStyle from './GlobalStyle';
 import 'animate.css';
 import 'normalize.css/normalize.css';
 import theme from './theme';
+import { trackElementClick } from './analytics';
 
 const DesignPortfolio = lazy(() =>
   import('./pages/DesignPortfolio/DesignPortfolio').then((module) => ({
@@ -20,6 +21,11 @@ const WebPortfolio = lazy(() =>
 );
 
 const App = () => {
+  React.useEffect(() => {
+    document.addEventListener('click', trackElementClick, true);
+    return () => document.removeEventListener('click', trackElementClick, true);
+  }, []);
+
   return (
     <BrowserRouter basename="/">
       <ThemeProvider theme={theme}>
@@ -27,6 +33,7 @@ const App = () => {
         <a
           className="skip-link"
           href="#main-content"
+          data-analytics-ignore
           onClick={(event) => {
             event.preventDefault();
             document.getElementById('main-content')?.focus();

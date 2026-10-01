@@ -5,13 +5,13 @@ import { Hero, About, Portfolio, Contact, ContactModal } from './Sections';
 import { HomeMain, ScrollableContainer } from './homeStyles';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { useSectionWheel } from '../../hooks/useSectionWheel';
-import { usePageTitle } from '../../hooks/usePageTitle';
+import { usePageTracking } from '../../hooks/usePageTracking';
 import { HOME_SECTIONS, getPageFromHash } from '../../navigation';
 
 const CONTACT_PAGE = 3;
 
 export const Home = () => {
-  usePageTitle('Min Chen | UX Engineer and Designer');
+  usePageTracking('Min Chen | UX Engineer and Designer');
   const [currentPage, setCurrentPage] = React.useState(getPageFromHash);
   const [showContactModal, setShowContactModal] = React.useState(false);
   const isShortViewport = useMediaQuery('(max-height: 499px)');

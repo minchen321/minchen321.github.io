@@ -201,7 +201,7 @@ export const About = ({ onContactClick, isCurrent = true }) => {
           <RightBubble
             data-opens={PANELS.PERSONAL}
             onClick={() => navigateTo(PANELS.PERSONAL, 'left')}
-            data-category="min-read-more"
+            data-category="Min-read-more"
             style={translate(parallax.bubbleRight)}
           >
             <p>

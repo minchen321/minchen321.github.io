@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Navbar, Footer } from '../../components';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
-import { usePageTitle } from '../../hooks/usePageTitle';
+import { usePageTracking } from '../../hooks/usePageTracking';
 import { PROJECTS, MODAL_ASSETS } from './assets';
 import {
   Section,
@@ -15,7 +15,7 @@ import {
 } from './styles';
 
 export const DesignPortfolio = () => {
-  usePageTitle('Design Projects | Min Chen');
+  usePageTracking('Design Projects | Min Chen');
   const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
   const [modalType, setModalType] = React.useState(null);
 
@@ -72,6 +72,7 @@ export const DesignPortfolio = () => {
 
         {modalType && (
           <ProjectModal
+            closeCategory="close-project-modal"
             label={PROJECTS.find(({ key }) => key === modalType).title}
             onClose={() => setModalType(null)}
           >

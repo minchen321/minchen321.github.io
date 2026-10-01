@@ -56,6 +56,7 @@ export const Navbar = ({
       <Item key={id}>
         <DynamicTag
           {...navigationProps(index)}
+          data-category={`nav-${id}`}
           data-autofocus={index === 0 ? '' : undefined}
           aria-current={currentPage === index ? 'page' : undefined}
         >
@@ -71,7 +72,9 @@ export const Navbar = ({
         {isDesktop ? (
           <>
             <SiteBrand>
-              <DynamicTag {...navigationProps(0)}>Min Chen</DynamicTag>
+              <DynamicTag {...navigationProps(0)} data-category="site-brand">
+                Min Chen
+              </DynamicTag>
             </SiteBrand>
             <MenuList>{renderItems(MenuListItem)}</MenuList>
           </>

@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import { Navbar, Footer } from '../../components';
 import theme from '../../theme';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
-import { usePageTitle } from '../../hooks/usePageTitle';
+import { usePageTracking } from '../../hooks/usePageTracking';
 import { WEB_PROJECTS } from './projects';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -36,7 +36,7 @@ export const Arrow = (props) => {
 };
 
 export const WebPortfolio = () => {
-  usePageTitle('Web Projects | Min Chen');
+  usePageTracking('Web Projects | Min Chen');
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const sliderRef = React.useRef(null);
   const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
