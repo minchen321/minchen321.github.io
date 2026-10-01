@@ -9,7 +9,11 @@ import {
   SocialMediaLink,
 } from './styles';
 
-export const Contact = ({ setShowContactModal, isActive }) => {
+export const Contact = ({
+  setShowContactModal,
+  isActive,
+  isCurrent = true,
+}) => {
   const phoneRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -26,11 +30,14 @@ export const Contact = ({ setShowContactModal, isActive }) => {
   }, [isActive]);
 
   return (
-    <Section id="contact">
-      <Phone
-        ref={phoneRef}
-        className="animate__animated animate__slideInUp"
-      >
+    <Section
+      id="contact"
+      aria-label="Contact"
+      tabIndex={-1}
+      aria-hidden={!isCurrent}
+      inert={isCurrent ? undefined : ''}
+    >
+      <Phone ref={phoneRef} className="animate__animated animate__slideInUp">
         <PhoneContent>
           <Title>Contact</Title>
           <SocialMediaContainer>
@@ -38,14 +45,15 @@ export const Contact = ({ setShowContactModal, isActive }) => {
               as="button"
               type="button"
               onClick={() => setShowContactModal(true)}
-              aria-label="Email"
+              aria-label="Send an email"
+              aria-haspopup="dialog"
               data-category="contact-email"
             >
               <img src={Mail} alt="Email" />
             </SocialMediaLink>
             <SocialMediaLink
               href="https://www.linkedin.com/in/minchen321"
-              aria-label="Linkedin"
+              aria-label="LinkedIn (opens in a new tab)"
               target="_blank"
               data-category="contact-linkedin"
               rel="noreferrer"
@@ -54,7 +62,7 @@ export const Contact = ({ setShowContactModal, isActive }) => {
             </SocialMediaLink>
             <SocialMediaLink
               href="https://www.instagram.com/min75208/?hl=en"
-              aria-label="Instagram"
+              aria-label="Instagram (opens in a new tab)"
               target="_blank"
               data-category="contact-instagram"
               rel="noreferrer"
@@ -63,7 +71,7 @@ export const Contact = ({ setShowContactModal, isActive }) => {
             </SocialMediaLink>
             <SocialMediaLink
               href="https://github.com/minchen321"
-              aria-label="GitHub"
+              aria-label="GitHub (opens in a new tab)"
               target="_blank"
               data-category="contact-github"
               rel="noreferrer"

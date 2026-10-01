@@ -71,13 +71,13 @@ export const SliderWrapper = styled.div`
 export const Slide = styled.div`
   border-radius: 1.25rem;
   text-align: center;
-  h4 {
+  .project-subtitle {
     font-size: 1rem;
     font-weight: 400;
     animation-duration: 80ms;
     animation-delay: 0s;
   }
-  h3 {
+  .project-title {
     margin-top: 1.5rem;
     font-size: 1.25rem;
     animation-duration: 80ms;
@@ -85,7 +85,7 @@ export const Slide = styled.div`
   }
   @media (min-width: ${({ theme }) => theme.lg}) {
     padding: 1rem;
-    h3 {
+    .project-title {
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }

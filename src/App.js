@@ -24,6 +24,16 @@ const App = () => {
     <BrowserRouter basename="/">
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+        <a
+          className="skip-link"
+          href="#main-content"
+          onClick={(event) => {
+            event.preventDefault();
+            document.getElementById('main-content')?.focus();
+          }}
+        >
+          Skip to main content
+        </a>
         <Suspense fallback={<LoadingScreen />}>
           <Switch>
             <Route exact path="/">

@@ -44,7 +44,7 @@ const NO_PARALLAX = {
 
 const translate = ({ x, y }) => ({ transform: `translate(${x}px, ${y}px)` });
 
-export const About = ({ onContactClick }) => {
+export const About = ({ onContactClick, isCurrent = true }) => {
   const [activePanel, setActivePanel] = React.useState(PANELS.MENU);
   const [exitingPanel, setExitingPanel] = React.useState(null);
   const [direction, setDirection] = React.useState('right');
@@ -54,6 +54,18 @@ export const About = ({ onContactClick }) => {
   );
   const sectionRef = React.useRef(null);
   const exitTimerRef = React.useRef(null);
+  const pendingFocus = React.useRef(false);
+  const returnPanel = React.useRef(PANELS.CODING);
+
+  React.useEffect(() => {
+    if (!pendingFocus.current) return;
+    pendingFocus.current = false;
+    const selector =
+      activePanel === PANELS.MENU
+        ? `[data-opens="${returnPanel.current}"]`
+        : `[data-panel="${activePanel}"]`;
+    sectionRef.current.querySelector(selector)?.focus({ preventScroll: true });
+  }, [activePanel]);
 
   React.useEffect(() => {
     if (!isParallaxEnabled) setParallax(NO_PARALLAX);
@@ -108,6 +120,8 @@ export const About = ({ onContactClick }) => {
   const navigateTo = (panel, exitDirection) => {
     window.clearTimeout(exitTimerRef.current);
     setParallax(NO_PARALLAX);
+    pendingFocus.current = true;
+    if (activePanel === PANELS.MENU) returnPanel.current = panel;
     setDirection(exitDirection);
     setExitingPanel(activePanel);
     setActivePanel(panel);
@@ -142,6 +156,10 @@ export const About = ({ onContactClick }) => {
   return (
     <Section
       id="about"
+      aria-label="About Min"
+      tabIndex={-1}
+      aria-hidden={!isCurrent}
+      inert={isCurrent ? undefined : ''}
       ref={sectionRef}
       onMouseMove={handleSectionMouseMove}
       onMouseLeave={handleSectionMouseLeave}
@@ -151,6 +169,9 @@ export const About = ({ onContactClick }) => {
         <MenuPanel
           className={panelClassName(PANELS.MENU)}
           data-panel={PANELS.MENU}
+          tabIndex={-1}
+          aria-hidden={activePanel !== PANELS.MENU}
+          inert={activePanel === PANELS.MENU ? undefined : ''}
         >
           <Title>About Me</Title>
           <BgImgContainer>
@@ -166,6 +187,7 @@ export const About = ({ onContactClick }) => {
             />
           </BgImgContainer>
           <LeftBubble
+            data-opens={PANELS.CODING}
             onClick={() => navigateTo(PANELS.CODING, 'right')}
             data-category="role-read-more"
             style={translate(parallax.bubbleLeft)}
@@ -177,6 +199,7 @@ export const About = ({ onContactClick }) => {
             </p>
           </LeftBubble>
           <RightBubble
+            data-opens={PANELS.PERSONAL}
             onClick={() => navigateTo(PANELS.PERSONAL, 'left')}
             data-category="min-read-more"
             style={translate(parallax.bubbleRight)}
@@ -192,7 +215,11 @@ export const About = ({ onContactClick }) => {
         <CodingPanel
           className={panelClassName(PANELS.CODING)}
           data-panel={PANELS.CODING}
+          tabIndex={-1}
+          aria-hidden={activePanel !== PANELS.CODING}
+          inert={activePanel === PANELS.CODING ? undefined : ''}
         >
+          <h2 className="sr-only">UX engineering and design</h2>
           <CoderIntro>
             <p>
               With a background in interaction design, my expertise lies in
@@ -203,15 +230,16 @@ export const About = ({ onContactClick }) => {
               experiences through experimentation and thoughtful design.
             </p>
             <BackButton
+              aria-label="Back to About Me"
               className="left-back"
               onClick={() => navigateTo(PANELS.MENU, 'left')}
               data-category="about-back-btn"
             >
-              <img src={BackBtnRight} alt="back button" />
+              <img src={BackBtnRight} alt="" />
             </BackButton>
           </CoderIntro>
           <SideImg>
-            <img src={SelfPortrait} alt="self illustration" />
+            <img src={SelfPortrait} alt="Illustration of Min" />
           </SideImg>
         </CodingPanel>
       )}
@@ -220,7 +248,11 @@ export const About = ({ onContactClick }) => {
         <PersonalPanel
           className={panelClassName(PANELS.PERSONAL)}
           data-panel={PANELS.PERSONAL}
+          tabIndex={-1}
+          aria-hidden={activePanel !== PANELS.PERSONAL}
+          inert={activePanel === PANELS.PERSONAL ? undefined : ''}
         >
+          <h2 className="sr-only">More about Min</h2>
           <PersonalSideImg>
             <picture>
               <source srcSet={Min} media={`(min-width: ${theme.sm})`} />
@@ -250,11 +282,12 @@ export const About = ({ onContactClick }) => {
               </p>
             </IntroContent>
             <BackButton
+              aria-label="Back to About Me"
               className="right-back"
               onClick={() => navigateTo(PANELS.MENU, 'right')}
               data-category="about-back-btn"
             >
-              <img src={BackBtnLeft} alt="back button" />
+              <img src={BackBtnLeft} alt="" />
             </BackButton>
           </SelfIntro>
         </PersonalPanel>

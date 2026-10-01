@@ -83,7 +83,7 @@ export const AboutProject = styled.div`
   & > * {
     margin-top: 1rem;
   }
-  h3 {
+  h2 {
     margin: 0;
     font-size: 1.5rem;
   }
@@ -109,7 +109,7 @@ export const AboutProject = styled.div`
       margin-top: 1.5rem;
     }
     max-width: 65%;
-    h3 {
+    h2 {
       font-size: 2.25rem;
     }
     .view-btn,

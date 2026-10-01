@@ -57,9 +57,46 @@ const GlobalStyle = createGlobalStyle`
   }
 
   button:focus-visible,
-  a:focus-visible {
-    outline: 3px solid ${({ theme }) => theme.primaryBlue};
+  a:focus-visible,
+  [role='button']:focus-visible {
+    outline: 3px solid currentColor;
     outline-offset: 4px;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .skip-link {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 2000;
+    padding: 0.75rem 1rem;
+    background: ${({ theme }) => theme.white};
+    color: ${({ theme }) => theme.primaryBlack};
+    transform: translateY(-200%);
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 `;
 

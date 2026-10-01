@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import { Navbar, Footer } from '../../components';
 import theme from '../../theme';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { usePageTitle } from '../../hooks/usePageTitle';
 import { WEB_PROJECTS } from './projects';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -35,8 +36,10 @@ export const Arrow = (props) => {
 };
 
 export const WebPortfolio = () => {
+  usePageTitle('Web Projects | Min Chen');
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const sliderRef = React.useRef(null);
+  const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
   const isTablet = useMediaQuery(`(min-width: ${theme.sm})`);
   const isDesktop = useMediaQuery(`(min-width: ${theme.md})`);
   const centerPadding = isDesktop ? '28%' : isTablet ? '15%' : '12%';
@@ -53,7 +56,7 @@ export const WebPortfolio = () => {
     centerMode: true,
     infinite: true,
     slidesToShow: 1,
-    speed: 500,
+    speed: reducedMotion ? 0 : 500,
     dots: false,
     slidesToScroll: 1,
     centerPadding,
@@ -65,7 +68,7 @@ export const WebPortfolio = () => {
   return (
     <Fragment>
       <Navbar currentPage={2} isScrollable={false} />
-      <Main>
+      <Main id="main-content" tabIndex={-1}>
         <TitleContainer>
           <ProjectPageTitle>Web Projects</ProjectPageTitle>
           <p>
@@ -74,12 +77,23 @@ export const WebPortfolio = () => {
           </p>
         </TitleContainer>
         <Container>
-          <SliderWrapper ref={sliderRef}>
+          <SliderWrapper
+            ref={sliderRef}
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Web projects"
+          >
+            <p className="sr-only" aria-live="polite" aria-atomic="true">
+              {`Project ${currentSlideIndex + 1} of ${WEB_PROJECTS.length}: `}
+              {WEB_PROJECTS[currentSlideIndex].title}
+            </p>
             <Slider {...settings}>
               {WEB_PROJECTS.map((item, i) => (
                 <Slide key={item.playbackId}>
                   <VideoWrapper>
                     <MuxPlayer
+                      aria-label={`${item.title}: ${item.subtitle}`}
+                      tabIndex={currentSlideIndex === i ? 0 : -1}
                       preload="none"
                       loop={true}
                       playbackId={item.playbackId}
@@ -91,24 +105,24 @@ export const WebPortfolio = () => {
                       className="video-player"
                     />
                   </VideoWrapper>
-                  <h3
-                    className={`animate__animated ${
+                  <h2
+                    className={`project-title animate__animated ${
                       currentSlideIndex === i
                         ? 'animate__fadeIn'
                         : 'animate__fadeOut'
                     }`}
                   >
                     {item.title}
-                  </h3>
-                  <h4
-                    className={`animate__animated ${
+                  </h2>
+                  <p
+                    className={`project-subtitle animate__animated ${
                       currentSlideIndex === i
                         ? 'animate__fadeIn'
                         : 'animate__fadeOut'
                     }`}
                   >
                     {item.subtitle}
-                  </h4>
+                  </p>
                 </Slide>
               ))}
             </Slider>

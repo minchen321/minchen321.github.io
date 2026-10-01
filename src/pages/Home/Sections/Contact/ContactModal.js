@@ -42,6 +42,7 @@ export const ContactModal = ({ setShowContactModal }) => {
               <input
                 type="text"
                 name="name"
+                autoComplete="name"
                 id="name"
                 className="form-control"
                 required
@@ -52,6 +53,7 @@ export const ContactModal = ({ setShowContactModal }) => {
               <input
                 type="email"
                 name="email"
+                autoComplete="email"
                 id="email"
                 className="form-control"
                 required

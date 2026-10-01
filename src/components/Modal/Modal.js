@@ -3,16 +3,8 @@ import { createPortal } from 'react-dom';
 import { useBodyScrollLock } from '../../hooks/useBodyScrollLock';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { ModalSurface, ModalCloseButton } from './styles';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 import CloseIcon from './close-icon.svg';
-
-const FOCUSABLE = [
-  'a[href]',
-  'button:not(:disabled)',
-  'input:not(:disabled):not([type="hidden"])',
-  'textarea:not(:disabled)',
-  'select:not(:disabled)',
-  '[tabindex="0"]',
-].join(',');
 
 export const Modal = ({
   children,
@@ -29,14 +21,7 @@ export const Modal = ({
   const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
   useBodyScrollLock();
 
-  React.useEffect(() => {
-    const trigger = document.activeElement;
-    dialogRef.current.querySelector('button').focus();
-    return () => {
-      window.clearTimeout(closeTimer.current);
-      if (trigger?.isConnected) trigger.focus();
-    };
-  }, []);
+  React.useEffect(() => () => window.clearTimeout(closeTimer.current), []);
 
   const close = () => {
     if (closeTimer.current !== null) return;
@@ -48,25 +33,7 @@ export const Modal = ({
     closeTimer.current = window.setTimeout(onClose, exitDuration);
   };
 
-  const handleKeyDown = (event) => {
-    if (event.key === 'Escape') {
-      event.stopPropagation();
-      close();
-    }
-    if (event.key !== 'Tab') return;
-    const items = Array.from(
-      dialogRef.current.querySelectorAll(FOCUSABLE)
-    ).filter((element) => !element.closest('[hidden], [aria-hidden="true"]'));
-    const first = items[0];
-    const last = items[items.length - 1];
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
-  };
+  useFocusTrap(dialogRef, true, close, '#root');
 
   return createPortal(
     <ModalSurface
@@ -74,7 +41,7 @@ export const Modal = ({
       role="dialog"
       aria-modal="true"
       aria-label={label}
-      onKeyDown={handleKeyDown}
+      tabIndex={-1}
       className={`${className || ''} animate__animated ${
         isClosing ? exitAnimation : enterAnimation
       }`}

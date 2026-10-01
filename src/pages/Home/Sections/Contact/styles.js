@@ -166,7 +166,8 @@ export const ContactForm = styled.form`
     padding: 0.75rem 1rem;
     &:focus {
       border: 0.125rem solid #b7b7b7;
-      outline: none;
+      outline: 2px solid ${({ theme }) => theme.primaryBlack};
+      outline-offset: 2px;
       box-shadow: none;
     }
   }

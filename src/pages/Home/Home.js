@@ -5,15 +5,30 @@ import { Hero, About, Portfolio, Contact, ContactModal } from './Sections';
 import { HomeMain, ScrollableContainer } from './homeStyles';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { useSectionWheel } from '../../hooks/useSectionWheel';
+import { usePageTitle } from '../../hooks/usePageTitle';
 import { HOME_SECTIONS, getPageFromHash } from '../../navigation';
 
 const CONTACT_PAGE = 3;
 
 export const Home = () => {
+  usePageTitle('Min Chen | UX Engineer and Designer');
   const [currentPage, setCurrentPage] = React.useState(getPageFromHash);
   const [showContactModal, setShowContactModal] = React.useState(false);
   const isShortViewport = useMediaQuery('(max-height: 499px)');
+  const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
   const scrollRef = useSectionWheel(!isShortViewport);
+
+  React.useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      const focused = document.activeElement;
+      if (scrollRef.current?.contains(focused) && focused.closest('[inert]')) {
+        document.getElementById(HOME_SECTIONS[currentPage].id)?.focus({
+          preventScroll: true,
+        });
+      }
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [currentPage, scrollRef]);
 
   React.useEffect(() => {
     const handleHashChange = () => setCurrentPage(getPageFromHash());
@@ -41,7 +56,19 @@ export const Home = () => {
   return (
     <Fragment>
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
-      <HomeMain ref={scrollRef}>
+      <HomeMain
+        id="main-content"
+        tabIndex={-1}
+        ref={scrollRef}
+        onKeyDownCapture={(event) => {
+          if (
+            ['ArrowUp', 'ArrowDown'].includes(event.key) &&
+            event.target.closest('input, textarea, select, [contenteditable]')
+          ) {
+            event.stopPropagation();
+          }
+        }}
+      >
         {isShortViewport ? (
           <ScrollableContainer>
             <Hero isShortViewport={isShortViewport} />
@@ -58,15 +85,19 @@ export const Home = () => {
             containerHeight="var(--home-page-height)"
             pageOnChange={setCurrentPage}
             customPageNumber={currentPage}
-            animationTimer={600}
+            animationTimer={reducedMotion ? 0 : 600}
             animationTimerBuffer={300}
           >
             <Hero isActive={currentPage === 0} />
-            <About onContactClick={() => handlePageChange(CONTACT_PAGE)} />
-            <Portfolio />
+            <About
+              isCurrent={currentPage === 1}
+              onContactClick={() => handlePageChange(CONTACT_PAGE)}
+            />
+            <Portfolio isCurrent={currentPage === 2} />
             <Contact
               setShowContactModal={setShowContactModal}
               isActive={currentPage === CONTACT_PAGE}
+              isCurrent={currentPage === CONTACT_PAGE}
             />
           </ReactPageScroller>
         )}

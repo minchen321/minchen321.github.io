@@ -15,6 +15,7 @@ import theme from '../../theme';
 import { HOME_SECTIONS } from '../../navigation';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { useBodyScrollLock } from '../../hooks/useBodyScrollLock';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { ReactComponent as Line } from './assets/line.svg';
 
 export const Navbar = ({
@@ -24,7 +25,15 @@ export const Navbar = ({
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const isDesktop = useMediaQuery(`(min-width: ${theme.sm})`);
+  const navRef = React.useRef(null);
   useBodyScrollLock(isOpen && !isDesktop);
+  useFocusTrap(navRef, isOpen && !isDesktop, () => setIsOpen(false), 'main');
+
+  React.useEffect(() => {
+    const toggle = navRef.current.querySelector('.hamburger-react');
+    if (isOpen) toggle?.setAttribute('aria-controls', 'mobile-navigation');
+    else toggle?.removeAttribute('aria-controls');
+  }, [isDesktop, isOpen]);
 
   React.useEffect(() => {
     if (isDesktop) setIsOpen(false);
@@ -47,6 +56,7 @@ export const Navbar = ({
       <Item key={id}>
         <DynamicTag
           {...navigationProps(index)}
+          data-autofocus={index === 0 ? '' : undefined}
           aria-current={currentPage === index ? 'page' : undefined}
         >
           {label}
@@ -56,7 +66,7 @@ export const Navbar = ({
     ));
 
   return (
-    <NavbarWrapper>
+    <NavbarWrapper ref={navRef} aria-label="Main navigation">
       <Container>
         {isDesktop ? (
           <>
@@ -67,18 +77,28 @@ export const Navbar = ({
           </>
         ) : (
           <>
-            <HamburgerButton>
+            <HamburgerButton
+              onKeyDown={(event) => {
+                if (event.key === ' ') event.preventDefault();
+              }}
+              onKeyUp={(event) => {
+                if (event.key === ' ') {
+                  event.preventDefault();
+                  setIsOpen((open) => !open);
+                }
+              }}
+            >
               <Hamburger
                 rounded
                 color={theme.primaryBlue}
-                label="Show menu"
+                label={isOpen ? 'Close menu' : 'Show menu'}
                 toggled={isOpen}
                 size={24}
                 toggle={setIsOpen}
               />
             </HamburgerButton>
             {isOpen && (
-              <MenuPanel>
+              <MenuPanel id="mobile-navigation">
                 <MobileMenuList>
                   {renderItems(MobileMenuListItem)}
                 </MobileMenuList>

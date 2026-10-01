@@ -65,7 +65,14 @@ export const Hero = ({ isShortViewport = false, isActive = true }) => {
   }, [isActive]);
 
   return (
-    <Section id="home" $isShortViewport={isShortViewport}>
+    <Section
+      id="home"
+      aria-label="Introduction"
+      tabIndex={-1}
+      aria-hidden={!isActive}
+      inert={isActive ? undefined : ''}
+      $isShortViewport={isShortViewport}
+    >
       <Helicopter aria-hidden="true" $isActive={isActive}>
         <img src={HelicopterImg} alt="" />
       </Helicopter>
