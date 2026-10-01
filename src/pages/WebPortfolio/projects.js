@@ -1,5 +1,11 @@
 export const WEB_PROJECTS = [
   {
+    title: 'Encanto',
+    subtitle: 'Premium Title Page',
+    playbackId: '6HL8GVWD47t5ypAefSBz00wOYBzJE1ADYeFWrJcvzbXE',
+    posterTime: 6,
+  },
+  {
     title: 'Paper Girls',
     subtitle: 'Premium Title Page',
     playbackId: '4lqPFMjSy1e7rcHQnmHrFRHKQIEL8eyf7ihH8XWnMNM',
@@ -13,22 +19,16 @@ export const WEB_PROJECTS = [
     posterTime: 1,
   },
   {
-    title: 'The Boys',
-    subtitle: 'Premium Title Page',
-    playbackId: 'dG64cigWlzLLYIB02Toh1dS8mw3SCBaVA5FJjaADJkgs',
-    posterTime: 3,
-  },
-  {
     title: 'Dune',
     subtitle: 'Premium Title Page',
     playbackId: 'ZZTPZ17LhthT02RTYOS01bMTFYOoWZ8tIpTR2BxWgja02s',
     posterTime: 1,
   },
   {
-    title: 'Encanto',
+    title: 'The Boys',
     subtitle: 'Premium Title Page',
-    playbackId: '6HL8GVWD47t5ypAefSBz00wOYBzJE1ADYeFWrJcvzbXE',
-    posterTime: 6,
+    playbackId: 'dG64cigWlzLLYIB02Toh1dS8mw3SCBaVA5FJjaADJkgs',
+    posterTime: 3,
   },
   {
     title: 'From',
