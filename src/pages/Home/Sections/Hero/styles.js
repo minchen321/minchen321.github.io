@@ -101,7 +101,7 @@ export const IntroTitle = styled.h1`
   z-index: 2;
   display: grid;
   align-items: center;
-  max-width: 16rem;
+  max-width: 18rem;
   margin-bottom: 40%;
   font-size: 1.5rem;
   font-family: ${({ theme }) => theme.secondaryFont};
